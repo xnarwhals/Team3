@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f76cdada5c4204949a80fd4202019da9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - menu: {instanceID: 0}
+  - sliderYellow: {instanceID: 0}
+  - sliderRed: {instanceID: 0}
+  - sliderGreen: {instanceID: 0}
+  - sliderBlue: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
