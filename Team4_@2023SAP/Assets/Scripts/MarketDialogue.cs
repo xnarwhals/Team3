@@ -6,7 +6,7 @@ using UnityEngine;
 public class MarketDialogue : ScriptableObject
 {
     public string text;
-    public string color;
+    public string color; //change to color scriptable obj maybe
 
     public float multiplier = 1.0f;
     public float difficulty = 1.0f;

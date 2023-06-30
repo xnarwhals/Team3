@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {
-    public class tempEvent : EvtSystem.Event
+    public class StartDialogue : EvtSystem.Event
     {
-        public int temp = 0;
+        public MarketDialogue dialogueLine;
     }
 }
