@@ -14,6 +14,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     public GameObject button2;
 
     public GameObject pfp;
+    public GameObject[] activate; //very temp
 
     MarketDialogue currentDialogue;
 
@@ -51,6 +52,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     public void BeginDialogue(StartDialogue evt)
     {
         pfp.SetActive(true);
+        activate[3].SetActive(true);
 
         currentDialogue = evt.dialogueLine;
         float duration = currentDialogue.text.Length / dialogueSpeed;
@@ -67,6 +69,10 @@ public class DialogueSystem : Singleton<DialogueSystem>
     {
         button1.SetActive(true);
         button2.SetActive(true);
+
+        activate[0].SetActive(true);
+        activate[1].SetActive(true);
+        activate[2].SetActive(true);
     }
 
     //the button on the top is 0 and the bottom is 1
