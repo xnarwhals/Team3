@@ -8,4 +8,9 @@ public class GameEvents : MonoBehaviour
     {
         public MarketDialogue dialogueLine;
     }
+
+    public class DroneSwitch : EvtSystem.Event 
+    {
+        public GameObject drone;
+    }
 }
