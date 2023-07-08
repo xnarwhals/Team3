@@ -18,9 +18,13 @@ public class Reticle : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
     }
 
-    public void ChangeMouse(int x)
+    public void Update()
     {
-        cursorTexture[0] = cursorTexture[x];  
+        if ((Input.GetKeyDown(KeyCode.Alpha1))) Cursor.SetCursor(cursorTexture[1], hotSpot, cursorMode);
+        if ((Input.GetKeyDown(KeyCode.Alpha2))) Cursor.SetCursor(cursorTexture[2], hotSpot, cursorMode);
+        if ((Input.GetKeyDown(KeyCode.Alpha3))) Cursor.SetCursor(cursorTexture[3], hotSpot, cursorMode);
+        if ((Input.GetKeyDown(KeyCode.Alpha4))) Cursor.SetCursor(cursorTexture[4], hotSpot, cursorMode);
+        if ((Input.GetKeyDown(KeyCode.Alpha5))) Cursor.SetCursor(cursorTexture[0], hotSpot, cursorMode);
     }
 
 
