@@ -247,8 +247,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: ba303b9723dc2402aadb02361f6cd7ab, type: 3}
   - {fileID: 2800000, guid: 767cfbeaec4d24fdcb58e4ef598e60f2, type: 3}
   - {fileID: 2800000, guid: fc2f5d05981de49c3a88db9af49d4c0b, type: 3}
-  - {fileID: 2800000, guid: 21454c84612c247299b64ea5ada9e7ad, type: 3}
   - {fileID: 2800000, guid: f489540b3d737400591e818a836ab68d, type: 3}
+  - {fileID: 2800000, guid: 21454c84612c247299b64ea5ada9e7ad, type: 3}
   cursorMode: 1
   hotSpot: {x: 16, y: 16}
 --- !u!114 &1004756711
@@ -406,7 +406,7 @@ MonoBehaviour:
     splatRandomRotation: 180
     splatChannel: 0
   RandomChannel: 0
-  SingleShotClick: 0
+  SingleShotClick: 1
   ClearOnClick: 0
   IndexBrush: 0
 --- !u!1 &1643852488

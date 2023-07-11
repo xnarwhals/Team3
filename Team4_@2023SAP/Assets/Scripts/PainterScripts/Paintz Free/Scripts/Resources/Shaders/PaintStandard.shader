@@ -2,7 +2,6 @@
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
-		_MaskTex("SplatMask", 2D) = "white" {}
 		_BumpTex("Normal", 2D) = "bump" {}
 		_BumpPower("Normal Scale", Range(.001,10)) = 1.0
 
@@ -37,7 +36,6 @@
 
 		sampler2D _MainTex;
 		sampler2D _BumpTex;
-		sampler2D _MaskTex;
 		sampler2D _SplatTex;
 		sampler2D _SplatTileNormalTex;
 		sampler2D _WorldTangentTex;
@@ -182,8 +180,7 @@
 		float4 MainTex = tex2D(_MainTex, IN.uv_MainTex);
 
 		fixed4 c = MainTex * _Color;
-		float4 SplatMaskTex = tex2D(_MaskTex, IN.uv_MainTex);
-		splatMask = splatMask * SplatMaskTex;
+
 
 		// Lerp the color with the splat colors based on the splat mask channels
 		c.xyz = lerp(c.xyz, _SplatColor1.xyz, splatMask.x);
