@@ -34,14 +34,18 @@ public class PaintExample : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5)) brush.splatChannel = 4; //Paint Removal Functionality 
 
         //if (RandomChannel) brush.splatChannel = Random.Range(0, 2);
+         
+        if (Input.GetKeyDown(KeyCode.F))
+        {
 
-        if (Input.GetMouseButton(0))
-        {   
-            if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))
+            if (!Physics.Raycast(Camera.main.transform.position, Vector3.forward, 100.0f, LayerMask.NameToLayer("NonPaintable")))
             {
-                if (ClearOnClick) PaintTarget.ClearAllPaint();
-                PaintTarget.PaintCursor(brush);
-                if (IndexBrush) brush.splatIndex++;
+                if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))
+                {
+                    if (ClearOnClick) PaintTarget.ClearAllPaint();
+                    PaintTarget.PaintCursor(brush);
+                    if (IndexBrush) brush.splatIndex++;
+                }
             }
             HoldingButtonDown = true;
         }

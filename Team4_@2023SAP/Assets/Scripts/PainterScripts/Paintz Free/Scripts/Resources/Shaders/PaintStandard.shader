@@ -181,7 +181,6 @@
 
 		fixed4 c = MainTex * _Color;
 
-
 		// Lerp the color with the splat colors based on the splat mask channels
 		c.xyz = lerp(c.xyz, _SplatColor1.xyz, splatMask.x);
 		c.xyz = lerp(c.xyz, _SplatColor2.xyz, splatMask.y);
