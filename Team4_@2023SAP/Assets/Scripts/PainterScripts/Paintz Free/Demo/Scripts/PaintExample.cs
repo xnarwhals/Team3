@@ -12,8 +12,12 @@ public class PaintExample : MonoBehaviour
 
     private bool HoldingButtonDown = false;
 
+    private bool canPaint = true;
+
     private void Start()
     {
+        EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
+
         colorTex = new Texture2D(1, 1);
 
         if (brush.splatTexture == null)
@@ -26,7 +30,6 @@ public class PaintExample : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
@@ -37,11 +40,7 @@ public class PaintExample : MonoBehaviour
          
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            Physics.Raycast(ray, out hit, 100.0f);
-
-            if (!(hit.collider.gameObject.layer == LayerMask.NameToLayer("NonPaintable")))
+            if (canPaint)
             {
                 if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))
                 {
@@ -56,5 +55,10 @@ public class PaintExample : MonoBehaviour
         {
             HoldingButtonDown = false;
         }
+    }
+
+    void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
+    {
+        canPaint = !evt.isOver;
     }
 }

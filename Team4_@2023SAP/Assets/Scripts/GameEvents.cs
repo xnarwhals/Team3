@@ -18,4 +18,9 @@ public class GameEvents : MonoBehaviour
     {
         public GameObject drone;
     }
+
+    public class NoPaintMouseOver : EvtSystem.Event
+    {
+        public bool isOver;
+    }
 }
