@@ -35,10 +35,13 @@ public class PaintExample : MonoBehaviour
 
         //if (RandomChannel) brush.splatChannel = Random.Range(0, 2);
          
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetMouseButtonDown(0))
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            Physics.Raycast(ray, out hit, 100.0f);
 
-            if (!Physics.Raycast(Camera.main.transform.position, Vector3.forward, 100.0f, LayerMask.NameToLayer("NonPaintable")))
+            if (!(hit.collider.gameObject.layer == LayerMask.NameToLayer("NonPaintable")))
             {
                 if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))
                 {
