@@ -9,7 +9,12 @@ public class GameEvents : MonoBehaviour
         public MarketDialogue dialogueLine;
     }
 
-    public class DroneSwitch : EvtSystem.Event 
+    public class DroneSwitchStart : EvtSystem.Event 
+    {
+        public GameObject drone;
+    }
+
+    public class DroneSwitchDone : EvtSystem.Event
     {
         public GameObject drone;
     }

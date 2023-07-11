@@ -8,15 +8,15 @@ public class Reticle : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;//Size makes image fit cursor 
     public Vector2 hotSpot = Vector2.zero;//Click and interact with things  
 
-    public void OnMouseEnter()
+    public void Start()
     {
         Cursor.SetCursor(cursorTexture[0], hotSpot, cursorMode);
     }
 
-    public void OnMouseExit()
+    /*public void OnMouseExit()
     {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
-    }
+    } */
 
     public void Update()
     {

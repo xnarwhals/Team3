@@ -21,17 +21,13 @@ public class DroneMovement : MonoBehaviour
     bool isOnRight;
     float switchDest; //just switchDest but positive or negative depending on isOnRight
 
-    float switchTimer = 0.0f;
     float stayTimer = 0.0f;
+    float switchVel = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        isOnRight = startFromRight;
-        switchDest = switchDist;
-        if (isOnRight) { switchDest *= -1.0f; } //make the destination on left(negative) if on left
     }
 
     // Update is called once per frame
@@ -40,8 +36,9 @@ public class DroneMovement : MonoBehaviour
         stayTimer += Time.deltaTime;
         if (stayTimer >= stayWaitTime)
         {
-            EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitch { drone = gameObject }); //for sound fx
+            EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchStart { drone = gameObject }); //for sound fx
 
+            updateSwitchVars();
             doSwitch = true;
         }
 
@@ -52,21 +49,36 @@ public class DroneMovement : MonoBehaviour
     {
         if (!reachedDest())
         {
-            switchTimer += Time.deltaTime;
+            /*float newPos = Mathf.SmoothDamp(transform.position.x, switchDest, ref switchVel, switchTime);
+            transform.position = new Vector2(newPos, transform.position.y);*/
 
-            Vector2 targetPos = new Vector2(switchDest, transform.position.y);
+            /*float newPos = -1 * (transform.position.x - switchDest) * (transform.position.x + switchDest);
+            transform.position = new Vector2(newPos, transform.position.y);*/
 
-            Vector2 newPos = Vector2.Lerp(transform.position, targetPos, switchTimer / switchTime);
-            transform.position = newPos;
+            //print(newPos);
         }
         else
         {
-            //update all variables
+            EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchDone { drone = gameObject }); //for sound fx
         }
 
         bool reachedDest() //fill out
         {
-            return false;
+            if (isOnRight)
+            {
+                return transform.position.x <= switchDest;
+            }
+            else
+            {
+                return transform.position.x >= switchDest;
+            }
         }
+    }
+
+    void updateSwitchVars()
+    {
+        isOnRight = transform.position.x > 0.0f; //dependent on x = 0 being center of screen
+        switchDest = switchDist;
+        if (isOnRight) { switchDest *= -1.0f; } //make the destination on left(negative) if on left
     }
 }

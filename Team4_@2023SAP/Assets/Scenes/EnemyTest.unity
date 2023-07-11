@@ -225,7 +225,7 @@ MonoBehaviour:
   startFromRight: 1
   switchDist: 6
   switchTime: 1
-  stayWaitTime: 10
+  stayWaitTime: 1
 --- !u!50 &365961842
 Rigidbody2D:
   serializedVersion: 4
