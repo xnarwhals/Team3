@@ -192,6 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotation: 117.6143
   damage: 1
-  lifeSpan: 50
+  direction: {x: 4.2452826, y: 3.3236575}
+  lifeSpan: 5

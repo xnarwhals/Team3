@@ -32,9 +32,4 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void SetDirection(Vector2 dir)
-    {
-        rb.velocity = dir.normalized * speed;
-    }
 }

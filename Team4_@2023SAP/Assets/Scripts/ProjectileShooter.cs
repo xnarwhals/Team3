@@ -6,7 +6,7 @@ public class ProjectileShooter : MonoBehaviour
 {
     public GameObject projectilePrefab;
 
-    Vector2 reticlePos;
+    Vector3 reticlePos;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,9 @@ public class ProjectileShooter : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             EvtSystem.EventDispatcher.Raise(new GameEvents.ShootProjectile());
-            reticlePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //temp
 
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            Projectile p = projectilePrefab.GetComponent<Projectile>();
+            GameObject obj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Projectile p = obj.GetComponent<Projectile>();
             p.direction = (Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
         }
     }
