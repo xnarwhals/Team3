@@ -23,4 +23,14 @@ public class GameEvents : MonoBehaviour
     {
         public bool isOver;
     }
+
+    public class ShootProjectile : EvtSystem.Event 
+    {
+
+    }
+
+    public class SendReticlePos : EvtSystem.Event
+    {
+        public Vector2 reticlePos;
+    }
 }
