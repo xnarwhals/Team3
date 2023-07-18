@@ -32,4 +32,15 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject hitObj = collision.gameObject;
+        if (hitObj.layer != LayerMask.NameToLayer("Enemy")) return;
+
+        EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyHit() { enemy = hitObj });
+
+        hitObj.GetComponent<EnemyHealth>().ApplyDamage(damage);
+        Destroy(gameObject);
+    }
 }

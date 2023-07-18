@@ -38,4 +38,14 @@ public class GameEvents : MonoBehaviour
     {
 
     }
+
+    public class EnemyHit : EvtSystem.Event
+    {
+        public GameObject enemy;
+    }
+
+    public class EnemyDie : EvtSystem.Event
+    {
+        public GameObject enemy;
+    }
 }

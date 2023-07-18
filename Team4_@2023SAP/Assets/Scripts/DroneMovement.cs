@@ -23,6 +23,7 @@ public class DroneMovement : MonoBehaviour
 
     float stayTimer = 0.0f;
     float switchVel = 0.0f;
+    Vector3 switchOrigin;
 
     // Start is called before the first frame update
     void Start()
@@ -49,10 +50,7 @@ public class DroneMovement : MonoBehaviour
     {
         if (!reachedDest())
         {
-            /*float newPos = Mathf.SmoothDamp(transform.position.x, switchDest, ref switchVel, switchTime);
-            transform.position = new Vector2(newPos, transform.position.y);*/
-
-            /*float newPos = -1 * (transform.position.x - switchDest) * (transform.position.x + switchDest);
+            /*float newPos = Mathf.Lerp(transform.position.x, switchDest, Time.deltaTime);
             transform.position = new Vector2(newPos, transform.position.y);*/
 
             //print(newPos);
@@ -77,6 +75,7 @@ public class DroneMovement : MonoBehaviour
 
     void updateSwitchVars()
     {
+        switchOrigin = transform.position;
         isOnRight = transform.position.x > 0.0f; //dependent on x = 0 being center of screen
         switchDest = switchDist;
         if (isOnRight) { switchDest *= -1.0f; } //make the destination on left(negative) if on left
