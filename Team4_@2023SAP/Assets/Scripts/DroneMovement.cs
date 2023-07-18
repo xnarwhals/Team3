@@ -1,26 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
 public class DroneMovement : MonoBehaviour
 {
-    [Tooltip("check to start from right, uncheck for right")]
-    public bool startFromRight; //delete
-
     [Tooltip("how long it takes to get from one side to the other")]
     public float switchTime = 1.0f;
     [Tooltip("how long the drone waits before switching sides")]
     public float stayWaitTime = 10.0f;
 
+    [DoNotSerialize]
     public Transform target;
 
     Rigidbody2D rb;
 
     bool doSwitch = false;
-    float stayTimer = 0.0f;
-    Vector2 dampVel = Vector3.zero;
 
+    float stayTimer = 0.0f;
+    Vector2 dampVel = Vector2.zero;
     
 
     // Start is called before the first frame update
@@ -67,13 +67,12 @@ public class DroneMovement : MonoBehaviour
 
         bool reachedDest() //fill out
         {
-            return dampVel == Vector2.zero;
+            return (transform.position - target.position).sqrMagnitude < 0.01f;
         }
     }
 
     void updateSwitchVars()
     {
         target.position = new Vector2(Random.Range(-8, 8), Random.Range(-2.9f, 3f));
-        print(76543);
     }
 }
