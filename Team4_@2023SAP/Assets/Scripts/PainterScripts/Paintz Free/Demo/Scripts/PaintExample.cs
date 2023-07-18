@@ -3,14 +3,12 @@
 public class PaintExample : MonoBehaviour
 {
     public Brush brush;
-    public bool RandomChannel = false;
     public bool SingleShotClick = false;
-    public bool ClearOnClick = false;
     public bool IndexBrush = false;
+     
+    [SerializeField] PaintChangeUI paintBar;
 
     private Texture2D colorTex;
-
-    private bool HoldingButtonDown = false;
 
     private bool canPaint = true;
 
@@ -36,24 +34,24 @@ public class PaintExample : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green
         if (Input.GetKeyDown(KeyCode.Alpha5)) brush.splatChannel = 4; //Paint Removal Functionality 
 
-        //if (RandomChannel) brush.splatChannel = Random.Range(0, 2);
          
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.LeftShift))
         {
             if (canPaint)
             {
-                if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))
-                {
-                    if (ClearOnClick) PaintTarget.ClearAllPaint();
+                {                
                     PaintTarget.PaintCursor(brush);
+                    PlayerUsePaint(10f);
                     if (IndexBrush) brush.splatIndex++;
                 }
             }
-            HoldingButtonDown = true;
+        
         }
         else
         {
-            HoldingButtonDown = false;
+     
+            PlayerRegenPaint();
+   
         }
     }
 
@@ -61,4 +59,16 @@ public class PaintExample : MonoBehaviour
     {
         canPaint = !evt.isOver;
     }
-}
+
+    private void PlayerUsePaint(float paintAmount)
+    {
+        GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
+        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+    }
+
+    private void PlayerRegenPaint()
+    {
+        GameManager.gameManager.playerPaint.RegenPaint();//updates data
+        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+    }
+} 

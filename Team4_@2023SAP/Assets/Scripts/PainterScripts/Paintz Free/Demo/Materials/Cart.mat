@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Test
-  m_Shader: {fileID: 4800000, guid: 226140307bf633b4e93007c7a44a1d39, type: 3}
+  m_Name: Cart
+  m_Shader: {fileID: 4800000, guid: 2b0f5fce771a1c645adeaed55998c8f1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -27,16 +27,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DrawingTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0e3ad3733717f42aca0e488199d93cd2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5bbc4737ff09b4ad18ed8647d41ccf3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatTex:
@@ -50,7 +42,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpPower: 1
-    - _Glossiness: 0.29
+    - _Glossiness: 0.5
     - _Metallic: 0
     - _SplatEdgeBump: 1
     - _SplatEdgeBumpWidth: 1
@@ -61,6 +53,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SplatColor1: {r: 1, g: 0.5, b: 0, a: 1}
     - _SplatColor2: {r: 1, g: 0, b: 0, a: 1}
-    - _SplatColor3: {r: 0.3253131, g: 1, b: 0, a: 1}
+    - _SplatColor3: {r: 0, g: 1, b: 0, a: 1}
     - _SplatColor4: {r: 0, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []

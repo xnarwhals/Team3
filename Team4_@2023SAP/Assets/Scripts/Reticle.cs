@@ -27,7 +27,10 @@ public class Reticle : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Alpha5))) Cursor.SetCursor(cursorTexture[0], hotSpot, cursorMode);
     }
 
-
+    private void OnMouseOver()
+    {
+        
+    }
 
 
 

@@ -33,4 +33,9 @@ public class GameEvents : MonoBehaviour
     {
         public Vector2 reticlePos;
     }
+
+    public class GameOver : EvtSystem.Event //for future? 
+    {
+
+    }
 }
