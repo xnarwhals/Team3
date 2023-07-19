@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchTime: 1
   stayWaitTime: 1
-  target: {fileID: 0}
+  target: {x: 0, y: 0}
 --- !u!60 &7331819916522528154
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultHealth: 3
   currentHealth: 0
+  score: 250
 --- !u!114 &7276017016470176822
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,6 +22,5 @@ public class EnemySpawn : MonoBehaviour
         pos += new Vector2(startFromRight ? spawnOffset.x : -spawnOffset.x, spawnOffset.y);
 
         transform.position = pos;
-
     }
 }

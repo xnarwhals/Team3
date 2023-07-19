@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     [DoNotSerialize]
     public float currentHealth;
 
+    public int score = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0.0f)
         {
-            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject });
+            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject, score = score});
             Destroy(gameObject);//temp maybe
         }
     }

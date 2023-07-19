@@ -21,6 +21,8 @@ public class GameGrid : MonoBehaviour
         {
             Instance = this;
         }
+
+        UpdateGrid();
     }
     #endregion singleton
 
@@ -34,13 +36,6 @@ public class GameGrid : MonoBehaviour
     public Vector2[,] tiles;
 
     Vector2 cellShape;
-
-    private void Start()
-    {
-        tiles = new Vector2[width, height];
-
-        UpdateGrid();
-    }
 
 
     private void Update()
