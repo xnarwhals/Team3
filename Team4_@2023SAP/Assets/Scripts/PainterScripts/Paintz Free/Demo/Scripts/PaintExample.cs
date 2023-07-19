@@ -6,11 +6,11 @@ public class PaintExample : MonoBehaviour
     public bool SingleShotClick = false;
     public bool IndexBrush = false;
 
-
+    //Change Paint Variables 
     [SerializeField] [Range(1f, 45f)] float paintAmountUsed;
     [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
 
-
+    //Refrence to the Bars 
     [SerializeField] PaintChangeUI paintBar;
     [SerializeField] IdentityChangeUI identityBar;
 
@@ -42,18 +42,25 @@ public class PaintExample : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (canPaint)
+            if (canPaint && GameManager.gameManager.playerPaint.Paint > 0)
             {
-                if (GameManager.gameManager.playerPaint.Paint > 0)
-                {
                     PaintTarget.PaintCursor(brush);
                     PlayerUsePaint(paintAmountUsed);
                     if (IndexBrush) brush.splatIndex++;
-                    
-                }
             }        
         }
+
+        if (GameManager.gameManager.playerPaint.Paint <= 0)
+        {
+            canPaint = false; 
+        }
+        else if (GameManager.gameManager.playerPaint.Paint >= 100f)
+        {
+            canPaint = true;
+        }
+  
         PlayerRegenPaint();
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
