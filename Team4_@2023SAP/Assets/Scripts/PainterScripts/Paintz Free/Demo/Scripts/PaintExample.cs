@@ -5,8 +5,14 @@ public class PaintExample : MonoBehaviour
     public Brush brush;
     public bool SingleShotClick = false;
     public bool IndexBrush = false;
-     
+
+
+    [SerializeField] [Range(1f, 45f)] float paintAmountUsed;
+    [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
+
+
     [SerializeField] PaintChangeUI paintBar;
+    [SerializeField] IdentityChangeUI identityBar;
 
     private Texture2D colorTex;
 
@@ -32,26 +38,26 @@ public class PaintExample : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
         if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green
-        if (Input.GetKeyDown(KeyCode.Alpha5)) brush.splatChannel = 4; //Paint Removal Functionality 
 
-         
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.LeftShift))
+
+        if (Input.GetMouseButtonDown(0))
         {
             if (canPaint)
             {
-                {                
+                if (GameManager.gameManager.playerPaint.Paint > 0)
+                {
                     PaintTarget.PaintCursor(brush);
-                    PlayerUsePaint(10f);
+                    PlayerUsePaint(paintAmountUsed);
                     if (IndexBrush) brush.splatIndex++;
+                    
                 }
-            }
-        
+            }        
         }
-        else
+        PlayerRegenPaint();
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-     
-            PlayerRegenPaint();
-   
+            PlayerLoseIdentity();
         }
     }
 
@@ -68,7 +74,15 @@ public class PaintExample : MonoBehaviour
 
     private void PlayerRegenPaint()
     {
-        GameManager.gameManager.playerPaint.RegenPaint();//updates data
+
+        GameManager.gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
         paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+
+    }
+
+    private void PlayerLoseIdentity()
+    {
+        GameManager.gameManager.playerIdentity.IdentityLose(5);
+        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
     }
 } 

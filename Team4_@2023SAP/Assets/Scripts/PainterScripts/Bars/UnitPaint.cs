@@ -70,19 +70,25 @@ public class UnitPaint
 
     public void UsePaint(float paintAmount)
     {
-        if(curPaint > 0)
+        if (curPaint > 0)
         {
             curPaint -= paintAmount;
         }
     }
 
-    public void RegenPaint()
+    public void RegenPaint(float regenPaintSpeed)
     {
         if (curPaint < maxPaint && !pausePaintRegen)
         {
             curPaint += regenPaintSpeed * Time.deltaTime;
         }
     }
+
+
+
+
+
+
 
 
 
