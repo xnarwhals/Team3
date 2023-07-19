@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1760257671305882431}
   - component: {fileID: 7331819916522528154}
   - component: {fileID: 8017248300785518696}
+  - component: {fileID: 7276017016470176822}
   m_Layer: 7
   m_Name: Drone
   m_TagString: Untagged
@@ -127,10 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df557d9ce6168041afb4e3012452770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startFromRight: 1
-  switchDist: 6
   switchTime: 1
   stayWaitTime: 1
+  target: {fileID: 0}
 --- !u!60 &7331819916522528154
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18.96, y: 10.32}
+    oldSize: {x: 20.506409, y: 15.53}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -339,3 +339,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultHealth: 3
   currentHealth: 0
+--- !u!114 &7276017016470176822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477982892895240670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb974f38d424bd24fa3e65d550933cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRow: 0
+  startFromRight: 1
+  spawnOffset: {x: 1, y: 1}

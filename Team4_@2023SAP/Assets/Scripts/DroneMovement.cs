@@ -13,7 +13,7 @@ public class DroneMovement : MonoBehaviour
     public float stayWaitTime = 10.0f;
 
     [DoNotSerialize]
-    public Transform target;
+    public Vector2 target;
 
     Rigidbody2D rb;
 
@@ -41,7 +41,6 @@ public class DroneMovement : MonoBehaviour
 
                 EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchStart { drone = gameObject }); //for sound fx
 
-                updateSwitchVars();
                 doSwitch = true;
             }
         }
@@ -55,24 +54,27 @@ public class DroneMovement : MonoBehaviour
     {
         if (!reachedDest())
         {
-            transform.position = Vector2.SmoothDamp(transform.position, target.position, 
+            transform.position = Vector2.SmoothDamp(transform.position, target, 
                 ref dampVel, switchTime);
         }
         else
         {
             doSwitch = false;
+            updateSwitchVars();
 
             EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchDone { drone = gameObject }); //for sound fx
         }
 
         bool reachedDest() //fill out
         {
-            return (transform.position - target.position).sqrMagnitude < 0.01f;
+            return ((Vector2)transform.position - target).sqrMagnitude < 0.01f;
         }
     }
 
     void updateSwitchVars()
     {
-        target.position = new Vector2(Random.Range(-8, 8), Random.Range(-2.9f, 3f));
+        Vector2[,] grid = GameGrid.Instance.tiles;
+
+        target = grid[Random.Range(0, grid.GetLength(0)), GetComponent<EnemySpawn>().spawnRow];
     }
 }
