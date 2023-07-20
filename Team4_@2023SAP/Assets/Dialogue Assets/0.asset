@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d1039e6398ea0439ec74b9f570cd1a, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  text: Hey, did you hear about that kid going around painting buildings? I hope
-    they paint my house GREEN and RED next!
+  lines:
+  - Mysterious line of dialogue, so mysterious, in fact, that you can't tell what's
+    going on...
+  - Disarmingly unmysterious and friends, perhaps even jovial, line of dialogue that
+    really makes the player feel really nice and warm inside.
+  - Now the character seems kinda bored and they're talking about colors, the plot
+    in this story is completely stupid, I think it's dumb and I don't really like
+    it.
   color: 
   multiplier: 1
   difficulty: 1

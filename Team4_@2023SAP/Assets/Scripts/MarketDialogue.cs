@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue System/Line Data")]
 public class MarketDialogue : ScriptableObject
 {
-    public string text;
+    public string[] lines;
     public string color; //change to color scriptable obj maybe
 
     public float multiplier = 1.0f;

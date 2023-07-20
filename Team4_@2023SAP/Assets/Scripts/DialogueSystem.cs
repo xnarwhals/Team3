@@ -1,9 +1,11 @@
 // Ignore Spelling: pfp
+// Ignore Spelling: evt
 
 using EvtSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static GameEvents;
@@ -15,8 +17,10 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     public GameObject pfp;
     public GameObject[] activate; //very temp
+    public GameObject continueIcon;
 
     MarketDialogue currentDialogue;
+    int currentIndex = 0;
 
     public TMPro.TextMeshProUGUI dialogueText;
     StringReveal typewriter = new StringReveal();
@@ -45,6 +49,17 @@ public class DialogueSystem : Singleton<DialogueSystem>
                 }
                 dialogueText.text = typewriter.GetCurrentRevealedText();
             }
+            else
+            {
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)) 
+                {
+                    StartDialogue evt = new StartDialogue();
+                    evt.dialogueLine = currentDialogue;
+                    evt.index = currentIndex;
+
+                    EventDispatcher.Raise(evt);
+                }
+            }
         }
     }
 
@@ -55,14 +70,28 @@ public class DialogueSystem : Singleton<DialogueSystem>
         activate[3].SetActive(true);
 
         currentDialogue = evt.dialogueLine;
-        float duration = currentDialogue.text.Length / dialogueSpeed;
+        currentIndex = evt.index;
+        float duration = currentDialogue.lines[evt.index].Length / dialogueSpeed;
 
-        typewriter.StartReveal(currentDialogue.text, duration);
+        typewriter.StartReveal(currentDialogue.lines[evt.index], duration);
     }
 
     void DialogueEnd()
     {
-        ShowButtons();
+        currentIndex++;
+        if (currentDialogue.lines.Length > currentIndex)
+        {
+            ContinueDialogue();
+        }
+        else
+        {
+            ShowButtons();
+        }
+    }
+
+    void ContinueDialogue()
+    {
+        continueIcon.SetActive(true);
     }
 
     void ShowButtons()
@@ -110,7 +139,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
         public bool isDone()
         {
-            return (textToReveal == null || currentStringIndex == textToReveal.Length);
+            return textToReveal == null || currentStringIndex == textToReveal.Length;
         }
 
         public void ForceFinish()

@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d1039e6398ea0439ec74b9f570cd1a, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  text: I can't beleive it! ANother line of dialogue??
+  lines:
+  - wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
+    wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
+    wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
+  - 'ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
+    ahw ahw ahw ahw ahw '
   color: 
   multiplier: 1
   difficulty: 1

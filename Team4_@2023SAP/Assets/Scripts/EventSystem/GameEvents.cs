@@ -7,6 +7,7 @@ public class GameEvents : MonoBehaviour
     public class StartDialogue : EvtSystem.Event
     {
         public MarketDialogue dialogueLine;
+        public int index;
     }
 
     public class DroneSwitchStart : EvtSystem.Event 

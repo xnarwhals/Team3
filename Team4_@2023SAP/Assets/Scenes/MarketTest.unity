@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &240471881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1116772957204629098, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+  m_PrefabInstance: {fileID: 6723397597839092165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1102249057 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3399160454224554263, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
@@ -302,6 +307,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Back
       objectReference: {fileID: 0}
+    - target: {fileID: 781584899298616997, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: continueIcon
+      value: 
+      objectReference: {fileID: 240471881}
     - target: {fileID: 1302157810527112595, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -354,6 +363,10 @@ PrefabInstance:
       propertyPath: marketSprites.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: d45345a4a40919549b2644612523b408, type: 3}
+    - target: {fileID: 3390351351048381241, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3482860319319497732, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -374,12 +387,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarketUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4666819831129175889, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666819831129175889, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4842583490181107354, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6186475261472235878, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545689896983131965, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545689896983131965, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6545689896983131965, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6850407563660292385, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
