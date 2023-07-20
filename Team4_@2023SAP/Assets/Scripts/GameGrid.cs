@@ -35,6 +35,9 @@ public class GameGrid : MonoBehaviour
 
     public Vector2[,] tiles;
 
+    public bool showXs = false;
+    public bool showLines = false;
+
     Vector2 cellShape;
 
 
@@ -67,19 +70,26 @@ public class GameGrid : MonoBehaviour
 
     private void drawDebugCell(Vector2 cell)
     {
-        //x for center of cell
-        Debug.DrawLine(new Vector2(cell.x - 0.1f, cell.y - 0.1f),
-                    new Vector2(cell.x + 0.1f, cell.y + 0.1f));
-        Debug.DrawLine(new Vector2(cell.x + 0.1f, cell.y - 0.1f),
-            new Vector2(cell.x - 0.1f, cell.y + 0.1f));
+        if (showXs)
+        {
+            //x for center of cell
+            Debug.DrawLine(new Vector2(cell.x - 0.1f, cell.y - 0.1f),
+                        new Vector2(cell.x + 0.1f, cell.y + 0.1f));
+            Debug.DrawLine(new Vector2(cell.x + 0.1f, cell.y - 0.1f),
+                new Vector2(cell.x - 0.1f, cell.y + 0.1f));
+        }
 
-        /*Debug.DrawLine(new Vector2(cell.x - cellShape.x / 2, cell.y + cellShape.y / 2),
+        if (showLines)
+        {
+            Debug.DrawLine(new Vector2(cell.x - cellShape.x / 2, cell.y + cellShape.y / 2),
             new Vector2(cell.x + cellShape.x / 2, cell.y + cellShape.y / 2));
-        Debug.DrawLine(new Vector2(cell.x + cellShape.x / 2, cell.y + cellShape.y / 2),
-            new Vector2(cell.x + cellShape.x / 2, cell.y - cellShape.y / 2));
-        Debug.DrawLine(new Vector2(cell.x + cellShape.x / 2, cell.y - cellShape.y / 2),
-            new Vector2(cell.x - cellShape.x / 2, cell.y - cellShape.y / 2));
-        Debug.DrawLine(new Vector2(cell.x - cellShape.x / 2, cell.y - cellShape.y / 2),
-            new Vector2(cell.x - cellShape.x / 2, cell.y + cellShape.y / 2));*/
+            Debug.DrawLine(new Vector2(cell.x + cellShape.x / 2, cell.y + cellShape.y / 2),
+                new Vector2(cell.x + cellShape.x / 2, cell.y - cellShape.y / 2));
+            Debug.DrawLine(new Vector2(cell.x + cellShape.x / 2, cell.y - cellShape.y / 2),
+                new Vector2(cell.x - cellShape.x / 2, cell.y - cellShape.y / 2));
+            Debug.DrawLine(new Vector2(cell.x - cellShape.x / 2, cell.y - cellShape.y / 2),
+                new Vector2(cell.x - cellShape.x / 2, cell.y + cellShape.y / 2));
+        }
+        
     }
 }

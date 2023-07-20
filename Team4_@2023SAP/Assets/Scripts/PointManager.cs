@@ -15,7 +15,7 @@ public class PointManager : Singleton<PointManager>
     // Update is called once per frame
     void Update()
     {
-        print(score);
+        
     }
 
     public void UpdateScore(GameEvents.EnemyDie evt)

@@ -45,9 +45,13 @@ public class DialogueSystem : Singleton<DialogueSystem>
                     && typewriter.GetCurrentRevealedText().Length > 0)  //fixes a bug using duct tape
                 {
                     typewriter.ForceFinish();
+                    dialogueText.text = typewriter.GetCurrentRevealedText();
                     DialogueEnd();
                 }
-                dialogueText.text = typewriter.GetCurrentRevealedText();
+                else
+                {
+                    dialogueText.text = typewriter.GetCurrentRevealedText();
+                }
             }
             else
             {
@@ -96,6 +100,9 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     void ShowButtons()
     {
+        currentIndex = 0;
+        typewriter.textToReveal = null;
+
         button1.SetActive(true);
         button2.SetActive(true);
 
@@ -117,7 +124,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     class StringReveal
     {
-        string textToReveal = null;
+        public string textToReveal = null;
 
         float currentTime;
         float secondsPerChar;

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7331819916522528154}
   - component: {fileID: 8017248300785518696}
   - component: {fileID: 7276017016470176822}
+  - component: {fileID: -7841060756712502988}
   m_Layer: 7
   m_Name: Drone
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 7f5ce54d94b11d54787003590576a062, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -869,4 +870,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRow: 0
   startFromRight: 1
-  spawnOffset: {x: 1, y: 1}
+  spawnOffset: {x: 5, y: 2}
+--- !u!114 &-7841060756712502988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477982892895240670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209a0269cf613ea4387d54b5d35a055d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

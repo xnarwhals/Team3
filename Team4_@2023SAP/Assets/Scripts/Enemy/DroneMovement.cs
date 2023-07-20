@@ -12,7 +12,7 @@ public class DroneMovement : MonoBehaviour
     [Tooltip("how long the drone waits before switching sides")]
     public float stayWaitTime = 10.0f;
 
-    [DoNotSerialize]
+    [HideInInspector]
     public Vector2 target;
 
     Rigidbody2D rb;
@@ -75,6 +75,17 @@ public class DroneMovement : MonoBehaviour
     {
         Vector2[,] grid = GameGrid.Instance.tiles;
 
-        target = grid[Random.Range(0, grid.GetLength(0)), GetComponent<EnemySpawn>().spawnRow];
+        Vector2 newTarget = new Vector2();
+        bool exit = false;
+        while (exit == false)
+        {
+            newTarget = grid[Random.Range(0, grid.GetLength(0)), GetComponent<EnemySpawn>().spawnRow];
+            if (newTarget != target && newTarget != grid[0, 0] && newTarget != grid[grid.GetLength(0) - 1, 0])
+            {
+                exit = true;
+            }
+        }
+
+        target = newTarget;
     }
 }

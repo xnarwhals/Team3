@@ -17,7 +17,12 @@ public class EnemySpawn : MonoBehaviour
         grid = GameGrid.Instance;
 
         Vector2 pos = grid.tiles[startFromRight ? grid.tiles.GetLength(0) - 1 : 0, spawnRow];
-        GetComponent<DroneMovement>().target = pos;
+
+        Vector2 tPos = pos; //for target
+        if (tPos == grid.tiles[0, 0]) tPos = grid.tiles[1, 0];
+        else if (tPos == grid.tiles[grid.tiles.GetLength(0) - 1, 0]) 
+            tPos = grid.tiles[grid.tiles.GetLength(0) - 2, 0];
+        GetComponent<DroneMovement>().target = tPos;
 
         pos += new Vector2(startFromRight ? spawnOffset.x : -spawnOffset.x, spawnOffset.y);
 

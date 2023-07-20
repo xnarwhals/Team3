@@ -7,7 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float defaultHealth = 3.0f;
 
-    [DoNotSerialize]
+    [HideInInspector]
     public float currentHealth;
 
     public int score = 1;
