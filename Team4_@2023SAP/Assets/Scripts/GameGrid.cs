@@ -45,7 +45,7 @@ public class GameGrid : MonoBehaviour
 
     private void UpdateGrid()
     {
-        cellShape = new Vector2(1.6f * cellSize, 0.85f * cellSize);
+        cellShape = new Vector2(1.6f * cellSize, 0.85f * cellSize) * (Camera.main.orthographicSize / 5);
 
         tiles = new Vector2[width, height];
         transform.position = new Vector2(-(width * 0.5f * cellShape.x - 0.5f * cellShape.x),
