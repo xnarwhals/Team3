@@ -9,10 +9,13 @@ public class PaintExample : MonoBehaviour
     //Change Paint Variables 
     [SerializeField] [Range(1f, 45f)] float paintAmountUsed;
     [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
+    [SerializeField] [Range(1f, 1.25f)] float regenMultiplier;
+    bool isRegening = true;
+    
 
-    //Refrence to the Bars 
+
+    //Refrence to the Bar 
     [SerializeField] PaintChangeUI paintBar;
-    [SerializeField] IdentityChangeUI identityBar;
 
     private Texture2D colorTex;
 
@@ -42,30 +45,37 @@ public class PaintExample : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (canPaint && GameManager.gameManager.playerPaint.Paint > 0)
+            if(canPaint && GameManager.gameManager.playerPaint.Paint > 0 && isRegening)
             {
-                    PaintTarget.PaintCursor(brush);
-                    PlayerUsePaint(paintAmountUsed);
-                    if (IndexBrush) brush.splatIndex++;
-            }        
+                paintRegenSpeed = 10f;
+                PaintTarget.PaintCursor(brush);
+                PlayerUsePaint(paintAmountUsed);
+                if (IndexBrush) brush.splatIndex++;
+            }         
         }
+
 
         if (GameManager.gameManager.playerPaint.Paint <= 0)
         {
-            canPaint = false; 
+            isRegening = false;
+            canPaint = false;
+            paintRegenSpeed = paintRegenSpeed * regenMultiplier;
+          
         }
+
         else if (GameManager.gameManager.playerPaint.Paint >= 100f)
         {
+            isRegening = true;
             canPaint = true;
+
         }
-  
+
         PlayerRegenPaint();
 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            PlayerLoseIdentity();
-        }
+
+
+
     }
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
@@ -73,13 +83,13 @@ public class PaintExample : MonoBehaviour
         canPaint = !evt.isOver;
     }
 
-    private void PlayerUsePaint(float paintAmount)
+    public void PlayerUsePaint(float paintAmount)
     {
         GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
         paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
     }
 
-    private void PlayerRegenPaint()
+    public void PlayerRegenPaint()
     {
 
         GameManager.gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
@@ -87,9 +97,4 @@ public class PaintExample : MonoBehaviour
 
     }
 
-    private void PlayerLoseIdentity()
-    {
-        GameManager.gameManager.playerIdentity.IdentityLose(5);
-        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
-    }
 } 

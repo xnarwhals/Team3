@@ -19,11 +19,11 @@ public class CartMovement : MonoBehaviour
    
     void Update()
     {
-        MoveGameObject();
+        MoveCart();
 
     }
 
-    void MoveGameObject()
+    void MoveCart()
     {
         if(transform.position == NextPos.position)
         {

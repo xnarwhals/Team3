@@ -13,13 +13,13 @@ public class IdentityChangeUI : MonoBehaviour
 
     }
 
-    public void SetMaxIndentity(int maxIdentity)
+    public void SetMaxIndentity(float maxIdentity)
     {
         identityBarSlider.maxValue = maxIdentity;
         identityBarSlider.value = maxIdentity;
     }
 
-    public void SetIdentity(int Identity)
+    public void SetIdentity(float Identity)
     {
         identityBarSlider.value = Identity;
     }

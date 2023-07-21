@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UnitIdentity
 {
-    public int curIdentity;
-    public int maxIdentity;
+    public float curIdentity;
+    public float maxIdentity;
 
-    public int Identity
+    public float Identity
     {
         get
         {
@@ -19,7 +19,7 @@ public class UnitIdentity
         }
     }
 
-    public int MaxIdentity 
+    public float MaxIdentity 
     {
         get
         {
@@ -31,17 +31,17 @@ public class UnitIdentity
         }
     }
 
-    public UnitIdentity(int Identity, int maximumIdentity)
+    public UnitIdentity(float Identity, float maximumIdentity)
     {
         curIdentity = Identity;
         maxIdentity = maximumIdentity;
     }
 
-    public void IdentityLose(int identityLost)
+    public void IdentityLose(float identityLost)
     {
         if (curIdentity < maxIdentity)
         {
-            curIdentity += identityLost;
+            curIdentity += identityLost; 
         }
 
     }

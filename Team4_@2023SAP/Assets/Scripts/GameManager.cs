@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public UnitIdentity playerIdentity = new UnitIdentity(0, 100);
 
 
+
     private void Awake()
     {
         if (gameManager != null && gameManager != this)
@@ -24,6 +25,5 @@ public class GameManager : MonoBehaviour
             gameManager = this;
         }
     }
-
 
 }

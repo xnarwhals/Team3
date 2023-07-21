@@ -12,7 +12,14 @@ public class DroneMovement : MonoBehaviour
     [Tooltip("how long the drone waits before switching sides")]
     public float stayWaitTime = 10.0f;
 
+<<<<<<< Updated upstream:Team4_@2023SAP/Assets/Scripts/Enemy/DroneMovement.cs
     [HideInInspector]
+=======
+    [SerializeField] IdentityChangeUI identityBar;
+    [SerializeField] float ScanPower = 10;
+
+    [DoNotSerialize]
+>>>>>>> Stashed changes:Team4_@2023SAP/Assets/Scripts/DroneMovement.cs
     public Vector2 target;
 
     Rigidbody2D rb;
@@ -42,6 +49,7 @@ public class DroneMovement : MonoBehaviour
                 EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchStart { drone = gameObject }); //for sound fx
 
                 doSwitch = true;
+                Scan();
             }
         }
         else
@@ -87,5 +95,11 @@ public class DroneMovement : MonoBehaviour
         }
 
         target = newTarget;
+    }
+
+    void Scan()
+    {
+        GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
+        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
     }
 }
