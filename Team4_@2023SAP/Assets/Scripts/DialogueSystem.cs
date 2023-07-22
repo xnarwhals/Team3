@@ -3,11 +3,7 @@
 
 using EvtSystem;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using static GameEvents;
 
 public class DialogueSystem : Singleton<DialogueSystem>
@@ -55,7 +51,8 @@ public class DialogueSystem : Singleton<DialogueSystem>
             }
             else
             {
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)) 
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)
+                    && currentIndex > 0) 
                 {
                     StartDialogue evt = new StartDialogue();
                     evt.dialogueLine = currentDialogue;
@@ -72,6 +69,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     {
         pfp.SetActive(true);
         activate[3].SetActive(true);
+        continueIcon.SetActive(false);
 
         currentDialogue = evt.dialogueLine;
         currentIndex = evt.index;
@@ -116,10 +114,21 @@ public class DialogueSystem : Singleton<DialogueSystem>
     {
         //open level
     }
-
+    
     public void Back()
     {
+        button1.SetActive(false);
+        button2.SetActive(false);
+        pfp.SetActive(false);
 
+        activate[0].SetActive(false);
+        activate[1].SetActive(false);
+        activate[2].SetActive(false);
+        activate[3].SetActive(false);
+
+        dialogueText.text = "";
+
+        EventDispatcher.Raise(new EndDialogue());
     }
 
     class StringReveal

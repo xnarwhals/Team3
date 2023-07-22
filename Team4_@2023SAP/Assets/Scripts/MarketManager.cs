@@ -15,7 +15,7 @@ public class MarketManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(CloseDialogue);
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class MarketManager : MonoBehaviour
         dialogueOpen = true;
     }
 
-    void CloseDialogue()
+    void CloseDialogue(GameEvents.EndDialogue evt)
     {
         dialogueOpen = false;
     }

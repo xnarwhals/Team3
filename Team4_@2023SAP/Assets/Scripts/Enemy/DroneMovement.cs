@@ -12,14 +12,10 @@ public class DroneMovement : MonoBehaviour
     [Tooltip("how long the drone waits before switching sides")]
     public float stayWaitTime = 10.0f;
 
-<<<<<<< Updated upstream:Team4_@2023SAP/Assets/Scripts/Enemy/DroneMovement.cs
-    [HideInInspector]
-=======
     [SerializeField] IdentityChangeUI identityBar;
     [SerializeField] float ScanPower = 10;
 
-    [DoNotSerialize]
->>>>>>> Stashed changes:Team4_@2023SAP/Assets/Scripts/DroneMovement.cs
+    [HideInInspector]
     public Vector2 target;
 
     Rigidbody2D rb;
