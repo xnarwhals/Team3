@@ -23,7 +23,7 @@ public class MarketManager : MonoBehaviour
     {
         if (!dialogueOpen)
         {
-            if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)) 
+            if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E))
             {
                 OpenDialogue(dialogueLines[currentIndex]);
             }

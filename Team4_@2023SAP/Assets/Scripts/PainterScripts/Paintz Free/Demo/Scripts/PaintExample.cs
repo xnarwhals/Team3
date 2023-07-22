@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PaintExample : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PaintExample : MonoBehaviour
     [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
     [SerializeField] [Range(1f, 1.25f)] float regenMultiplier;
     bool isRegening = true;
+    bool color = false;
+    int[] colors = new int[2];
     
 
 
@@ -33,15 +36,30 @@ public class PaintExample : MonoBehaviour
             brush.splatsX = 4;
             brush.splatsY = 4;
         }
+
+        colors[0] = PlayerPrefs.GetInt("Color1");
+        colors[1] = PlayerPrefs.GetInt("Color2");
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
+        if (Input.GetKeyDown("X"))
+        {
+            color = !color;
+            if (color)
+            {
+                brush.splatChannel = colors[0];
+            }
+            else
+            {
+                brush.splatChannel = colors[1];
+            }
+        }
+       
+        /*if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
-        if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green
-
+        if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green*/
 
         if (Input.GetMouseButtonDown(0))
         {

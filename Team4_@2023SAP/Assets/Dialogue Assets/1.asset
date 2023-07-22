@@ -13,16 +13,10 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   lines:
-  - wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
-    wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
-    wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha wha
-  - 'ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw ahw
-    ahw ahw ahw ahw '
-  color: 
+  - I really like fire, it's pretty cool
+  - So I like RED and ORANGE because they're pretty cool.
+  color1: 0
+  color2: 1
   multiplier: 1
   difficulty: 1
+  CloseUp: {fileID: 21300000, guid: 87cd8ee4936c10d479fd81db1d205506, type: 3}
