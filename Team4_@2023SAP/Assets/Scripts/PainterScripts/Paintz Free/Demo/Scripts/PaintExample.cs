@@ -43,7 +43,7 @@ public class PaintExample : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("X"))
+        if (Input.GetKeyDown("x"))
         {
             color = !color;
             if (color)
