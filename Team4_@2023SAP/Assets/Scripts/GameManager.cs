@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
 
     public static GameManager gameManager { get; private set; }
@@ -12,18 +12,52 @@ public class GameManager : MonoBehaviour
 
     public UnitIdentity playerIdentity = new UnitIdentity(0, 100);
 
+    [SerializeField] private SceneLoadingManager _sceneLoadingManager;
+
+    [SerializeField] private bool _isGameOver;
+
+    [SerializeField] private GameObject GameOverUI;
 
 
-    private void Awake()
+    void Start()
     {
-        if (gameManager != null && gameManager != this)
+        _isGameOver = false;
+        FetchComponents();
+    }
+
+    void FetchComponents()
+    {
+        _sceneLoadingManager = GameObject.Find("SceneLoadingManager").GetComponent<SceneLoadingManager>();
+
+        if (_sceneLoadingManager == null)
         {
-            Destroy(this);
+            Debug.Log("THERE IS NO SCENE LOADING MANAGER IN SCENE :)");
         }
-        else
+    }
+
+    public void Restart()
+    {
+        if (_isGameOver == true)
         {
-            gameManager = this;
+            int sceneID = _sceneLoadingManager.activeScene;
+            _sceneLoadingManager.LoadLevel(sceneID);
         }
+        else if(_isGameOver == false)
+        {
+            Debug.Log("No, Play The Game");
+        }
+    }
+
+    public void SetGameOver()
+    {
+        GameOverUI.SetActive(true);
+        _isGameOver = true;
+        
+    }
+
+    public void QuitGame()
+    {
+
     }
 
 }
