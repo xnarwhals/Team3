@@ -3,11 +3,9 @@
 
 using EvtSystem;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static GameEvents;
 
 public class DialogueSystem : Singleton<DialogueSystem>
@@ -18,6 +16,9 @@ public class DialogueSystem : Singleton<DialogueSystem>
     public GameObject pfp;
     public GameObject[] activate; //very temp
     public GameObject continueIcon;
+
+    public GameObject color1;
+    public GameObject color2;
 
     MarketDialogue currentDialogue;
     int currentIndex = 0;
@@ -41,7 +42,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
         {
             if (!typewriter.isDone())
             {
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)
                     && typewriter.GetCurrentRevealedText().Length > 0)  //fixes a bug using duct tape
                 {
                     typewriter.ForceFinish();
@@ -55,7 +56,8 @@ public class DialogueSystem : Singleton<DialogueSystem>
             }
             else
             {
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.Return)) 
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)
+                    && currentIndex > 0) 
                 {
                     StartDialogue evt = new StartDialogue();
                     evt.dialogueLine = currentDialogue;
@@ -70,14 +72,19 @@ public class DialogueSystem : Singleton<DialogueSystem>
     //just putting this in start for now
     public void BeginDialogue(StartDialogue evt)
     {
-        pfp.SetActive(true);
-        activate[3].SetActive(true);
 
         currentDialogue = evt.dialogueLine;
         currentIndex = evt.index;
         float duration = currentDialogue.lines[evt.index].Length / dialogueSpeed;
 
         typewriter.StartReveal(currentDialogue.lines[evt.index], duration);
+
+
+        pfp.SetActive(true);
+        pfp.GetComponent<Image>().sprite = currentDialogue.CloseUp;
+
+        activate[0].SetActive(true);
+        continueIcon.SetActive(false);
     }
 
     void DialogueEnd()
@@ -106,20 +113,64 @@ public class DialogueSystem : Singleton<DialogueSystem>
         button1.SetActive(true);
         button2.SetActive(true);
 
-        activate[0].SetActive(true);
         activate[1].SetActive(true);
         activate[2].SetActive(true);
+
+        Image img = color1.GetComponent<Image>();
+        switch (currentDialogue.color1)
+        {
+            case 0:
+                img.color = new Color(223.0f / 255, 143.0f / 255, 42.0f / 255);
+                break;
+            case 1:
+                img.color = Color.red;
+                break;
+            case 2:
+                img.color = Color.blue;
+                break;
+            case 3:
+                img.color = Color.green;
+                break;
+        }
+
+        img = color2.GetComponent<Image>();
+        switch (currentDialogue.color2)
+        {
+            case 0:
+                img.color = new Color(223, 143, 42);
+                break;
+            case 1:
+                img.color = Color.red;
+                break;
+            case 2:
+                img.color = Color.blue;
+                break;
+            case 3:
+                img.color = Color.green;
+                break;
+        }
     }
 
     //the button on the top is 0 and the bottom is 1
     public void Choose()
     {
-        //open level
+        PlayerPrefs.SetInt("Color1", currentDialogue.color1);
+        PlayerPrefs.SetInt("Color1", currentDialogue.color2);
     }
-
+    
     public void Back()
     {
+        button1.SetActive(false);
+        button2.SetActive(false);
+        pfp.SetActive(false);
 
+        activate[0].SetActive(false);
+        activate[1].SetActive(false);
+        activate[2].SetActive(false);
+
+        dialogueText.text = "";
+
+        EventDispatcher.Raise(new EndDialogue());
     }
 
     class StringReveal

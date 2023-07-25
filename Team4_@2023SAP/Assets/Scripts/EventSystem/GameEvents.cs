@@ -10,6 +10,11 @@ public class GameEvents : MonoBehaviour
         public int index;
     }
 
+    public class EndDialogue : EvtSystem.Event
+    {
+
+    }
+
     public class DroneSwitchStart : EvtSystem.Event 
     {
         public GameObject drone;
