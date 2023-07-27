@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: -3071.461}
-  m_SizeDelta: {x: 654.09, y: 805.4077}
+  m_AnchoredPosition: {x: -55.572052, y: -1995.3992}
+  m_SizeDelta: {x: 654.09, y: 579.3193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39172318
 MonoBehaviour:
@@ -195,9 +195,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Big Thank You To: \n\n\nThe Gameheads Board for the Feedback on Saturdays\n\n\nEvery
-    Gameheads mentor who showed up for \"Mentor Madness\"\n\n\nFriends + Family Supporting
-    and Playing Our Game\n\n\nGameheads Students:\nJose Martinez\nCarlos Cruz\nFrancisco
-    Flores\nZiggy Henry\n\n\nAnd Of Course...\n\n\n\nYou."
+    individual instructor for \"Unity Day\"\n\n\nAll Gameheads mentors who showed
+    up for \"Mentor Madness\"\n\n\nFriends + Family Supporting and Playing Our Game\n\n\nAnd
+    Of Course...\n\n\n\nYou for downloading and finishing our game."
 --- !u!222 &39172319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.000006, y: -3856}
+  m_AnchoredPosition: {x: -55.572083, y: -2715.4434}
   m_SizeDelta: {x: 654.09, y: 101.8954}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &67847081
@@ -362,8 +362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 252.84755, y: -1548.003}
-  m_SizeDelta: {x: 464.3244, y: 2116.114}
+  m_AnchoredPosition: {x: 151.42795, y: -1091.654}
+  m_SizeDelta: {x: 428.7312, y: 1088.5354}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &318130760
 MonoBehaviour:
@@ -387,7 +387,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -398,15 +398,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Rogelio Lara\nRogelio.lara007@gmail.com\nInsta/Twitter: @Gamerlink7\n\n\n\nJonathan
-    Mahogany Jr.\nJondmjr@gmail.com\nInsta/Twitter: @xenoslayerlv426\n\n\n\nGriselda
-    Aleman\nGriselda.aleman707@gmail.com\nInsta: @zelda_7o7\n\n\n\nWilson Lee\nWilson2304@gmail.com\nDiscord:
-    Timson#2342\n\n\n\nAdam Nguyenk\nAdam.Nguyenk4@gmail.com\n@NeoPlaid120\n\n\n\nDario
-    Quintero\nDario.r.quintero@gmail.com\nInsta: @Dario.r.quintero\n\n\n\nJilana
-    Jaemsopon\nJilanajaemsopon@gmail.com\nInsta: @yami_bonneko \n\n\n\nRogelio Lara\nRogelio.lara007@gmail.com\nInsta/Twitter:
-    @Gamerlink7\n\n\n\nAviva Schecterson\nNicholas Brancaccio\nBrian Mullan\nAlston
-    Chan\nForrest Pando\nFatima Dominguez\n\nJavierzumer\nPaul Virostek\nDrotzruhn\nFreqman\nKenney
-    UI\n---"
+  m_Text: "Rogelio Lara\nRogelio.lara007@gmail.com\nInsta/Twitter: @Gamerlink7\n\n\nXavier
+    Gonzalez\nXaviergonzalezpersonal@gmail.com\nInsta: @xnarwhalsyt\n\n\nJonathan
+    Mahogany Jr.\nJondmjr@gmail.com\nInsta/Twitter: @xenoslayerlv426\n\n\nZiggy Henry\nZiggycooperhenry@gmail.com\n...\n\n\nReyna
+    Castro\nReyguin428@gmail.com\nInsta: Reytheloser\n\n\nGriselda Aleman\nGriselda.aleman707@gmail.com\nInsta:
+    @zelda_7o7\n\n\nReese Climaco P\xE9rez\nmarissa.climacoperez@gmail.com\n\n\nCierra
+    McDonald\nXav\nJon\nZigg\nGris\n\n"
 --- !u!222 &318130761
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -615,7 +612,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1724530785}
+  - {fileID: 1495436874}
+  - {fileID: 888998179}
   - {fileID: 798097295}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -801,6 +799,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &888998178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888998179}
+  - component: {fileID: 888998181}
+  - component: {fileID: 888998180}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &888998179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888998178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487536684}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -130.716, y: 2.9880066}
+  m_SizeDelta: {x: -246.781, y: 5.978}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &888998180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888998178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &888998181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888998178}
+  m_CullTransparentMesh: 1
 --- !u!1 &1003642804
 GameObject:
   m_ObjectHideFlags: 1
@@ -880,8 +954,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: -1548.0149}
-  m_SizeDelta: {x: 422.5267, y: 2116.1497}
+  m_AnchoredPosition: {x: -270.99997, y: -1091.6602}
+  m_SizeDelta: {x: 391.3826, y: 1088.5537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323980272
 MonoBehaviour:
@@ -905,7 +979,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 25
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
@@ -916,21 +990,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\"El Mero Mero\" - \nProject Lead & Manager\n\n\n\"El Pensador\" -\nProgrammer
-    Lead & Debugger\n\n\n\"El M\xFAsico ... un poco\" - Sound Designer & Music Composer\n\n\"La
-    Mano Derecha\" -\nGame/Level Designer \r\n& Backup Programmer\n\r\n\r\n\"La Aprendiz\"
-    - \nPaint Gun Designer & \nEnemy Artist\n\n\n\"La Determinada\" - \nArt Lead,
-    Background, & Character Artist\r\n\r\n\r\n\"The Green that Acts like an Orange
-    Troll\" - Lead Programmer and Programming Q.A\r\n\r\n\r\n\"The Constantly Learning
-    Assassin who is Always Quiet\" - Game and Level Designer\r\n\r\n\r\n\"The M.V.P
-    Legendary One Man Army\" - Background Environmental Artist & Chief Debugger in
-    Unity\r\n\r\n\r\n\"Feedbacker Seeker with Effort for Days on End\" - Enemy Designer
-    and Word Projectile Animator\r\n\r\n\r\n\"Yeah\u2026 This guy had a lot of roles
-    on this project LOL\" - Also Game and Level + U.I and Narrative Designer \r\n\n\nThe
+  m_Text: "\"El Mero Mero\" \n- Project Lead, Manager, Game/Level/Narrative Designer\n\n\n\"El
+    Pensador\"\n- Programmer Lead & \nDebugger\n\n\n\"El M\xFAsico ... un poco\"
+    \n- Sound Designer \n& Music Composer\n\n\n\"La Mano Derecha\" \n- Game/Level
+    Designer \r\n& Backup Programmer\n\r\n\r\n\"La Aprendiz\" \n- Paint Gun Designer
+    & \nEnemy Artist\n\n\n\"La Determinada\" \n- Art Lead, Background, & Character
+    Artist\r\n\r\n\r\n\"El Siempre pensativo/a\" \n- Our Game's UX/UI Designer\n\n\nThe
     AMAZING SUPER ULTRA MEGA AWESOME Mentors who helped with the development of this
-    game (in order of the roles shown):\n\n\n\"The Creatively Talented\" - Sound
-    Designers who posted their work online for others to use. You made a huge impact
-    and we wanted to credit you definitely:"
+    game through feedback (in order of the roles shown):"
 --- !u!222 &1323980273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1067,7 +1134,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1724530784
+--- !u!1 &1495436873
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,9 +1142,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1724530785}
-  - component: {fileID: 1724530787}
-  - component: {fileID: 1724530786}
+  - component: {fileID: 1495436874}
+  - component: {fileID: 1495436876}
+  - component: {fileID: 1495436875}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -1085,60 +1152,60 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1724530785
+--- !u!224 &1495436874
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724530784}
+  m_GameObject: {fileID: 1495436873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 487536684}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1724530786
+--- !u!114 &1495436875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724530784}
+  m_GameObject: {fileID: 1495436873}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 41ecfbc86e93f2d4ba6cc47cf557b9b2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
---- !u!222 &1724530787
+--- !u!222 &1495436876
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724530784}
+  m_GameObject: {fileID: 1495436873}
   m_CullTransparentMesh: 1
 --- !u!1 &1897417378
 GameObject:
@@ -1177,8 +1244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 8.7, y: -406.82104}
-  m_SizeDelta: {x: 706.2182, y: 119.3986}
+  m_AnchoredPosition: {x: -32, y: -485}
+  m_SizeDelta: {x: 531.1794, y: 111.8479}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1897417380
 Animator:
@@ -1222,8 +1289,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: f87bbff2a877b9f4998acc3fe2ffb89a, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1234,11 +1301,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Congratulations! You have beaten our game''s Demo!
-
-
-    Staff (In Order
-    of Joining the Team):'
+  m_Text: "Congratulations! \nYou beaten the game's Demo!\n\nStaff (In Order of Joining
+    the Team):"
 --- !u!222 &1897417382
 CanvasRenderer:
   m_ObjectHideFlags: 0
