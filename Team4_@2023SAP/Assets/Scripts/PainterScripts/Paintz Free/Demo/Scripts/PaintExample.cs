@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PaintExample : MonoBehaviour
+public class PaintExample : Singleton<PaintExample>
 {
     public Brush brush;
     public bool SingleShotClick = false;
@@ -43,19 +43,6 @@ public class PaintExample : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("x"))
-        {
-            color = !color;
-            if (color)
-            {
-                brush.splatChannel = colors[0];
-            }
-            else
-            {
-                brush.splatChannel = colors[1];
-            }
-        }
-       
         /*if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
@@ -71,7 +58,6 @@ public class PaintExample : MonoBehaviour
                 if (IndexBrush) brush.splatIndex++;
             }         
         }
-
 
         if (GameManager.gameManager.playerPaint.Paint <= 0)
         {
@@ -89,11 +75,6 @@ public class PaintExample : MonoBehaviour
         }
 
         PlayerRegenPaint();
-
-
-
-
-
     }
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)

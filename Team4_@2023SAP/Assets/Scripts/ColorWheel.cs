@@ -9,12 +9,14 @@ public class ColorWheel : MonoBehaviour
 
     int currentIndex;
 
+    PaintExample paintScript;
     Image img;
 
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
+        paintScript = PaintExample.Instance;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class ColorWheel : MonoBehaviour
                 currentIndex = (int)(Vector2.Angle(Vector2.left, stickPos) / 180.0f * (sprites.Length - 1));
                 img.sprite = sprites[currentIndex];
 
-                FindAnyObjectByType<PaintExample>().brush.splatChannel = currentIndex;
+                paintScript.brush.splatChannel = currentIndex;
             }
         }
         else

@@ -22,8 +22,7 @@ public class PauseManager : MonoBehaviour
             {
                 if (!mainCanvas.activeInHierarchy)
                 {
-                    mainCanvas.SetActive(true);
-                    Time.timeScale = 0.0f;
+                    PauseGame();
                 }
                 else
                 {
@@ -37,10 +36,20 @@ public class PauseManager : MonoBehaviour
         }
     }
 
+    public void PauseGame()
+    {
+        mainCanvas.SetActive(true);
+        Time.timeScale = 0.0f;
+
+        Cursor.visible = true;
+    }
+
     public void ContinueClicked()
     {
         mainCanvas.SetActive(false);
         Time.timeScale = 1.0f; //if we do bullet time, change this!
+
+        Cursor.visible = false;
     }
 
     public void RestartClicked()
