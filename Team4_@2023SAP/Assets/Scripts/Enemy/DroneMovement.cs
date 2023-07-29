@@ -11,6 +11,7 @@ public class DroneMovement : MonoBehaviour
     public float switchTime = 1.0f;
     [Tooltip("how long the drone waits before switching sides")]
     public float stayWaitTime = 10.0f;
+    public float scanTime = 1.0f;
 
     [SerializeField] IdentityChangeUI identityBar;
     [SerializeField] float ScanPower = 10;
@@ -18,43 +19,67 @@ public class DroneMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 target;
 
-    Rigidbody2D rb;
+    Animator animator;
 
-    bool doSwitch = false;
 
     float stayTimer = 0.0f;
+    float scanTimer = 0.0f;
+
     Vector2 dampVel = Vector2.zero;
     
+    enum Mode
+    {
+        move,
+        idle,
+        scan
+    }
+
+    Mode _mode = Mode.move;
+    Mode mode
+    {
+        get { return _mode; }
+        set 
+        { 
+            _mode = value;
+
+            animator.SetInteger("State", (int)_mode);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!doSwitch)
+        switch (mode)
         {
-            stayTimer += Time.deltaTime;
-            if (stayTimer >= stayWaitTime)
-            {
-                stayTimer = 0;
+            case Mode.move:
+                updateMove();
+                break;
 
-                EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchStart { drone = gameObject }); //for sound fx
+            case Mode.idle:
+                stayTimer += Time.deltaTime;
+                if (stayTimer >= stayWaitTime)
+                {
+                    stayTimer = 0;
 
-                doSwitch = true;
-                Scan();
-            }
-        }
-        else
-        {
-            switchSides();
+                    EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchStart { drone = gameObject }); //for sound fx
+
+                    startScan();
+                }
+                break;
+
+            case Mode.scan:
+                
+                break;
         }
     }
 
-    void switchSides() //runs in update (during switching)
+    void updateMove() //runs in update (during switching)
     {
         if (!reachedDest())
         {
@@ -63,8 +88,7 @@ public class DroneMovement : MonoBehaviour
         }
         else
         {
-            doSwitch = false;
-            updateSwitchVars();
+            finishMove();
 
             EvtSystem.EventDispatcher.Raise(new GameEvents.DroneSwitchDone { drone = gameObject }); //for sound fx
         }
@@ -75,8 +99,10 @@ public class DroneMovement : MonoBehaviour
         }
     }
 
-    void updateSwitchVars()
+    void finishMove()
     {
+        mode = Mode.idle;
+
         Vector2[,] grid = GameGrid.Instance.tiles;
 
         Vector2 newTarget = new Vector2();
@@ -93,12 +119,16 @@ public class DroneMovement : MonoBehaviour
         target = newTarget;
     }
 
-    void Scan()
+    void startScan()
     {
-        if(GameManager.gameManager.playerIdentity.Identity < 100)
-        {
-            GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
-            identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
-        }
+        mode = Mode.scan;
+    }
+
+    public void finishScan()
+    {
+        GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
+        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
+
+        mode = Mode.move;
     }
 }

@@ -1,25 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class PointManager : Singleton<PointManager>
+public class ScoreUI : MonoBehaviour
 {
-    public int score = 0;
+    TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()
     {
         EvtSystem.EventDispatcher.AddListener<GameEvents.UpdateScore>(UpdateScore);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        text = GetComponent<TextMeshProUGUI>();
     }
 
     void UpdateScore(GameEvents.UpdateScore evt)
     {
-        score += evt.score;
+        text.text = ("Score : " + PointManager.Instance.score);
     }
 }

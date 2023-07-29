@@ -2,38 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reticle : MonoBehaviour
+public class Reticle : Singleton<Reticle>
 {
-    public Texture2D[] cursorTexture;//Texture   
-    public CursorMode cursorMode = CursorMode.Auto;//Size makes image fit cursor 
-    public Vector2 hotSpot = Vector2.zero;//Click and interact with things  
+    public float speed;
+
+    Rigidbody2D rb;
 
     public void Start()
     {
-        Cursor.SetCursor(cursorTexture[0], hotSpot, cursorMode);
-    }
+        rb = GetComponent<Rigidbody2D>();
 
-    /*public void OnMouseExit()
-    {
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
-    } */
+        Cursor.visible = false;
+    }
 
     public void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Alpha1))) Cursor.SetCursor(cursorTexture[1], hotSpot, cursorMode);
-        if ((Input.GetKeyDown(KeyCode.Alpha2))) Cursor.SetCursor(cursorTexture[2], hotSpot, cursorMode);
-        if ((Input.GetKeyDown(KeyCode.Alpha3))) Cursor.SetCursor(cursorTexture[3], hotSpot, cursorMode);
-        if ((Input.GetKeyDown(KeyCode.Alpha4))) Cursor.SetCursor(cursorTexture[4], hotSpot, cursorMode);
-        if ((Input.GetKeyDown(KeyCode.Alpha5))) Cursor.SetCursor(cursorTexture[0], hotSpot, cursorMode);
+        if (Input.GetJoystickNames().Length > 0)
+        {
+            Vector2 stickPos = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            Vector2 desiredPos = (Vector2)transform.position + (2* stickPos);
+
+            transform.position = Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
+        }
+        else
+        {
+            Vector2 desiredPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            transform.position = Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
+        }
     }
-
-    private void OnMouseOver()
-    {
-        
-    }
-
-
-
-
-
 }

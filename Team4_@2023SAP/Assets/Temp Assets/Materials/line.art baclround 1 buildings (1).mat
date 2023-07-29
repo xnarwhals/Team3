@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 30f2767a14a4583459eb17a9e1236095, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatTex:
@@ -44,7 +44,7 @@ Material:
     - _BumpPower: 1
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _SplatEdgeBump: 1
+    - _SplatEdgeBump: 0.25
     - _SplatEdgeBumpWidth: 1
     - _SplatGlossiness: 0.8
     - _SplatMetallic: 0
@@ -52,7 +52,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SplatColor1: {r: 0.90588236, g: 0.17254902, b: 0.5921569, a: 1}
-    - _SplatColor2: {r: 1, g: 0, b: 0, a: 1}
-    - _SplatColor3: {r: 0, g: 0, b: 1, a: 1}
-    - _SplatColor4: {r: 0, g: 1, b: 0, a: 1}
+    - _SplatColor2: {r: 1, g: 0.2627451, b: 0, a: 1}
+    - _SplatColor3: {r: 0.21568628, g: 0.8039216, b: 0.9529412, a: 1}
+    - _SplatColor4: {r: 0.08707574, g: 0.764151, b: 0, a: 1}
+    - _SplatColor5: {r: 0, g: 0.8198209, b: 1, a: 1}
   m_BuildTextureStacks: []

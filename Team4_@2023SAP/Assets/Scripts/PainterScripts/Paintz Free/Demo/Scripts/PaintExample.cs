@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PaintExample : MonoBehaviour
+public class PaintExample : Singleton<PaintExample>
 {
     public Brush brush;
     public bool SingleShotClick = false;
@@ -14,13 +14,13 @@ public class PaintExample : MonoBehaviour
     bool isRegening = true;
     bool color = false;
     int[] colors = new int[2];
-    
+
 
 
     //Refrence to the Bar + GameManager
     [SerializeField] PaintChangeUI paintBar;
-    [SerializeField] private GameManager _gameManager;  
-    
+    [SerializeField] private GameManager _gameManager;
+
 
     private Texture2D colorTex;
 
@@ -59,12 +59,6 @@ public class PaintExample : MonoBehaviour
                 brush.splatChannel = colors[1];
             }
         }
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
-        if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
-        if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
-        if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green
 
 
         if (Input.GetMouseButtonDown(0))
@@ -112,7 +106,7 @@ public class PaintExample : MonoBehaviour
         }
     }
 
-           
+
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
     {
@@ -127,7 +121,7 @@ public class PaintExample : MonoBehaviour
 
     public void PlayerRegenPaint()
     {
-        
+
         _gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
         paintBar.SetPaint(_gameManager.playerPaint.Paint);//updates UI
 

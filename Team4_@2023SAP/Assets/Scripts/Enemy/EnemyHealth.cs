@@ -29,7 +29,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0.0f)
         {
-            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject, score = score});
+            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject });
+            EvtSystem.EventDispatcher.Raise(new GameEvents.UpdateScore() { score = score });
             Destroy(gameObject);//temp maybe
         }
     }

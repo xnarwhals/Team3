@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: a10e24562ae74b54b8ef592a480a2f8d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd89b7268e7524390015ca02eb2ee5
+      internalID: -1097653405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 26
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e85ec66b99dfa43b6956254a6aaf5b
+      internalID: -26391917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01dbc9849bc96946b5f858ca51dc52f
+      internalID: -1266406385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b794778429c0e1741b5d0d1d8f049758
+      internalID: 1233355744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_4
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac928d71a55bf54fa28165febf3c8c0
+      internalID: -435910038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6170206288f1f9d4f8bda697c9b3b741
+      internalID: 1002030273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 26.5
+        width: 27.181818
+        height: 26.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e3193c18eb896488241b9f6bc3d059
+      internalID: 1740041716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_7
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4092c0aa31dd2d14fb09dd5e9d6ed333
+      internalID: 1160062765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455c67844f3e4cc4da592d0c4e694041
+      internalID: -1136056355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9477f787a5834564489ec2dc5aee37a3
+      internalID: -163128994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_10
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 27
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c1d59b5ae5cdc4082cdbec333bd403
+      internalID: -1474350305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06f68dae70a06d4ba6dd1a3dc8725e4
+      internalID: 1144607466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 27
+        height: 26
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fafd248ad6909d4f9ae3759efb5aadf
+      internalID: -1152941315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bbb43967c0c55418df80b10c4a225a
+      internalID: 1553879721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347c14ffbd4114a4ab957e2257dffdca
+      internalID: -426497717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_16
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3806ddc834ddc9b47a21c2d668451ec0
+      internalID: -1012862959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a7cc587a9ec234898b087564021135
+      internalID: 1973355557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_18
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 0
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ef738f173f4194a88bb0552541976b
+      internalID: 725093194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 299
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea482ca7b266894ca5136c4aacec7e4
+      internalID: 370649690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 299
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67469aa845922b1418827b0a0c0047f7
+      internalID: -18668409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_0: -1097653405
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_1: -26391917
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_10: -1474350305
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_11: 1144607466
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_12: -1152941315
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_13: 1553879721
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_14: -426497717
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_15: 2057388428
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_16: -1012862959
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_17: 1973355557
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_18: 725093194
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_19: -1253911627
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_2: -1266406385
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_20: 370649690
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_21: 1740121304
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_22: -18668409
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_23: -915956399
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_3: 1233355744
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_4: -435910038
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_5: 1002030273
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_6: 1740041716
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_7: 1160062765
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_8: -1136056355
+      Game Boy Advance - Kirby & the Amazing Mirror - Sleep and Mini Kirby_9: -163128994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

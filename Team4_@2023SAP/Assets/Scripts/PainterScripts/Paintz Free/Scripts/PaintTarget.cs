@@ -188,7 +188,8 @@ public class PaintTarget : MonoBehaviour
             return;
         }
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay
+            (Camera.main.WorldToScreenPoint(Reticle.Instance.transform.position)); //worst line of code ever
         PaintRaycast(ray, brush);
     }
 

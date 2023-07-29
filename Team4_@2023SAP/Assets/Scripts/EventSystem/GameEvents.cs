@@ -53,6 +53,10 @@ public class GameEvents : MonoBehaviour
     public class EnemyDie : EvtSystem.Event
     {
         public GameObject enemy;
+    }
+
+    public class UpdateScore : EvtSystem.Event
+    {
         public int score;
     }
 }

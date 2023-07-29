@@ -176,6 +176,8 @@ MonoBehaviour:
   height: 5
   cellSize: 2.35
   gridPrefab: {fileID: 84617807135528026, guid: 5c5e099166769f642888c6e52dcbab53, type: 3}
+  showXs: 0
+  showLines: 0
 --- !u!1001 &735146869
 PrefabInstance:
   m_ObjectHideFlags: 0
