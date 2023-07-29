@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - NonPaintable
-  - PaintManager
+  - GameOverUI
   layers:
   - Default
   - TransparentFX

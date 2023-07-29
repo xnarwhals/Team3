@@ -17,15 +17,19 @@ public class PaintExample : MonoBehaviour
     
 
 
-    //Refrence to the Bar 
+    //Refrence to the Bar + GameManager
     [SerializeField] PaintChangeUI paintBar;
+    [SerializeField] private GameManager _gameManager;  
+    
 
     private Texture2D colorTex;
 
     private bool canPaint = true;
+    public bool isDead;
 
     private void Start()
     {
+        _gameManager = FindObjectOfType<GameManager>();
         EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
 
         colorTex = new Texture2D(1, 1);
@@ -55,33 +59,35 @@ public class PaintExample : MonoBehaviour
                 brush.splatChannel = colors[1];
             }
         }
-       
-        /*if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) brush.splatChannel = 0;//orange
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
-        if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green*/
+        if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green
+
 
         if (Input.GetMouseButtonDown(0))
         {
-            if(canPaint && GameManager.gameManager.playerPaint.Paint > 0 && isRegening)
+            if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening)
             {
                 paintRegenSpeed = 10f;
                 PaintTarget.PaintCursor(brush);
                 PlayerUsePaint(paintAmountUsed);
                 if (IndexBrush) brush.splatIndex++;
-            }         
+            }
         }
 
 
-        if (GameManager.gameManager.playerPaint.Paint <= 0)
+        if (_gameManager.playerPaint.Paint <= 0)
         {
             isRegening = false;
             canPaint = false;
             paintRegenSpeed = paintRegenSpeed * regenMultiplier;
-          
+
         }
 
-        else if (GameManager.gameManager.playerPaint.Paint >= 100f)
+        else if (_gameManager.playerPaint.Paint >= 100f)
         {
             isRegening = true;
             canPaint = true;
@@ -90,11 +96,23 @@ public class PaintExample : MonoBehaviour
 
         PlayerRegenPaint();
 
+        if (_gameManager.playerIdentity.Identity >= 100 && !isDead)
+        {
+            isDead = true;
 
-
-
-
+            Debug.Log("Gameover");
+            _gameManager.GameOver();
+        }
+        else
+        {
+            if (_gameManager.playerIdentity.Identity < 100)
+            {
+                isDead = false;
+            }
+        }
     }
+
+           
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
     {
@@ -103,15 +121,15 @@ public class PaintExample : MonoBehaviour
 
     public void PlayerUsePaint(float paintAmount)
     {
-        GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
-        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        _gameManager.playerPaint.UsePaint(paintAmount);//updates data
+        paintBar.SetPaint(_gameManager.playerPaint.Paint);//updates UI
     }
 
     public void PlayerRegenPaint()
     {
-
-        GameManager.gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
-        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        
+        _gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
+        paintBar.SetPaint(_gameManager.playerPaint.Paint);//updates UI
 
     }
 

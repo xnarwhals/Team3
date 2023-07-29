@@ -95,7 +95,10 @@ public class DroneMovement : MonoBehaviour
 
     void Scan()
     {
-        GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
-        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
+        if(GameManager.gameManager.playerIdentity.Identity < 100)
+        {
+            GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
+            identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
+        }
     }
 }

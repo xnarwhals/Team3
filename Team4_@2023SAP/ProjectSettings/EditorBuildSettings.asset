@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/BuildScenes/TitleScreen.unity
+    guid: 0c7282eaae6a9b24783773ed3f83b9b0
   - enabled: 1
-    path: Assets/Scenes/WhiteBox2.unity
-    guid: e8eaf3e89ff324664b032efd03a67d5f
+    path: Assets/Scenes/BuildScenes/Level01.unity
+    guid: a9d72266842bf4657b56c7b6fe74fe72
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/Loading.unity
+    guid: 40bb6baad0a3f495d8d4f52cc91ccf5c
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/MarketTest.unity
+    guid: 23776c2a5c1c1fe488ee17b018f2998f
   m_configObjects: {}

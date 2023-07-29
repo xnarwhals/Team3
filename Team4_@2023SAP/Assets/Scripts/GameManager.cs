@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 { 
@@ -11,67 +12,45 @@ public class GameManager : MonoBehaviour
 
     public UnitIdentity playerIdentity = new UnitIdentity(0, 100);
 
-    [SerializeField] private SceneLoadingManager _sceneLoadingManager;
+    public GameObject gameOverUI;
 
-    [SerializeField] private bool _isGameOver;
+    GameObject playerGun;
 
-    [SerializeField] private GameObject GameOverUI;
+    public bool _isGameOver = false;
 
 
     private void Awake()
     {
-        if (gameManager != null && gameManager != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            gameManager = this;
-            DontDestroyOnLoad(gameManager);
-        }
+        gameManager = this;
+        playerGun = GameObject.Find("projectileShooter");
     }
 
-    void Start()
-    {
-        _isGameOver = false;
-        FetchComponents();
-    }
+    
 
-    void FetchComponents()
+    public void GameOver()
     {
-        _sceneLoadingManager = GameObject.Find("SceneLoadingManager").GetComponent<SceneLoadingManager>();
-
-        if (_sceneLoadingManager == null)
-        {
-            Debug.Log("THERE IS NO SCENE LOADING MANAGER IN SCENE :)");
-        }
+        _isGameOver = true;
+        playerGun.SetActive(false);
+        gameOverUI.SetActive(true);
     }
 
     public void Restart()
     {
-        if (_isGameOver == true)
-        {
-            int sceneID = _sceneLoadingManager.activeScene;
-            _sceneLoadingManager.LoadLevel(sceneID);
-        }
-        else if(_isGameOver == false)
-        {
-            
-            Debug.Log("No, Play The Game");
-        }
+        _isGameOver = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerIdentity.Identity = 0;
     }
 
-    public void SetGameOver()
+    public void MainMenu()
     {
-        GameOverUI.SetActive(true);
-        Debug.Log("GameOver");
-        _isGameOver = true;
-        
+        SceneManager.LoadScene("TitleScreen");
     }
 
-    public void QuitGame()
+    public void Quit()
     {
-
+        Application.Quit(); 
     }
+
+
 
 }
