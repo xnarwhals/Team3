@@ -21,7 +21,7 @@ public class ProjectileShooter : MonoBehaviour
     {
         firetimer += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             if (firetimer >= fireRate)
             {
