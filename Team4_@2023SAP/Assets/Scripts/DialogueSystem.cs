@@ -151,11 +151,13 @@ public class DialogueSystem : Singleton<DialogueSystem>
         }
     }
 
-    //the button on the top is 0 and the bottom is 1
     public void Choose()
     {
         PlayerPrefs.SetInt("Color1", currentDialogue.color1);
         PlayerPrefs.SetInt("Color1", currentDialogue.color2);
+
+        SceneManager.LoadScene("FinalizedBuild");
+        Destroy(gameObject);
     }
     
     public void Back()

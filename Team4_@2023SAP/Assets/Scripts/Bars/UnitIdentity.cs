@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnitIdentity
@@ -41,9 +42,9 @@ public class UnitIdentity
     {
         if (curIdentity < maxIdentity)
         {
-            curIdentity += identityLost; 
+            curIdentity += identityLost;
+            GameObject.FindAnyObjectByType<IdentityChangeUI>().SetIdentity(Identity); //REMOVE THIS AND DO SOMETHING BETTER!!11!!1!
         }
-
     }
 
 }

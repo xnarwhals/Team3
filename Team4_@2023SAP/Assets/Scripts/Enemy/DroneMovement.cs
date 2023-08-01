@@ -13,7 +13,6 @@ public class DroneMovement : MonoBehaviour
     public float stayWaitTime = 10.0f;
     public float scanTime = 1.0f;
 
-    [SerializeField] IdentityChangeUI identityBar;
     [SerializeField] float ScanPower = 10;
 
     [HideInInspector]
@@ -128,7 +127,6 @@ public class DroneMovement : MonoBehaviour
     public void finishScan()
     {
         GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
-        identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
 
         mode = Mode.move;
     }
