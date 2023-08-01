@@ -35,11 +35,6 @@ public class GameEvents : MonoBehaviour
 
     }
 
-    public class SendReticlePos : EvtSystem.Event
-    {
-        public Vector2 reticlePos;
-    }
-
     public class GameOver : EvtSystem.Event //for future? 
     {
 

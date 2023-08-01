@@ -8,15 +8,11 @@ public class ProjectileShooter : MonoBehaviour
 
     public float fireRate = 0.2f;
 
-    Vector3 reticlePos;
-
     float firetimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        EvtSystem.EventDispatcher.AddListener<GameEvents.SendReticlePos>(ReceiveReticlePos);
-
         firetimer = fireRate;
     }
 
@@ -35,13 +31,8 @@ public class ProjectileShooter : MonoBehaviour
 
                 GameObject obj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
                 Projectile p = obj.GetComponent<Projectile>();
-                p.direction = (Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+                p.direction = (Vector2)(Reticle.Instance.transform.position - transform.position);
             }
         }
-    }
-
-    public void ReceiveReticlePos(GameEvents.SendReticlePos evt)
-    {
-        reticlePos = evt.reticlePos;
     }
 }
