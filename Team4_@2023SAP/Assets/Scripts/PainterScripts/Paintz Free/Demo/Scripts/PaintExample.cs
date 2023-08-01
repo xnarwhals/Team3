@@ -10,12 +10,12 @@ public class PaintExample : Singleton<PaintExample>
     //Change Paint Variables 
     [SerializeField] [Range(1f, 45f)] float paintAmountUsed;
     [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
-    [SerializeField] [Range(1f, 1.25f)] float regenMultiplier;
+    [SerializeField] [Range(0.1f, 10f)] float regenMultiplier;
     bool isRegening = true;
     bool color = false;
     int[] colors = new int[2];
-    
 
+    float currentRegenSpeed;
 
     //Refrence to the Bar 
     [SerializeField] PaintChangeUI paintBar;
@@ -48,30 +48,28 @@ public class PaintExample : Singleton<PaintExample>
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
         if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green*/
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if(canPaint && GameManager.gameManager.playerPaint.Paint > 0 && isRegening)
             {
-                paintRegenSpeed = 10f;
+                currentRegenSpeed = paintRegenSpeed;
                 PaintTarget.PaintCursor(brush);
                 PlayerUsePaint(paintAmountUsed);
                 if (IndexBrush) brush.splatIndex++;
             }         
         }
 
-        if (GameManager.gameManager.playerPaint.Paint <= 0)
+        if (GameManager.gameManager.playerPaint.Paint <= 0 && isRegening)
         {
             isRegening = false;
             canPaint = false;
-            paintRegenSpeed = paintRegenSpeed * regenMultiplier;
-          
+            currentRegenSpeed = paintRegenSpeed * regenMultiplier;
         }
 
         else if (GameManager.gameManager.playerPaint.Paint >= 100f)
         {
             isRegening = true;
             canPaint = true;
-
         }
 
         PlayerRegenPaint();
@@ -84,15 +82,15 @@ public class PaintExample : Singleton<PaintExample>
 
     public void PlayerUsePaint(float paintAmount)
     {
-        //GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
-        //paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
+        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
     }
 
     public void PlayerRegenPaint()
     {
 
-        GameManager.gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
-        //paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        GameManager.gameManager.playerPaint.RegenPaint(currentRegenSpeed);//updates data
+        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
 
     }
 

@@ -7,6 +7,8 @@ public class PaintChangeUI : MonoBehaviour
 {
     public Slider paintBarSlider;
 
+    public float StartValue = 32.0f;
+
     public void Start()
     {
         paintBarSlider = GetComponent<Slider>();
@@ -21,10 +23,7 @@ public class PaintChangeUI : MonoBehaviour
 
     public void SetPaint(float paint)
     {
-        paintBarSlider.value = paint;
+        float value = paint * 0.01f * (100.0f - StartValue) + StartValue; //make paint a percentage, multiply by the amount of the bar that can be changed, add StartValue
+        paintBarSlider.value = value;
     }
-
-
-
-
 }
