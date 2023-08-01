@@ -25,6 +25,8 @@ public class DroneMovement : MonoBehaviour
     float scanTimer = 0.0f;
 
     Vector2 dampVel = Vector2.zero;
+
+    bool tempflagForDeath = false;
     
     enum Mode
     {
@@ -55,6 +57,8 @@ public class DroneMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (tempflagForDeath) mode = Mode.death;
+
         switch (mode)
         {
             case Mode.move:
@@ -133,6 +137,7 @@ public class DroneMovement : MonoBehaviour
 
     public void Die()
     {
+        if (mode == Mode.scan) tempflagForDeath = true;
         mode = Mode.death;
         GetComponent<Collider2D>().enabled = false;
     }

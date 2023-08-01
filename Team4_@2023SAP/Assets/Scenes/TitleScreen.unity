@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 726822294}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &170278377
@@ -1017,7 +1017,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MarketTest
+          m_StringArgument: BuildDisclaimer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &728134190
@@ -1147,8 +1147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 46.139}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -363, y: 115.5}
-  m_SizeDelta: {x: -1720, y: -977}
+  m_AnchoredPosition: {x: -788, y: -344}
+  m_SizeDelta: {x: -1899.8578, y: -977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763127489
 MonoBehaviour:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 129.0769, w: 0}
+  m_margin: {x: 0, y: 0, z: -71.42159, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
