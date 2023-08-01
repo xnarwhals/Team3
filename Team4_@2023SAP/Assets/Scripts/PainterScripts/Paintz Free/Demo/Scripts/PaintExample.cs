@@ -84,15 +84,15 @@ public class PaintExample : Singleton<PaintExample>
 
     public void PlayerUsePaint(float paintAmount)
     {
-        GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
-        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        //GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
+        //paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
     }
 
     public void PlayerRegenPaint()
     {
 
         GameManager.gameManager.playerPaint.RegenPaint(paintRegenSpeed);//updates data
-        paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+        //paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
 
     }
 

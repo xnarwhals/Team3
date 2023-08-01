@@ -31,7 +31,8 @@ public class EnemyHealth : MonoBehaviour
         {
             EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject });
             EvtSystem.EventDispatcher.Raise(new GameEvents.UpdateScore() { score = score });
-            Destroy(gameObject);//temp maybe
+
+            GetComponent<DroneMovement>().Die();
         }
     }
 }

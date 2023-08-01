@@ -31,7 +31,8 @@ public class DroneMovement : MonoBehaviour
     {
         move,
         idle,
-        scan
+        scan,
+        death
     }
 
     Mode _mode = Mode.move;
@@ -130,5 +131,16 @@ public class DroneMovement : MonoBehaviour
         identityBar.SetIdentity(GameManager.gameManager.playerIdentity.Identity);
 
         mode = Mode.move;
+    }
+
+    public void Die()
+    {
+        mode = Mode.death;
+        GetComponent<Collider2D>().enabled = false;
+    }
+
+    public void FinishDie()
+    {
+        Destroy(gameObject);
     }
 }
