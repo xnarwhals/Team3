@@ -27,7 +27,7 @@ public class PaintExample : Singleton<PaintExample>
     private bool canPaint = true;
     public bool isDead;
 
-    private void Start()
+    private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
         EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
@@ -63,7 +63,7 @@ public class PaintExample : Singleton<PaintExample>
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening)
+            if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
             {
                 paintRegenSpeed = 10f;
                 PaintTarget.PaintCursor(brush);
@@ -93,17 +93,12 @@ public class PaintExample : Singleton<PaintExample>
         if (_gameManager.playerIdentity.Identity >= 100 && !isDead)
         {
             isDead = true;
+            canPaint = false;
 
             Debug.Log("Gameover");
             _gameManager.GameOver();
         }
-        else
-        {
-            if (_gameManager.playerIdentity.Identity < 100)
-            {
-                isDead = false;
-            }
-        }
+
     }
 
 

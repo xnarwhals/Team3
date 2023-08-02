@@ -11,8 +11,12 @@ public static class Loader
     {
         TitleScreen,
         Loading,
-        Level01,
-        MarketTest
+        ScrollingEndCredits,
+        HighScores,
+        MarketTest,
+        FinalizedBuild
+
+       
 
     }
 

@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/TitleScreen.unity
     guid: 0c7282eaae6a9b24783773ed3f83b9b0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BuildScenes/Level01.unity
     guid: a9d72266842bf4657b56c7b6fe74fe72
   - enabled: 1
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/MarketTest.unity
     guid: 23776c2a5c1c1fe488ee17b018f2998f
+  - enabled: 1
+    path: Assets/Scenes/Death & Credits/ScrollingEndCredits.unity
+    guid: 80544575f0b79b64bb014782296a68d6
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/FinalizedBuild.unity
+    guid: 4b1336a5e4ef39d489f772d8a34cb1db
   m_configObjects: {}

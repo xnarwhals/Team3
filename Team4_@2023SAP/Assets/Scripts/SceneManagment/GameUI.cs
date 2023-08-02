@@ -10,13 +10,33 @@ public class GameUI : MonoBehaviour
     private void Awake()
     {
         Button newGame = GameObject.Find("New Game Btn").GetComponent<Button>();
-        newGame.onClick.AddListener(LoadGame);   
+        newGame.onClick.AddListener(LoadGame);
+
+        Button gameCredits = GameObject.Find("End Credits Btn").GetComponent<Button>();
+        gameCredits.onClick.AddListener(LoadCredits);
+
+        Button highScores = GameObject.Find("High Scores Btn").GetComponent<Button>();
+        highScores.onClick.AddListener(LoadScores);
     }
 
+
+    
     private void LoadGame()
     {
-        Loader.Load(Loader.Scene.Level01);
+        Loader.Load(Loader.Scene.MarketTest);
     }
+
+    private void LoadCredits()
+    {
+        Loader.Load(Loader.Scene.ScrollingEndCredits);
+    }
+
+    private void LoadScores()
+    {
+        Loader.Load(Loader.Scene.HighScores);
+    }
+
+
 
 
 }

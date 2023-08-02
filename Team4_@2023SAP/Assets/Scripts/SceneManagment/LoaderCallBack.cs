@@ -14,8 +14,5 @@ public class LoaderCallBack : MonoBehaviour
             Loader.LoaderCallback();
         
         }
-     
     }
-
-
 }

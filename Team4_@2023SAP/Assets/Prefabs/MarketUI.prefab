@@ -879,6 +879,8 @@ MonoBehaviour:
   - {fileID: 332426390659963457}
   - {fileID: 8256636770098788786}
   continueIcon: {fileID: 0}
+  color1: {fileID: 0}
+  color2: {fileID: 0}
   dialogueText: {fileID: 5773087882593453253}
   dialogueSpeed: 15
 --- !u!1 &4842583490181107354
