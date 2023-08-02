@@ -11,7 +11,7 @@ public class GameManager : Singleton<GameManager>
 
     public UnitIdentity playerIdentity = new UnitIdentity(0, 100);
 
-    [SerializeField] private bool _isGameOver;
+    private EnemySpawner enemySpawner;
 
     [SerializeField] private GameObject GameOverUI;
 
@@ -22,18 +22,21 @@ public class GameManager : Singleton<GameManager>
     {
         gameManager = this;
         playerGun = GameObject.Find("projectileShooter");
+        enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
     }
 
     public void GameOver()
     {
-        _isGameOver = true;
+        enemySpawner.enabled = !enemySpawner.enabled;
+        Cursor.visible = true;
+
+        
         playerGun.SetActive(false);
         GameOverUI.SetActive(true);
     }
 
     public void Restart()
     {
-        _isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerIdentity.Identity = 0;
     }
