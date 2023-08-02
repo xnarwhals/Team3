@@ -31,11 +31,11 @@ public class EnemySpawner : MonoBehaviour
             int count = Random.Range(EnemyCountRange.x, EnemyCountRange.y);
             for (int i = 0; i < count; i++)
             {
-                Instantiate(EnemyPrefab);
+                GameObject enemy = Instantiate(EnemyPrefab);
 
-                EnemySpawn enemy = EnemyPrefab.GetComponent<EnemySpawn>();
-                enemy.spawnRow = Random.Range(0, GameGrid.Instance.height);
-                enemy.startFromRight = Random.value > 0.5f;
+                EnemySpawn spawn = enemy.GetComponent<EnemySpawn>();
+                spawn.spawnRow = Random.Range(0, GameGrid.Instance.height);
+                spawn.startFromRight = Random.value > 0.5f;
             }
         }
     }
