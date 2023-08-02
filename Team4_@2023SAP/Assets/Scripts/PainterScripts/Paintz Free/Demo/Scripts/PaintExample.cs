@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Ignore Spelling: evt
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PaintExample : Singleton<PaintExample>
@@ -31,6 +33,7 @@ public class PaintExample : Singleton<PaintExample>
         _gameManager = FindObjectOfType<GameManager>();
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
+        EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(Shoot);
 
         colorTex = new Texture2D(1, 1);
 
@@ -51,17 +54,6 @@ public class PaintExample : Singleton<PaintExample>
         if (Input.GetKeyDown(KeyCode.Alpha2)) brush.splatChannel = 1;//red
         if (Input.GetKeyDown(KeyCode.Alpha3)) brush.splatChannel = 2;//blue
         if (Input.GetKeyDown(KeyCode.Alpha4)) brush.splatChannel = 3;//green*/
-
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Joystick1Button0))
-        {
-            if(canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
-            {
-                currentRegenSpeed = paintRegenSpeed;
-                PaintTarget.PaintCursor(brush);
-                PlayerUsePaint(paintAmountUsed);
-                if (IndexBrush) brush.splatIndex++;
-            }         
-        }
 
         //Paint Regen 
         if (GameManager.gameManager.playerPaint.Paint <= 0 && isRegening)
@@ -106,4 +98,14 @@ public class PaintExample : Singleton<PaintExample>
         paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
     }
 
+    public void Shoot(GameEvents.ShootPaint evt)
+    {
+        if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
+        {
+            currentRegenSpeed = paintRegenSpeed;
+            PaintTarget.PaintCursor(brush);
+            PlayerUsePaint(paintAmountUsed);
+            if (IndexBrush) brush.splatIndex++;
+        }
+    }
 } 

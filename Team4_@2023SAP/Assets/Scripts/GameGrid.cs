@@ -31,8 +31,6 @@ public class GameGrid : MonoBehaviour
     public int height = 16;
     public float cellSize = 2.0f;
 
-    public GameObject gridPrefab;
-
     public Vector2[,] tiles;
 
     public bool showXs = false;
@@ -41,7 +39,7 @@ public class GameGrid : MonoBehaviour
     Vector2 cellShape;
 
 
-    private void Update()
+    private void Start()
     {
         UpdateGrid();
     }
@@ -90,6 +88,5 @@ public class GameGrid : MonoBehaviour
             Debug.DrawLine(new Vector2(cell.x - cellShape.x / 2, cell.y - cellShape.y / 2),
                 new Vector2(cell.x - cellShape.x / 2, cell.y + cellShape.y / 2));
         }
-        
     }
 }
