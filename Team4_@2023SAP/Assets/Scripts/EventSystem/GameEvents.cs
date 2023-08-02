@@ -54,4 +54,9 @@ public class GameEvents : MonoBehaviour
     {
         public int score;
     }
+
+    public class ShootPaint : EvtSystem.Event
+    {
+
+    }
 }

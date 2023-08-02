@@ -19,7 +19,10 @@ public class ProjectileShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        firetimer += Time.deltaTime;
+        if (firetimer < fireRate)
+        {
+            firetimer += Time.deltaTime;
+        }
 
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
