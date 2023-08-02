@@ -54,7 +54,7 @@ public class PauseManager : MonoBehaviour
 
     public void RestartClicked()
     {
-        //scene things most likely
+        GameManager.gameManager.Restart(); 
     }
 
     public void ControlsClicked()
@@ -65,7 +65,7 @@ public class PauseManager : MonoBehaviour
 
     public void ExitClicked()
     {
-        //scene things
+        GameManager.gameManager.MainMenu();
     }
 
     public void Back()

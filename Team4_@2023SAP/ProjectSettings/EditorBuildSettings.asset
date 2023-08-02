@@ -6,21 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
+    path: Assets/Scenes/BuildScenes/TitleScreen.unity
     guid: 0c7282eaae6a9b24783773ed3f83b9b0
-  - enabled: 0
-    path: Assets/Scenes/IdentityTest2.unity
-    guid: a9d72266842bf4657b56c7b6fe74fe72
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BuildScenes/Loading.unity
     guid: 40bb6baad0a3f495d8d4f52cc91ccf5c
   - enabled: 1
-    path: Assets/Scenes/MarketTest.unity
+    path: Assets/Scenes/BuildScenes/MarketTest.unity
     guid: 23776c2a5c1c1fe488ee17b018f2998f
   - enabled: 1
-    path: Assets/Scenes/Death & Credits/ScrollingEndCredits.unity
+    path: Assets/Scenes/BuildScenes/ScrollingEndCredits.unity
     guid: 80544575f0b79b64bb014782296a68d6
   - enabled: 1
-    path: Assets/Scenes/FinalizedBuild.unity
+    path: Assets/Scenes/BuildScenes/FinalizedBuild.unity
     guid: 4b1336a5e4ef39d489f772d8a34cb1db
   m_configObjects: {}
