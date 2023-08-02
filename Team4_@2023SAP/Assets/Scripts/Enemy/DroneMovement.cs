@@ -18,6 +18,8 @@ public class DroneMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 target;
 
+    public float sizeMulti = 1.2f;
+
     Animator animator;
 
 
@@ -140,6 +142,8 @@ public class DroneMovement : MonoBehaviour
         if (mode == Mode.scan) tempflagForDeath = true;
         mode = Mode.death;
         GetComponent<Collider2D>().enabled = false;
+
+        transform.localScale *= sizeMulti;
     }
 
     public void FinishDie()
