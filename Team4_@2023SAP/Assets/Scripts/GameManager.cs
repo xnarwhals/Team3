@@ -15,14 +15,14 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private GameObject GameOverUI;
 
-    GameObject playerGun;
+    GameObject playerInputs;
 
 
     private void Awake()
     {
         gameManager = this;
-        playerGun = GameObject.Find("projectileShooter");
-        enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+        playerInputs = GameObject.Find("PlayerInputs");
+        enemySpawner = GameObject.Find("EnemyHandler").GetComponent<EnemySpawner>();
     }
 
     public void GameOver()
@@ -31,12 +31,13 @@ public class GameManager : Singleton<GameManager>
         Cursor.visible = true;
 
         
-        playerGun.SetActive(false);
+        playerInputs.SetActive(false);
         GameOverUI.SetActive(true);
     }
 
     public void Restart()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerIdentity.Identity = 0;
     }
