@@ -5,25 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/WhiteBox2.unity
-    guid: e8eaf3e89ff324664b032efd03a67d5f
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 0c7282eaae6a9b24783773ed3f83b9b0
-  - enabled: 1
-    path: Assets/Scenes/FinalizedBuild.unity
-    guid: 4b1336a5e4ef39d489f772d8a34cb1db
+  - enabled: 0
+    path: Assets/Scenes/IdentityTest2.unity
+    guid: a9d72266842bf4657b56c7b6fe74fe72
+  - enabled: 0
+    path: Assets/Scenes/BuildScenes/Loading.unity
+    guid: 40bb6baad0a3f495d8d4f52cc91ccf5c
   - enabled: 1
     path: Assets/Scenes/MarketTest.unity
     guid: 23776c2a5c1c1fe488ee17b018f2998f
   - enabled: 1
-    path: Assets/Scenes/HowToPlay.unity
-    guid: 80ffc7727092c874eafe40ac26a91111
+    path: Assets/Scenes/Death & Credits/ScrollingEndCredits.unity
+    guid: 80544575f0b79b64bb014782296a68d6
   - enabled: 1
-    path: Assets/Scenes/BuildDisclaimer.unity
-    guid: 863b72bd1879f6d45b8a72a2e782e071
+    path: Assets/Scenes/FinalizedBuild.unity
+    guid: 4b1336a5e4ef39d489f772d8a34cb1db
   m_configObjects: {}

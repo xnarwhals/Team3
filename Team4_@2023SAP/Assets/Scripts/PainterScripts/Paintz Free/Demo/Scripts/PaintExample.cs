@@ -19,13 +19,17 @@ public class PaintExample : Singleton<PaintExample>
 
     //Refrence to the Bar 
     [SerializeField] PaintChangeUI paintBar;
+    [SerializeField] GameManager _gameManager; 
 
     private Texture2D colorTex;
 
     private bool canPaint = true;
+    private bool isDead;
 
-    private void Start()
+    private void Awake()
     {
+        _gameManager = FindObjectOfType<GameManager>();
+
         EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
 
         colorTex = new Texture2D(1, 1);
@@ -50,7 +54,7 @@ public class PaintExample : Singleton<PaintExample>
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            if(canPaint && GameManager.gameManager.playerPaint.Paint > 0 && isRegening)
+            if(canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
             {
                 currentRegenSpeed = paintRegenSpeed;
                 PaintTarget.PaintCursor(brush);
@@ -59,20 +63,29 @@ public class PaintExample : Singleton<PaintExample>
             }         
         }
 
+        //Paint Regen 
         if (GameManager.gameManager.playerPaint.Paint <= 0 && isRegening)
         {
             isRegening = false;
             canPaint = false;
             currentRegenSpeed = paintRegenSpeed * regenMultiplier;
         }
-
         else if (GameManager.gameManager.playerPaint.Paint >= 100f)
         {
             isRegening = true;
             canPaint = true;
         }
-
         PlayerRegenPaint();
+
+        //Identity Loss
+        if (_gameManager.playerIdentity.Identity >= 100 && !isDead)
+        {
+            isDead = true;
+            canPaint = false;
+
+            Debug.Log("Gameover");
+            _gameManager.GameOver();
+        }
     }
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
@@ -91,7 +104,6 @@ public class PaintExample : Singleton<PaintExample>
 
         GameManager.gameManager.playerPaint.RegenPaint(currentRegenSpeed);//updates data
         paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
-
     }
 
 } 
