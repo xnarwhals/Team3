@@ -57,6 +57,6 @@ public class GameEvents : MonoBehaviour
 
     public class ShootPaint : EvtSystem.Event
     {
-
+        public Vector2 position;
     }
 }

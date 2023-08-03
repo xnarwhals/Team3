@@ -180,7 +180,7 @@ public class PaintTarget : MonoBehaviour
         PaintRaycast(ray, brush);
     }
 
-    public static void PaintCursor(Brush brush)
+    public static void PaintCursor(Brush brush, Vector2 position)
     {
         if (Camera.main == null)
         {
@@ -189,7 +189,7 @@ public class PaintTarget : MonoBehaviour
         }
 
         Ray ray = Camera.main.ScreenPointToRay
-            (Camera.main.WorldToScreenPoint(Reticle.Instance.transform.position)); //worst line of code ever
+            (Camera.main.WorldToScreenPoint(position)); //worst line of code ever
         PaintRaycast(ray, brush);
     }
 

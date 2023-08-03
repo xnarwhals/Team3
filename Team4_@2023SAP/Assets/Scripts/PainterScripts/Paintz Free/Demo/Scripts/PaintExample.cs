@@ -103,7 +103,7 @@ public class PaintExample : Singleton<PaintExample>
         if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
         {
             currentRegenSpeed = paintRegenSpeed;
-            PaintTarget.PaintCursor(brush);
+            PaintTarget.PaintCursor(brush, evt.position);
             PlayerUsePaint(paintAmountUsed);
             if (IndexBrush) brush.splatIndex++;
         }
