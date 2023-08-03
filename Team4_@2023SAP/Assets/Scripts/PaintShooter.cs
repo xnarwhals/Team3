@@ -8,8 +8,6 @@ public class PaintShooter : MonoBehaviour
     public float fireRate = 0.1f;
     public float shotRadius = 0.05f;
 
-    bool[,] tilesPainted;
-
     float fireTimer = 0.0f;
 
     // Start is called before the first frame update
@@ -24,7 +22,7 @@ public class PaintShooter : MonoBehaviour
         if (fireTimer < fireRate)
             fireTimer += Time.deltaTime;
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.JoystickButton0)) 
+        if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton0)) 
             && fireTimer >= fireRate)
         {
             fireTimer = 0;
