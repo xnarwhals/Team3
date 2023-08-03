@@ -44,8 +44,8 @@ public class PaintShooter : MonoBehaviour
 
             tileInfo info = GetHitTile(grid);
 
-            EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint() 
-                { position = info.pos, hitGrid = grid, tileCoords = info.coords });
+            EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint() //put this elsewhere
+                { position = info.pos, hitGrid = grid, hitCoords = info.coords });
         }
     }
 

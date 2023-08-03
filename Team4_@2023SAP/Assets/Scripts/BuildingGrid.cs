@@ -17,11 +17,18 @@ public class BuildingGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateGrid();
+
+        EvtSystem.EventDispatcher.Raise(new GameEvents.RegisterBuildingGrid { grid = this });
     }
 
     // Update is called once per frame
     void Update()
+    {
+        UpdateGrid();
+    }
+
+    private void UpdateGrid()
     {
         tiles = new Vector2[width, height];
         Vector2 origin = (Vector2)transform.position + new Vector2(-(width * 0.5f * tileSize.x - 0.5f * tileSize.x),
