@@ -10,6 +10,18 @@ public class PaintShooter : MonoBehaviour
 
     float fireTimer = 0.0f;
 
+    struct tileInfo
+    {
+        public tileInfo(Vector2 Pos, Vector2Int Coords)
+        {
+            pos = Pos;
+            coords = Coords;
+        }
+
+        public Vector2 pos;
+        public Vector2Int coords;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +42,10 @@ public class PaintShooter : MonoBehaviour
             BuildingGrid grid = GetHitBuilding();
             if (grid == null) return;
 
-            Vector2 pos = GetHitTile(grid);
+            tileInfo info = GetHitTile(grid);
 
-            EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint() { position = pos });
+            EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint() 
+                { position = info.pos, hitGrid = grid, tileCoords = info.coords });
         }
     }
 
@@ -53,7 +66,7 @@ public class PaintShooter : MonoBehaviour
         return null; //never happens
     }
 
-    Vector2 GetHitTile(BuildingGrid grid)
+    tileInfo GetHitTile(BuildingGrid grid)
     {
         Vector2[,] tiles = grid.tiles;
 
@@ -67,11 +80,11 @@ public class PaintShooter : MonoBehaviour
                 if (pos.x >= tile.x - (grid.tileSize.x * 0.5f) && pos.x <= tile.x + (grid.tileSize.x * 0.5f)
                     && pos.y >= tile.y - (grid.tileSize.x * 0.5f) && pos.y <= tile.y + (grid.tileSize.y * 0.5f))
                 {
-                    return tile;
+                    return new tileInfo(tile, new Vector2Int(i, j));
                 }
             }
         }
 
-        return new Vector2(1000.0f, 1000.0f);
+        return new tileInfo();
     }
 }

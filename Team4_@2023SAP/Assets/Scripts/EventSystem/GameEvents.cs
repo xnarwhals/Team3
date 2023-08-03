@@ -59,6 +59,6 @@ public class GameEvents : MonoBehaviour
     {
         public Vector2 position;
         public BuildingGrid hitGrid;
-        public Vector2Int tilePos;
+        public Vector2Int tileCoords;
     }
 }
