@@ -37,15 +37,19 @@ public class PaintShooter : MonoBehaviour
         if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton0)) 
             && fireTimer >= fireRate)
         {
-            fireTimer = 0;
+            PaintExample paintScript = FindAnyObjectByType<PaintExample>(); //fixes weird bug
+            if (paintScript.CanPaint())
+            {
+                fireTimer = 0;
 
-            BuildingGrid grid = GetHitBuilding();
-            if (grid == null) return;
+                BuildingGrid grid = GetHitBuilding();
+                if (grid == null) return;
 
-            tileInfo info = GetHitTile(grid);
+                tileInfo info = GetHitTile(grid);
 
-            EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint() //put this elsewhere
+                EvtSystem.EventDispatcher.Raise(new GameEvents.ShootPaint()
                 { position = info.pos, hitGrid = grid, hitCoords = info.coords });
+            }
         }
     }
 

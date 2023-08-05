@@ -100,12 +100,14 @@ public class PaintExample : Singleton<PaintExample>
 
     public void Shoot(GameEvents.ShootPaint evt)
     {
-        if (canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead)
-        {
-            currentRegenSpeed = paintRegenSpeed;
-            PaintTarget.PaintCursor(brush, evt.position);
-            PlayerUsePaint(paintAmountUsed);
-            if (IndexBrush) brush.splatIndex++;
-        }
+        currentRegenSpeed = paintRegenSpeed;
+        PaintTarget.PaintCursor(brush, evt.position);
+        PlayerUsePaint(paintAmountUsed);
+        if (IndexBrush) brush.splatIndex++;
     }
-} 
+
+    public bool CanPaint()
+    {
+        return canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead;
+    }
+}
