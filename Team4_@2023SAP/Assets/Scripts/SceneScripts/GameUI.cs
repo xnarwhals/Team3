@@ -16,6 +16,8 @@ public class GameUI : MonoBehaviour
         Button highScores = GameObject.Find("High Scores Btn").GetComponent<Button>();
         highScores.onClick.AddListener(LoadScores);
 
+        Button skip = GameObject.Find("Skip").GetComponent<Button>();
+        skip.onClick.AddListener(SkipIntro);
     }
 
     private void LoadGame()
@@ -31,5 +33,10 @@ public class GameUI : MonoBehaviour
     private void LoadScores()
     {
         Loader.Load(Loader.Scene.HighScores);
+    }
+
+    private void SkipIntro()
+    {
+        Loader.Load(Loader.Scene.FinalizedBuild);
     }
 }

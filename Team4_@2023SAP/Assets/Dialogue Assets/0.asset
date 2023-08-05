@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   lines:
-  - Hey, how's it goin?
+  - Hey, how's it goin? My name's Falco, I just landed in this strange galaxy a few
+    hours ago so I'm pretty tired.
   - I really like RED and GREEN because those are the colors on the flag of Mexico.
   color1: 1
   color2: 3
