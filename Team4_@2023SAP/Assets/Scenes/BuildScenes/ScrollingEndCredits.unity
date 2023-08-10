@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.572052, y: -1995.3992}
-  m_SizeDelta: {x: 654.09, y: 579.3193}
+  m_AnchoredPosition: {x: -55.572052, y: -2084.873}
+  m_SizeDelta: {x: 654.09, y: 758.2671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39172318
 MonoBehaviour:
@@ -195,9 +195,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Big Thank You To: \n\n\nThe Gameheads Board for the Feedback on Saturdays\n\n\nEvery
-    individual instructor for \"Unity Day\"\n\n\nAll Gameheads mentors who showed
-    up for \"Mentor Madness\"\n\n\nFriends + Family Supporting and Playing Our Game\n\n\nAnd
-    Of Course...\n\n\n\nYou for downloading and finishing our game."
+    individual instructor for \"Unity Day\"\n\n\nCarlos Cruz\n\n\nEasy Drawing Guides,
+    SpeedTutor, and Ted McGrath\n\n\nAll Gameheads mentors who showed up for \"Mentor
+    Madness\"\n\n\nFriends + Family Supporting and Playing Our Game\n\n\nAnd Of Course...\n\n\n\nYou
+    for downloading and finishing our game."
 --- !u!222 &39172319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -217,8 +218,6 @@ GameObject:
   - component: {fileID: 67847080}
   - component: {fileID: 67847083}
   - component: {fileID: 67847082}
-  - component: {fileID: 67847081}
-  - component: {fileID: 67847084}
   m_Layer: 5
   m_Name: Thanks & Contin Text
   m_TagString: Untagged
@@ -243,30 +242,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.572083, y: -2715.4434}
-  m_SizeDelta: {x: 654.09, y: 101.8954}
+  m_AnchoredPosition: {x: -55.572083, y: -2705}
+  m_SizeDelta: {x: 654.09, y: 158.2034}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &67847081
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67847079}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 73d8d5aef9d3ecd42a778d2d678463cf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &67847082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -289,7 +267,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 30
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 2
@@ -303,7 +281,7 @@ MonoBehaviour:
   m_Text: 'Thank You So Much For Playing Our Game
 
 
-    To Be Continued . . .'
+    To Be Continued . . . ?'
 --- !u!222 &67847083
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -312,21 +290,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67847079}
   m_CullTransparentMesh: 1
---- !u!111 &67847084
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67847079}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 33fd69c2f54671c49810137a38560eee, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &318130758
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,10 +363,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Rogelio Lara\nRogelio.lara007@gmail.com\nInsta/Twitter: @Gamerlink7\n\n\nXavier
     Gonzalez\nXaviergonzalezpersonal@gmail.com\nInsta: @xnarwhalsyt\n\n\nJonathan
-    Mahogany Jr.\nJondmjr@gmail.com\nInsta/Twitter: @xenoslayerlv426\n\n\nZiggy Henry\nZiggycooperhenry@gmail.com\n...\n\n\nReyna
+    Mahogany Jr.\nJondmjr@gmail.com\nInsta/Twitter: @xenoslayerlv426\n\n\nZiggy Henry\nZiggycooperhenry@gmail.com\nN/A\n\n\nReyna
     Castro\nReyguin428@gmail.com\nInsta: Reytheloser\n\n\nGriselda Aleman\nGriselda.aleman707@gmail.com\nInsta:
     @zelda_7o7\n\n\nReese Climaco P\xE9rez\nmarissa.climacoperez@gmail.com\n\n\nCierra
-    McDonald\nXav\nJon\nZigg\nGris\n\n"
+    McDonald\nQuach Benjamin\n\nRobert Anderberg\nIko Manfroi\n\n"
 --- !u!222 &318130761
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +492,6 @@ GameObject:
   - component: {fileID: 487536683}
   - component: {fileID: 487536682}
   - component: {fileID: 487536681}
-  - component: {fileID: 487536685}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -623,18 +585,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &487536685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487536680}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca4c66e59a94b542828cb42758302a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &586065346
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 798097295}
   - component: {fileID: 798097296}
-  - component: {fileID: 798097297}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -719,7 +668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 190}
+  m_AnchoredPosition: {x: -47, y: 336}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &798097296
@@ -732,7 +681,7 @@ Animator:
   m_GameObject: {fileID: 798097294}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 51b5c8b764a7794438a8400e94169402, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9bfcf9be84759fd4fb76061236477759, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -743,18 +692,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &798097297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798097294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abeeacadcf37e2f439387cb2940b9bb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &845976122
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +771,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -130.716, y: 2.9880066}
+  m_AnchoredPosition: {x: -130.71606, y: 2.988037}
   m_SizeDelta: {x: -246.781, y: 5.978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &888998180
@@ -1218,8 +1155,6 @@ GameObject:
   - component: {fileID: 1897417379}
   - component: {fileID: 1897417382}
   - component: {fileID: 1897417381}
-  - component: {fileID: 1897417380}
-  - component: {fileID: 1897417383}
   m_Layer: 5
   m_Name: Beginning Text
   m_TagString: Untagged
@@ -1244,30 +1179,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -32, y: -485}
-  m_SizeDelta: {x: 531.1794, y: 111.8479}
+  m_AnchoredPosition: {x: -32, y: -504.74066}
+  m_SizeDelta: {x: 531.1794, y: 151.3292}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1897417380
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897417378}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c0225a63dd6f644483f7cda5fba5bfb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1897417381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1204,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 25
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1311,21 +1225,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897417378}
   m_CullTransparentMesh: 1
---- !u!111 &1897417383
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897417378}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &2034412859
 GameObject:
   m_ObjectHideFlags: 0
