@@ -14,7 +14,8 @@ public static class Loader
         ScrollingEndCredits,
         HighScores,
         MarketTest,
-        FinalizedBuild
+        FinalizedBuild,
+        HowToPlay
 
     }
 

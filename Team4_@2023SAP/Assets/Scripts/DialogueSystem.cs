@@ -156,7 +156,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
         PlayerPrefs.SetInt("Color1", currentDialogue.color1);
         PlayerPrefs.SetInt("Color1", currentDialogue.color2);
 
-        SceneManager.LoadScene("FinalizedBuild");
+        Loader.Load(Loader.Scene.HowToPlay);
         Destroy(gameObject);
     }
     

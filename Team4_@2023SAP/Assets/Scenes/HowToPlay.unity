@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 977350182}
   - component: {fileID: 977350181}
   - component: {fileID: 977350180}
+  - component: {fileID: 977350183}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -546,10 +547,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 621771362}
-        m_TargetAssemblyTypeName: tempScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 977350183}
+        m_TargetAssemblyTypeName: temphow2playbutton, Assembly-CSharp
+        m_MethodName: press
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -596,6 +597,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977350178}
   m_CullTransparentMesh: 1
+--- !u!114 &977350183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977350178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3706be86ed97c34ead7eead0990ec1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203580357
 GameObject:
   m_ObjectHideFlags: 0
