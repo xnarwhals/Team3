@@ -134,6 +134,7 @@ public class DroneMovement : MonoBehaviour
 
     public void finishScan()
     {
+        EvtSystem.EventDispatcher.Raise<GameEvents.ScanComplete>(new GameEvents.ScanComplete());
         GameManager.gameManager.playerIdentity.IdentityLose(ScanPower);
 
         mode = Mode.move;

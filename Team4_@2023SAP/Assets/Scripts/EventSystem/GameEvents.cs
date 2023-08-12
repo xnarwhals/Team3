@@ -51,6 +51,11 @@ public class GameEvents : MonoBehaviour
         public float identityRestore;
     }
 
+    public class ScanComplete : EvtSystem.Event
+    {
+
+    }
+
     public class UpdateScore : EvtSystem.Event
     {
         public int score;

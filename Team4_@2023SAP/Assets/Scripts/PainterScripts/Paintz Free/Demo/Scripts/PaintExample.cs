@@ -75,7 +75,6 @@ public class PaintExample : Singleton<PaintExample>
             isDead = true;
             canPaint = false;
 
-            Debug.Log("Gameover");
             _gameManager.GameOver();
         }
     }

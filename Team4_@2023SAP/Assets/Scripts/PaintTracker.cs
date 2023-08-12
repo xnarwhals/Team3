@@ -33,8 +33,6 @@ public class PaintTracker : MonoBehaviour
             if (grids[i].buildingGrid == evt.hitGrid)
             {
                 grids[i].tiles[evt.hitCoords.x, evt.hitCoords.y]++;
-                print(evt.hitCoords.x + ", " + evt.hitCoords.y + ": " + 
-                    grids[i].tiles[evt.hitCoords.x, evt.hitCoords.y]);
 
                 return;
             }
