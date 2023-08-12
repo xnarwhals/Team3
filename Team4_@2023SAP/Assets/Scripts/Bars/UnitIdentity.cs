@@ -8,6 +8,9 @@ public class UnitIdentity
     public float curIdentity;
     public float maxIdentity;
 
+    [DoNotSerialize]
+    public IdentityChangeUI identityScript;
+
     public float Identity
     {
         get
@@ -43,7 +46,7 @@ public class UnitIdentity
         if (curIdentity < maxIdentity)
         {
             curIdentity += identityLost;
-            GameObject.FindAnyObjectByType<IdentityChangeUI>().SetIdentity(Identity); //REMOVE THIS AND DO SOMETHING BETTER!!11!!1!
+            identityScript.SetIdentity(Identity);
         }
     }
 

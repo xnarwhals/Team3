@@ -29,7 +29,9 @@ public class DroneMovement : MonoBehaviour
     Vector2 dampVel = Vector2.zero;
 
     bool tempflagForDeath = false;
-    
+
+    EnemyHealth healthScript;
+
     enum Mode
     {
         move,
@@ -137,7 +139,7 @@ public class DroneMovement : MonoBehaviour
         mode = Mode.move;
     }
 
-    public void Die()
+    public void Die(EnemyHealth health)
     {
         if (mode == Mode.scan) tempflagForDeath = true;
         mode = Mode.death;

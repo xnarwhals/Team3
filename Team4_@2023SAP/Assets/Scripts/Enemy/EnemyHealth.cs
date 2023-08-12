@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
 
     public int score = 1;
 
+    public float IdentityRestore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +31,11 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0.0f)
         {
-            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() { enemy = gameObject });
+            EvtSystem.EventDispatcher.Raise(new GameEvents.EnemyDie() 
+                { enemy = gameObject, identityRestore = IdentityRestore });
             EvtSystem.EventDispatcher.Raise(new GameEvents.UpdateScore() { score = score });
 
-            GetComponent<DroneMovement>().Die(); //temp
+            GetComponent<DroneMovement>().Die(this); //temp
         }
     }
 }

@@ -327,6 +327,7 @@ MonoBehaviour:
   defaultHealth: 3
   currentHealth: 0
   score: 250
+  IdentityRestore: 5
 --- !u!114 &7276017016470176822
 MonoBehaviour:
   m_ObjectHideFlags: 0

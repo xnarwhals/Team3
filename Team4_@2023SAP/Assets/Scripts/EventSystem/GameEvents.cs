@@ -48,6 +48,7 @@ public class GameEvents : MonoBehaviour
     public class EnemyDie : EvtSystem.Event
     {
         public GameObject enemy;
+        public float identityRestore;
     }
 
     public class UpdateScore : EvtSystem.Event

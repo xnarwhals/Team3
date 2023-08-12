@@ -23,6 +23,10 @@ public class GameManager : Singleton<GameManager>
         gameManager = this;
         playerInputs = GameObject.Find("PlayerInputs");
         enemySpawner = GameObject.Find("EnemyHandler").GetComponent<EnemySpawner>();
+
+        EvtSystem.EventDispatcher.AddListener<GameEvents.EnemyDie>(RestoreIdentity);
+
+        playerIdentity.identityScript = FindAnyObjectByType<IdentityChangeUI>();//this is not good
     }
 
     public void GameOver()
@@ -50,5 +54,10 @@ public class GameManager : Singleton<GameManager>
     public void MainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void RestoreIdentity(GameEvents.EnemyDie evt)
+    {
+        playerIdentity.IdentityLose(-evt.identityRestore);
     }
 }
