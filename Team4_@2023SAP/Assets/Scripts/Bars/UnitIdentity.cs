@@ -43,11 +43,10 @@ public class UnitIdentity
 
     public void IdentityLose(float identityLost)
     {
-        if (curIdentity < maxIdentity)
+        if (curIdentity < maxIdentity && curIdentity + identityLost >= 0)
         {
             curIdentity += identityLost;
             identityScript.SetIdentity(Identity);
         }
     }
-
 }

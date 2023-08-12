@@ -28,9 +28,9 @@ public class Brush
     public Vector4 getMask()
     {
         if (this.splatChannel == 0) return new Vector4(1, 0, 0, 0);
-        if (this.splatChannel == 1) return new Vector4(0, 1, 0, 0);
-        if (this.splatChannel == 2) return new Vector4(0, 0, 1, 0);
-        if (this.splatChannel == 3) return new Vector4(0, 0, 0, 1);
+        if (this.splatChannel == 1) return new Vector4(0, 0, 0, 1);
+        if (this.splatChannel == 2) return new Vector4(0, 1, 0, 0);
+        if (this.splatChannel == 3) return new Vector4(0, 0, 1, 0);
         return new Vector4(0, 0, 0, 0);
     }
 

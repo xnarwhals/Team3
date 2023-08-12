@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PaintShooter : MonoBehaviour
+public class PaintShooter : Singleton<PaintShooter>
 {
     public float fireRate = 0.1f;
     public float shotRadius = 0.05f;

@@ -15,13 +15,14 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private GameObject GameOverUI;
 
-    GameObject playerInputs;
+    GameObject[] playerInputs;
 
 
     private void Awake()
     {
         gameManager = this;
-        playerInputs = GameObject.Find("PlayerInputs");
+        playerInputs = new GameObject[] { GameObject.Find("PaintShooter"),
+            GameObject.Find("ProjectileShooter") };
         enemySpawner = GameObject.Find("EnemyHandler").GetComponent<EnemySpawner>();
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.EnemyDie>(RestoreIdentity);
@@ -34,13 +35,17 @@ public class GameManager : Singleton<GameManager>
         enemySpawner.enabled = !enemySpawner.enabled;
         Cursor.visible = true;
 
-        
-        playerInputs.SetActive(false);
+
+        playerInputs[0].SetActive(false);
+        playerInputs[1].SetActive(false);
         GameOverUI.SetActive(true);
     }
 
     public void Restart()
     {
+        playerInputs[0].SetActive(true);
+        playerInputs[1].SetActive(true);
+
         Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerIdentity.Identity = 0;

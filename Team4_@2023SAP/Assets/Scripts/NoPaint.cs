@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class NoPaint : MonoBehaviour
 {
-    private void OnMouseOver()
+    private void OnTriggerEnter(Collider collision)
     {
-        EvtSystem.EventDispatcher.Raise(new GameEvents.NoPaintMouseOver { isOver = true });
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Building")
+            || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            EvtSystem.EventDispatcher.Raise(new GameEvents.NoPaintMouseOver 
+                { isOver = true });
     }
 
-    private void OnMouseExit()
+    private void OnTriggerExit(Collider collision)
     {
-        EvtSystem.EventDispatcher.Raise(new GameEvents.NoPaintMouseOver { isOver = false });
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Building") 
+            || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            EvtSystem.EventDispatcher.Raise(new GameEvents.NoPaintMouseOver 
+                { isOver = false });
     }
 }

@@ -306,9 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df557d9ce6168041afb4e3012452770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchTime: 1
-  stayWaitTime: 1
-  scanTime: 1
+  switchTime: 2
+  stayWaitTime: 1.25
+  scanTime: 1.25
   ScanPower: 10
   target: {x: 0, y: 0}
   sizeMulti: 1.3
@@ -327,7 +327,7 @@ MonoBehaviour:
   defaultHealth: 3
   currentHealth: 0
   score: 250
-  IdentityRestore: 5
+  IdentityRestore: 3.4
 --- !u!114 &7276017016470176822
 MonoBehaviour:
   m_ObjectHideFlags: 0

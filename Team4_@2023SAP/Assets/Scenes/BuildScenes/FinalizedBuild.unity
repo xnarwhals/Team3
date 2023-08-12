@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 324133763}
   - component: {fileID: 324133768}
   - component: {fileID: 324133769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,11 +482,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &324133765
@@ -1022,28 +1022,13 @@ GameObject:
   m_Component:
   - component: {fileID: 512155950}
   - component: {fileID: 512155949}
-  - component: {fileID: 512155948}
   m_Layer: 0
-  m_Name: PlayerInputs
+  m_Name: ProjectileShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &512155948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512155947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12c942f34e3e714e990bd11f28e032f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 0.3
-  shotRadius: 0.05
 --- !u!114 &512155949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,7 +1492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 8477982892895240670, guid: 6f9712ac9cd902742b5e211561672eca, type: 3}
-  TimeRange: {x: 9, y: 12}
+  TimeRange: {x: 12, y: 5}
   EnemyCountRange: {x: 2, y: 4}
 --- !u!4 &663263289
 Transform:
@@ -1522,7 +1507,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &663263290
 MonoBehaviour:
@@ -1660,7 +1645,7 @@ GameObject:
   - component: {fileID: 793209533}
   - component: {fileID: 793209538}
   - component: {fileID: 793209539}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,11 +1685,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &793209535
@@ -1897,7 +1882,7 @@ GameObject:
   - component: {fileID: 831098409}
   - component: {fileID: 831098415}
   - component: {fileID: 831098414}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,11 +1922,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &831098411
@@ -2317,7 +2302,7 @@ GameObject:
   - component: {fileID: 1005012253}
   - component: {fileID: 1005012258}
   - component: {fileID: 1005012259}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2357,11 +2342,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1005012255
@@ -2509,7 +2494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4816528205086622525, guid: c70ca66893a504b338196eb263aa9c25, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 156.6
+      value: 164.3
       objectReference: {fileID: 0}
     - target: {fileID: 4816528205086622525, guid: c70ca66893a504b338196eb263aa9c25, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4121,7 +4106,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377149784
 GameObject:
@@ -4177,6 +4162,52 @@ RectTransform:
   m_AnchoredPosition: {x: -6.6176, y: 3.5156}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1473662282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1473662284}
+  - component: {fileID: 1473662283}
+  m_Layer: 0
+  m_Name: PaintShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1473662283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473662282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12c942f34e3e714e990bd11f28e032f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0.3
+  shotRadius: 0.05
+--- !u!4 &1473662284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473662282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523421165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,7 +4257,7 @@ Transform:
   m_Children:
   - {fileID: 1308311178}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1531111762
 GameObject:
@@ -4240,6 +4271,7 @@ GameObject:
   - component: {fileID: 1531111764}
   - component: {fileID: 1531111765}
   - component: {fileID: 1531111766}
+  - component: {fileID: 1531111767}
   m_Layer: 0
   m_Name: Reticle
   m_TagString: Untagged
@@ -4326,7 +4358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8fc7f22d7994ab099e05f92510527f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4.5
 --- !u!50 &1531111766
 Rigidbody2D:
   serializedVersion: 4
@@ -4354,6 +4386,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &1531111767
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531111762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &1696244014
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,7 +5594,7 @@ GameObject:
   - component: {fileID: 1957664700}
   - component: {fileID: 1957664705}
   - component: {fileID: 1957664706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Building2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5567,11 +5634,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1957664702
