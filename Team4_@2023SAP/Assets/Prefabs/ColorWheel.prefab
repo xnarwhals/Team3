@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 4660753644620414386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba268dbb2ce6bdc4a91f3c317cc19674, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3be47628ee6ad714a9b7d7fb720a03c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: ba268dbb2ce6bdc4a91f3c317cc19674, type: 3}
-  - {fileID: 21300000, guid: bb2e6046d46ecc64ea1e886d8fd1dd9f, type: 3}
-  - {fileID: 21300000, guid: 30ff411de66885d468f8a6014cf3127a, type: 3}
-  - {fileID: 21300000, guid: b7ef4a352f456854a8f6b89b06e11b0b, type: 3}
+  - {fileID: 21300000, guid: 3be47628ee6ad714a9b7d7fb720a03c3, type: 3}
+  - {fileID: 21300000, guid: 1dabf504a92654d448292ef92f33e758, type: 3}
+  - {fileID: 21300000, guid: c4b61aaaea643e94782c6d169d9a0b84, type: 3}
+  - {fileID: 21300000, guid: e6eef712541f8324c9a15b593bb566fa, type: 3}
+  offset: 0

@@ -13,6 +13,8 @@ public class Reticle : Singleton<Reticle>
         rb = GetComponent<Rigidbody2D>();
 
         Cursor.visible = false;
+
+        transform.position = Input.mousePosition;
     }
 
     public void Update()

@@ -22,14 +22,22 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: b092e76bbf8913b4396b254c6de1403e, type: 3}
-    - time: 0.35
+    - time: 0.28333333
       value: {fileID: 21300000, guid: d25a25cf3b650fb4c895c2de30a8fbb3, type: 3}
-    - time: 0.68333334
+    - time: 0.53333336
       value: {fileID: 21300000, guid: 5444fa9054ece8f478b2bc8554fbe908, type: 3}
-    - time: 1
+    - time: 0.78333336
       value: {fileID: 21300000, guid: c88f591752a378f4bb6f4b6480c3a867, type: 3}
-    - time: 1.35
+    - time: 1.0666667
       value: {fileID: 21300000, guid: 742f99c969ba1f64797d650e02c494b7, type: 3}
+    - time: 1.35
+      value: {fileID: 21300000, guid: 8d5bce9c150d5674bac3aecbddb6dd9a, type: 3}
+    - time: 1.55
+      value: {fileID: 21300000, guid: 87166d9ace915a844bb948debfe8df6c, type: 3}
+    - time: 1.7833333
+      value: {fileID: 21300000, guid: 00d539a508d00134190ff7337c6ea79a, type: 3}
+    - time: 2
+      value: {fileID: 21300000, guid: 615ec55afade477408875164435c3737, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -57,12 +65,16 @@ AnimationClip:
     - {fileID: 21300000, guid: 5444fa9054ece8f478b2bc8554fbe908, type: 3}
     - {fileID: 21300000, guid: c88f591752a378f4bb6f4b6480c3a867, type: 3}
     - {fileID: 21300000, guid: 742f99c969ba1f64797d650e02c494b7, type: 3}
+    - {fileID: 21300000, guid: 8d5bce9c150d5674bac3aecbddb6dd9a, type: 3}
+    - {fileID: 21300000, guid: 87166d9ace915a844bb948debfe8df6c, type: 3}
+    - {fileID: 21300000, guid: 00d539a508d00134190ff7337c6ea79a, type: 3}
+    - {fileID: 21300000, guid: 615ec55afade477408875164435c3737, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.4166666
+    m_StopTime: 2.2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,7 +94,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.4166666
+  - time: 2.2
     functionName: FinishDie
     data: 
     objectReferenceParameter: {fileID: 0}
