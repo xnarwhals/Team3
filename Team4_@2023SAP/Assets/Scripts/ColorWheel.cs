@@ -8,6 +8,7 @@ public class ColorWheel : MonoBehaviour
     public Sprite[] sprites;
     public float offset = 0.0f;
 
+    int prevIndex;
     int currentIndex;
 
     PaintExample paintScript;
@@ -34,6 +35,14 @@ public class ColorWheel : MonoBehaviour
                 img.sprite = sprites[currentIndex];
 
                 paintScript.brush.splatChannel = currentIndex;
+
+                if (currentIndex != prevIndex)
+                {
+                    EvtSystem.EventDispatcher.Raise(new GameEvents.ColorWheelChange());
+                    print("wh");
+                }
+
+                prevIndex = currentIndex;
             }
         }
         else

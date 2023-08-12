@@ -51,6 +51,11 @@ public class GameEvents : MonoBehaviour
         public float identityRestore;
     }
 
+    public class ScanStart : EvtSystem.Event
+    {
+        public GameObject enemy;
+    }
+
     public class ScanComplete : EvtSystem.Event
     {
 
@@ -71,5 +76,10 @@ public class GameEvents : MonoBehaviour
     public class RegisterBuildingGrid : EvtSystem.Event
     {
         public BuildingGrid grid;
+    }
+
+    public class ColorWheelChange : EvtSystem.Event
+    {
+        public string color; //not in use rn
     }
 }

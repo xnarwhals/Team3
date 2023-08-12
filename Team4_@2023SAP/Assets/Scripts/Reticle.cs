@@ -14,23 +14,29 @@ public class Reticle : Singleton<Reticle>
 
         Cursor.visible = false;
 
-        transform.position = Input.mousePosition;
+        /*if (Input.GetJoystickNames().Length <= 0)
+        {
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }*/
     }
 
     public void Update()
     {
         if (Input.GetJoystickNames().Length > 0)
         {
-            Vector2 stickPos = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            Vector2 desiredPos = (Vector2)transform.position + (2* stickPos);
+            Vector2 stickPos = 
+                new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            Vector2 desiredPos = (Vector2)transform.position + (2.0f * stickPos);
 
-            transform.position = Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
+            transform.position = 
+                Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
         }
         else
         {
             Vector2 desiredPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            transform.position = Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
+            transform.position = Vector2.Lerp
+                (transform.position, desiredPos, Time.deltaTime * speed);
         }
     }
 }
