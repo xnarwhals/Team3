@@ -29,6 +29,8 @@ public class DialogueSystem : Singleton<DialogueSystem>
     [Tooltip("characters per second")]
     public float dialogueSpeed = 0.1f;
 
+    bool dialogueOverStandby = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +49,6 @@ public class DialogueSystem : Singleton<DialogueSystem>
                 {
                     typewriter.ForceFinish();
                     dialogueText.text = typewriter.GetCurrentRevealedText();
-                    DialogueEnd();
                 }
                 else
                 {
@@ -56,9 +57,18 @@ public class DialogueSystem : Singleton<DialogueSystem>
             }
             else
             {
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)
-                    && currentIndex > 0) 
+                if (!dialogueOverStandby)
                 {
+                    dialogueOverStandby = true;
+
+                    currentIndex++;
+                    DialogueEnd();
+                }
+
+                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)) 
+                {
+                    dialogueOverStandby = false;
+
                     StartDialogue evt = new StartDialogue();
                     evt.dialogueLine = currentDialogue;
                     evt.index = currentIndex;
@@ -89,13 +99,13 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     void DialogueEnd()
     {
-        currentIndex++;
         if (currentDialogue.lines.Length > currentIndex)
         {
             ContinueDialogue();
         }
         else
         {
+            dialogueOverStandby = false;
             ShowButtons();
         }
     }
@@ -115,6 +125,8 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
         activate[1].SetActive(true);
         activate[2].SetActive(true);
+
+        continueIcon.SetActive(false);
 
         Image img = color1.GetComponent<Image>();
         switch (currentDialogue.color1)
