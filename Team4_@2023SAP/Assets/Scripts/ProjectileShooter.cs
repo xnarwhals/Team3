@@ -8,6 +8,8 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
 
     public float fireRate = 0.2f;
 
+    public bool holdToFire = true;
+
     float firetimer;
 
     // Start is called before the first frame update
@@ -24,7 +26,11 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
             firetimer += Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1))
+        bool canfire = holdToFire ?
+            Input.GetMouseButton(1) || Input.GetKey(KeyCode.JoystickButton1) :
+            Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1);
+
+        if (canfire)
         {
             if (firetimer >= fireRate)
             {
