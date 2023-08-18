@@ -15,11 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/Loading.unity
     guid: 40bb6baad0a3f495d8d4f52cc91ccf5c
   - enabled: 1
+    path: Assets/Scenes/BuildScenes/Exposition.unity
+    guid: 778f7dcf5fd060c4a83bc4c3a57e4a70
+  - enabled: 1
     path: Assets/Scenes/BuildScenes/MarketTest.unity
     guid: 23776c2a5c1c1fe488ee17b018f2998f
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/ScrollingEndCredits.unity
-    guid: 80544575f0b79b64bb014782296a68d6
+    path: Assets/Scenes/BuildScenes/HowToPlay.unity
+    guid: 80ffc7727092c874eafe40ac26a91111
+  - enabled: 1
+    path: Assets/Scenes/BuildScenes/OfficialHowToPlay.unity
+    guid: 599edc0d3ad790f439ceafe86e82362c
   - enabled: 1
     path: Assets/Scenes/BuildScenes/FinalizedBuild.unity
     guid: 4b1336a5e4ef39d489f772d8a34cb1db
@@ -27,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/HighScores.unity
     guid: 9cbe9a3a103ab47c68d30feef01b5dec
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/HowToPlay.unity
-    guid: 80ffc7727092c874eafe40ac26a91111
+    path: Assets/Scenes/BuildScenes/ScrollingEndCredits.unity
+    guid: 80544575f0b79b64bb014782296a68d6
   m_configObjects: {}

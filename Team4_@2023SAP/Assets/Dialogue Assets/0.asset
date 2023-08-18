@@ -13,9 +13,16 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   lines:
-  - Hey, how's it goin? My name's Falco, I just landed in this strange galaxy a few
-    hours ago so I'm pretty tired.
-  - I really like RED and GREEN because those are the colors on the flag of Mexico.
+  - Eh! Que miras? I'd quit staring so dumbly unless you want your eye taken out.
+  - What? You want information on the mysterious painter? If it will leave me alone,
+    rumor has it they apparently live in this very neighborhood and buy paint from
+    their own pocket money.
+  - They do their art in front of everyone even while pigs are trying to figure out
+    their identity. I may be risking my life while working, but that artist got some
+    cojones doing something like that. Personalmente, los respeto por ello.
+  - You want my thoughts about their color usage? Well, not that opinion matters,
+    but I would like to see some red and yellow incorporated in their next piece
+    because they remind me of my favorite bullfighter of all time!
   color1: 1
   color2: 3
   multiplier: 1
