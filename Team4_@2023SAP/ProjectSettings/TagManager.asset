@@ -16,8 +16,8 @@ TagManager:
   - Projectile
   - Enemy
   - NonPaintable
-  - 
-  - 
+  - Reticle
+  - ReticleWall
   - 
   - 
   - 
