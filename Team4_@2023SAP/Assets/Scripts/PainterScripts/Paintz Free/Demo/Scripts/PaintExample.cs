@@ -10,14 +10,14 @@ public class PaintExample : Singleton<PaintExample>
     public bool IndexBrush = false;
 
     //Change Paint Variables 
-    [SerializeField] [Range(1f, 45f)] float paintAmountUsed;
-    [SerializeField] [Range(1f, 45f)] float paintRegenSpeed;
+    [SerializeField] [Range(1f, 45f)] float paintCost;
+    [SerializeField] [Range(1f, 45f)] public float paintRegenSpeed;
     [SerializeField] [Range(0.1f, 10f)] float regenMultiplier;
     bool isRegening = true;
     bool color = false;
     int[] colors = new int[2];
 
-    float currentRegenSpeed;
+    public float currentRegenSpeed;
 
     //Refrence to the Bar 
     [SerializeField] PaintChangeUI paintBar;
@@ -101,7 +101,7 @@ public class PaintExample : Singleton<PaintExample>
     {
         currentRegenSpeed = paintRegenSpeed;
         PaintTarget.PaintCursor(brush, evt.position);
-        PlayerUsePaint(paintAmountUsed);
+        PlayerUsePaint(paintCost);
         if (IndexBrush) brush.splatIndex++;
     }
 

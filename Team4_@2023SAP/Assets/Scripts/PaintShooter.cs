@@ -55,7 +55,8 @@ public class PaintShooter : Singleton<PaintShooter>
 
     BuildingGrid GetHitBuilding()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Camera.main.WorldToScreenPoint(Reticle.Instance.transform.position));
+        Ray ray = Camera.main.ScreenPointToRay
+            (Camera.main.WorldToScreenPoint(Reticle.Instance.transform.position));
 
         RaycastHit[] hits = Physics.RaycastAll(ray);
         for (int h = 0; h < hits.Length; h++)

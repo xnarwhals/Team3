@@ -10,12 +10,18 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
 
     public bool holdToFire = true;
 
+    public float PaintCost = 5.0f;
+
     float firetimer;
+
+    PaintExample paintExample;
 
     // Start is called before the first frame update
     void Start()
     {
         firetimer = fireRate;
+
+        paintExample = FindAnyObjectByType<PaintExample>(); //this is bad
     }
 
     // Update is called once per frame
@@ -37,6 +43,9 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
                 firetimer = 0.0f;
 
                 EvtSystem.EventDispatcher.Raise(new GameEvents.ShootProjectile());
+
+                paintExample.currentRegenSpeed = paintExample.paintRegenSpeed;
+                paintExample.PlayerUsePaint(PaintCost);
 
                 GameObject obj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
                 Projectile p = obj.GetComponent<Projectile>();

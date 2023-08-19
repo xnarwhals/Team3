@@ -1044,6 +1044,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 310988431068880809, guid: 926e2924d44adcd4890166dbb6575761, type: 3}
   fireRate: 0.5
   holdToFire: 1
+  PaintCost: 6.5
 --- !u!4 &512155950
 Transform:
   m_ObjectHideFlags: 0
@@ -2766,9 +2767,10 @@ MonoBehaviour:
     splatChannel: 0
   SingleShotClick: 1
   IndexBrush: 0
-  paintAmountUsed: 10
+  paintCost: 10
   paintRegenSpeed: 10
   regenMultiplier: 2.5
+  currentRegenSpeed: 0
   paintBar: {fileID: 1024469722}
   _gameManager: {fileID: 0}
 --- !u!81 &1037105015
