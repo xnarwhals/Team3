@@ -27,6 +27,9 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0.0f)
+            return;
+
         if (firetimer < fireRate)
         {
             firetimer += Time.deltaTime;

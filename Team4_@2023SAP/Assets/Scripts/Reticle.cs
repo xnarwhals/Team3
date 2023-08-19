@@ -22,21 +22,30 @@ public class Reticle : Singleton<Reticle>
 
     public void Update()
     {
+        Vector2 desiredPos;
         if (Input.GetJoystickNames().Length > 0)
         {
-            Vector2 stickPos = 
+            Vector2 stickPos =
                 new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            Vector2 desiredPos = (Vector2)transform.position + (2.0f * stickPos);
-
-            transform.position = 
-                Vector2.Lerp(transform.position, desiredPos, Time.deltaTime * speed);
+            desiredPos = (Vector2)transform.position + (2.0f * stickPos);
         }
         else
         {
-            Vector2 desiredPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            transform.position = Vector2.Lerp
-                (transform.position, desiredPos, Time.deltaTime * speed);
+            desiredPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+
+        transform.position = Vector2.Lerp
+                (transform.position, desiredPos, Time.deltaTime * speed);
+
+        float x = Mathf.Clamp(transform.position.x, 
+            Camera.main.ScreenToWorldPoint(new Vector3(-Camera.main.scaledPixelWidth, 0.0f, 0.0f)).x,
+            Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.scaledPixelWidth, 0.0f, 0.0f)).x);
+
+        float y = Mathf.Clamp(transform.position.y, 
+            Camera.main.ScreenToWorldPoint(new Vector3(0.0f, -Camera.main.scaledPixelHeight, 0.0f)).y,
+            Camera.main.ScreenToWorldPoint(new Vector3(0.0f, Camera.main.scaledPixelHeight, 0.0f)).y);
+        transform.position = new Vector2(x, y);
     }
+
 }
+

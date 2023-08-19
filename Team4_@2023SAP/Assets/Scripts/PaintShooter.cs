@@ -31,6 +31,9 @@ public class PaintShooter : Singleton<PaintShooter>
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0.0f)
+            return;
+
         if (fireTimer < fireRate)
             fireTimer += Time.deltaTime;
 

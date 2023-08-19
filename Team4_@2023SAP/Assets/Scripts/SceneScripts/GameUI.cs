@@ -16,7 +16,7 @@ public class GameUI : MonoBehaviour
         Button highScores = GameObject.Find("High Scores Btn").GetComponent<Button>();
         highScores.onClick.AddListener(LoadScores);
 
-        Button skip = GameObject.Find("Skip").GetComponent<Button>();
+        Button skip = GameObject.Find("Skip Intro Btn").GetComponent<Button>();
         skip.onClick.AddListener(SkipIntro);
     }
 
