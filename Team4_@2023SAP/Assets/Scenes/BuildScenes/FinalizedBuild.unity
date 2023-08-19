@@ -1495,6 +1495,8 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 8477982892895240670, guid: 6f9712ac9cd902742b5e211561672eca, type: 3}
   TimeRange: {x: 12, y: 5}
   EnemyCountRange: {x: 2, y: 4}
+  RowRange: {x: 1, y: 4}
+  MaxEnemyCount: 5
 --- !u!4 &663263289
 Transform:
   m_ObjectHideFlags: 0
