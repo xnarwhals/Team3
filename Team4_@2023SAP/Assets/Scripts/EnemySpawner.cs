@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject EnemyPrefab;
-
+    
+    public float StartDelay = 10.0f;
     public Vector2 TimeRange = new Vector2(8.0f, 12.0f);
     public Vector2Int EnemyCountRange = new Vector2Int(2, 4);
     public Vector2Int RowRange = new Vector2Int(0, 4);
@@ -14,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
 
     float currentTime = 0.0f;
     float timer = 0.0f;
+
+    float startTimer = 0.0f;
 
     List<GameObject> enemies = new List<GameObject>();
 
@@ -26,6 +29,12 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (startTimer < StartDelay)
+        {
+            startTimer += Time.deltaTime;
+            return;
+        }
+
         timer += Time.deltaTime;
 
         if (timer >= currentTime)
