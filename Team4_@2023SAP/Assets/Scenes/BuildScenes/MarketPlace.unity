@@ -275,10 +275,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Keyboard & Mouse for this section:
 
-    A and D to move left and right
+    A and D to pick a character
 
     E
-    to interact
+    to select
 
 
 '
@@ -1069,7 +1069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773087882593453253, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6186475261472235878, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_IsActive

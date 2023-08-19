@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BuildScenes/Exposition.unity
     guid: 778f7dcf5fd060c4a83bc4c3a57e4a70
   - enabled: 1
-    path: Assets/Scenes/BuildScenes/MarketTest.unity
+    path: Assets/Scenes/BuildScenes/MarketPlace.unity
     guid: 23776c2a5c1c1fe488ee17b018f2998f
   - enabled: 1
     path: Assets/Scenes/BuildScenes/HowToPlay.unity
