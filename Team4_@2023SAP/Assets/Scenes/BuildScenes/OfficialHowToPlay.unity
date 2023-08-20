@@ -451,7 +451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbc1ee2d3bea92f499dcbc246d592e3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb9d8f4afc3753f4b9b16d0fb0c86af5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1441,9 +1441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff206b8a58cc284409f5ce6f5f62d169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextButton: {fileID: 707198561}
-  backButton: {fileID: 1842472634}
   background:
   - {fileID: 608174977}
   - {fileID: 900365906}
-  NextScene: FinalizedBuild

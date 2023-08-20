@@ -222,14 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 847024974}
   sentences:
-  - '???: Making sure I got enough paint... yeah. Ah... Yeah I already got my face
-    mask on.'
-  - '???: Alright. As long as the law enforcement doesn''t get involved, everything
-    should go smoothly.'
-  - '???: ...Just gotta remember to not make awkward eye contact when I talk with
-    people.'
-  - '*Use Left and Right Arrows on Keyboard or Controller Analog to Select Who to
-    Speak To*'
+  - Making sure I got enough paint... yeah. Ah... Yeah I already got my face mask
+    on.
+  - Alright. As long as the law enforcement doesn't get involved, everything should
+    go smoothly.
+  - ...Just gotta remember to not make awkward eye contact when I talk with people.
   typingSpeed: 0.05
   continueButton: {fileID: 903278198}
 --- !u!4 &209533263
@@ -501,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: '???: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -535,7 +532,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

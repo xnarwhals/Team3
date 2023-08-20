@@ -273,12 +273,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Keyboard & Mouse for this section:
+  m_text: 'Keyboard:
 
     A and D to pick a character
 
-    E
-    to select
+    E to select
 
 
 '
@@ -1206,6 +1205,10 @@ PrefabInstance:
     - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_HorizontalAlignment
