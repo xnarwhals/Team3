@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Switch : MonoBehaviour
 {
-
+    public GameObject nextButton;
+    public GameObject backButton;
     public GameObject[] background;
+
+    public string NextScene;
+
     int index;
+
     void Start()
     {
         index = 0;
     }
+
     void Update()
     {
         if (index >= 4)
@@ -30,13 +37,25 @@ public class Switch : MonoBehaviour
     {
         index += 1;
 
-        for (int i = 0; i < background.Length; i++)
+        if (index > 0)
         {
-            background[i].gameObject.SetActive(false);
+            background[index - 1].gameObject.SetActive(false);
+        }
+
+        backButton.gameObject.SetActive(true);
+
+        if (index <= background.Length - 1)
+        {
             background[index].gameObject.SetActive(true);
         }
-        Debug.Log(index);
+        else
+        {
+            backButton.gameObject.SetActive(false);
+            nextButton.gameObject.SetActive(false);
+            SceneManager.LoadScene(NextScene);
+        }
     }
+
 
     public void Previous()
     {
@@ -46,7 +65,11 @@ public class Switch : MonoBehaviour
             background[i].gameObject.SetActive(false);
             background[index].gameObject.SetActive(true);
         }
-        Debug.Log(index);
+
+        if (index <= 0)
+        {
+            backButton.gameObject.SetActive(false);
+        }
     }
 }
 

@@ -9,13 +9,14 @@ public class BeginningExposition : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     public string[] sentences; // Will hold all the sentences that hold our dialogue
     private int index;
-    public float typingSpeed;
+    public float typingSpeed = 0.1f;
     public GameObject continueButton;
 
     void Start()
     {
         StartCoroutine(Type());
     }
+
     void Update()
     {
         if(textDisplay.text == sentences[index])
@@ -29,16 +30,15 @@ public class BeginningExposition : MonoBehaviour
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 
     public void NextSentence()
     {
-
         continueButton.SetActive(false);
 
-        if (index > sentences.Length - 1) // Make sure we have not come to the end of our dialogue
+        if (index <= sentences.Length - 1) // Make sure we have not come to the end of our dialogue
         {
             index++; // of 1
             textDisplay.text = ""; // To prevent sentences to stack
@@ -49,7 +49,6 @@ public class BeginningExposition : MonoBehaviour
             textDisplay.text = ""; // Resets the text
             continueButton.SetActive(false);
         }
-
     }
 }
 

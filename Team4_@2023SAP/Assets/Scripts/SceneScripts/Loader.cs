@@ -38,7 +38,5 @@ public static class Loader
             onLoaderCallback();
             onLoaderCallback = null;
         }
-
-
     }
 }
