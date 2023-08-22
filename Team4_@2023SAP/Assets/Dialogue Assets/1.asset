@@ -17,17 +17,18 @@ MonoBehaviour:
     without saying anything.
   - Wait, you want me to help you with information on the mysterious artist? Not
     a chance buddy uuuuunlesssss you tell me a good place that's hiring. A girl is
-    strapped for cash to support her people you know?
-  - Wait there's a store that just needs someone to lift boxes and check inventory?
-    Awesome! ! Alright let me tell you the super secret classified information now.
+    strapped for cash to support her people, you know?
+  - Wait, there's a store that just needs someone to lift boxes and check inventory?
+    Awesome!! Alright, let me tell you the super secret classified information now.
   - "\u2026"
   - . . .
   - .     .     .
-  - Okay, I may not know much about them, but I do know from my time working odd
-    jobs I have a theory that the paint tool they use HAS to be custom made!
+  - Okay, I may not know much about them, but I DO know from my time working odd
+    jobs I have a theory that the paint tool they use HAS to be custom-made! My guess
+    is they must be both an engineer and a painter.
   - "Huh? You want me to pick two random colors for no reason? Well, I have really
-    liked blue and orange ever since I was a little kid, but um\u2026 How does this
-    help you out again?"
+    liked blue and orange since I was a little kid, but um\u2026 How does this help
+    you out again?"
   color1: 0
   color2: 1
   multiplier: 1

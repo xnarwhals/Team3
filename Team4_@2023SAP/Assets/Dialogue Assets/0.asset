@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - Eh! Que miras? I'd quit staring so dumbly unless you want your eye taken out.
-  - What? You want information on the mysterious painter? Rumor has it they apparently
-    live in this very neighborhood and buy paint using their own pocket money.
-  - They do their art in front of everyone even while pigs are trying to figure out
-    their identity. I work in machinary which is dangerous, but that artist got some
-    cojones doing something like that. Personalmente, los respeto por ello.
+  - What? You want information on the mysterious painter? Rumor has it they live
+    in this very neighborhood and buy paint using their own pocket money.
+  - They do an art performance in front of everyone, even while the pigs try to find
+    their identity. I work in machinery, which is dangerous, but that artist got
+    more cojones than me. Personalmente, los respeto por ello.
   - You want my thoughts about their color usage? Well, not that opinion matters,
-    but I would like to see some red and yellow incorporated in their next piece
-    because they remind me favorite bullfighter!
+    but I would like to see red and yellow incorporated in their next piece because
+    they remind me of my favorite bullfighter!
   color1: 1
   color2: 3
   multiplier: 1
