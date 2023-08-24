@@ -21,9 +21,10 @@ public class GameManager : Singleton<GameManager>
     private void Awake()
     {
         gameManager = this;
-        playerInputs = new GameObject[] { GameObject.Find("PaintShooter"),
-            GameObject.Find("ProjectileShooter") };
-        enemySpawner = GameObject.Find("EnemyHandler").GetComponent<EnemySpawner>();
+        playerInputs = new GameObject[] { FindAnyObjectByType<PaintShooter>().gameObject,
+            FindAnyObjectByType<ProjectileShooter>().gameObject};
+
+        enemySpawner = FindAnyObjectByType<EnemySpawner>();
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.EnemyDie>(RestoreIdentity);
 
