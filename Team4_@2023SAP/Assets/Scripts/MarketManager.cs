@@ -14,7 +14,11 @@ public class MarketManager : MonoBehaviour
 
     public float DialogueSpeed = 5.0f; // I want to be able to edit this, but I do not know where to tell of this change in the code  
 
-    public AudioSource textAudioSource; // Trying to make a sound effect play with every word being written in front of the player
+    public AudioClip textAudioClip; // Trying to make a sound effect play with every word being written in front of the player
+
+    float thumbStickDeadzone = 0.9f;
+
+    int joystickDirection = -1;
 
     void Start()
     {
@@ -23,19 +27,41 @@ public class MarketManager : MonoBehaviour
 
     void Update()
     {
+        if (joystickDirection == -1)
+        {
+            if (Input.GetAxis("Horizontal") > thumbStickDeadzone)
+            {
+                joystickDirection = 1;
+            }
+            else if (Input.GetAxis("Horizontal") < -thumbStickDeadzone)
+            {
+                joystickDirection = 0;
+            }
+        }
+        else if (joystickDirection == -2 && Mathf.Abs(Input.GetAxis("Horizontal")) < thumbStickDeadzone)
+        {
+            joystickDirection = -1;
+        }
+        else
+        {
+            joystickDirection = -2;
+        }
+
         if (!dialogueOpen)
         {
             if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)) // Interact button
             {
                 OpenDialogue(dialogueLines[currentIndex]);
             }
-            else if (Input.GetKeyUp(KeyCode.Joystick1Button1) || Input.GetKeyUp(KeyCode.D)) // Right arrow
+            else if (joystickDirection == 1 || 
+                Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow)) // Right arrow
             {
                 currentIndex++;
                 if (currentIndex > marketSprites.Length - 1) currentIndex = 0;
                 UpdateBackground();
             }
-            else if (Input.GetKeyUp(KeyCode.Joystick1Button2) || Input.GetKeyUp(KeyCode.A)) // Left arrow
+            else if (joystickDirection == 0 || 
+                Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) // Left arrow
             {
                 currentIndex--;
                 if (currentIndex < 0) currentIndex = marketSprites.Length - 1;
