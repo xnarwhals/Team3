@@ -33,6 +33,8 @@ public class GameManager : Singleton<GameManager>
 
     public void GameOver()
     {
+        EvtSystem.EventDispatcher.Raise(new GameEvents.GameOver());
+
         enemySpawner.enabled = !enemySpawner.enabled;
         Cursor.visible = true;
 

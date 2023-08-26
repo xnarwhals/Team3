@@ -39,6 +39,8 @@ public class EnemySpawner : MonoBehaviour
 
         if (timer >= currentTime)
         {
+            EvtSystem.EventDispatcher.Raise(new GameEvents.DroneWaveEnter());
+
             timer = 0.0f;
             currentTime = Random.Range(TimeRange.x, TimeRange.y);
 

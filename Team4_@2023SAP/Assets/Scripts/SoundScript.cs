@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class SoundScript : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class SoundScript : MonoBehaviour
 
     public AudioClip ShootPaint;
     public AudioClip colorWheel;
+
+    public AudioClip DroneEnter;
+
+    public AudioClip GameOverRiff;
 
     public AudioClip MarketTalking;
     private GameObject marketTalkingSource;
@@ -31,6 +36,10 @@ public class SoundScript : MonoBehaviour
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.StartDialogue>(StartDialogue);
         EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(EndDialogue);
+
+        EvtSystem.EventDispatcher.AddListener<GameEvents.DroneWaveEnter>(droneEnter);
+
+        EvtSystem.EventDispatcher.AddListener<GameEvents.GameOver>(GameOver);
     }
 
     // Update is called once per frame
@@ -62,6 +71,16 @@ public class SoundScript : MonoBehaviour
     void ColorWheel (GameEvents.ColorWheelChange evt)
     {
         AudioSource.PlayClipAtPoint(colorWheel, Vector3.zero, volume);
+    }
+
+    void droneEnter(GameEvents.DroneWaveEnter evt)
+    {
+        AudioSource.PlayClipAtPoint(DroneEnter, Vector3.zero, volume);
+    }
+
+    void GameOver(GameEvents.GameOver evt)
+    {
+        AudioSource.PlayClipAtPoint(GameOverRiff, Vector3.zero, volume);
     }
 
     void StartDialogue (GameEvents.StartDialogue evt)
