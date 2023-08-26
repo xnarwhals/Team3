@@ -3439,7 +3439,7 @@ MonoBehaviour:
     splatsX: 4
     splatsY: 4
     splatIndex: -1
-    splatScale: 1.5
+    splatScale: 1.4
     splatRandomScaleMin: 1
     splatRandomScaleMax: 1
     splatRotation: 0
@@ -3447,7 +3447,7 @@ MonoBehaviour:
     splatChannel: 0
   SingleShotClick: 1
   IndexBrush: 0
-  paintCost: 10
+  paintCost: 9.5
   paintRegenSpeed: 10
   regenMultiplier: 2.5
   currentRegenSpeed: 0
@@ -3539,10 +3539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6922f049ba3ed2b40ac2b3b12ef8d1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 1.25
+  intensity: 1.35
   roughness: 0.5
-  fadeInTime: 0.1
-  fadeOutTime: 0.1
+  fadeInTime: 0.15
+  fadeOutTime: 0.15
 --- !u!114 &1037105019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5285,7 +5285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8fc7f22d7994ab099e05f92510527f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6.5
+  speed: 6.3
 --- !u!50 &1531111766
 Rigidbody2D:
   serializedVersion: 4
