@@ -31,6 +31,11 @@ public static class Loader
         SceneManager.LoadScene(Scene.Loading.ToString());
     }
 
+    public static void Load(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
     public static void LoaderCallback()
     {
         if (onLoaderCallback != null)

@@ -10,6 +10,11 @@ public class GameUI : MonoBehaviour
     public Button highScores;
     public Button skip;
 
+    public string newGameScene;
+    public string gameCreditsScene;
+    public string highScoresScene;
+    public string skipScene;
+
     private void Awake()
     {
         newGame.onClick.AddListener(LoadGame);
@@ -23,21 +28,21 @@ public class GameUI : MonoBehaviour
 
     private void LoadGame()
     {
-        Loader.Load(Loader.Scene.MarketTest);
+        Loader.Load(newGameScene);
     }
 
     private void LoadCredits()
     {
-        Loader.Load(Loader.Scene.ScrollingEndCredits);
+        Loader.Load(gameCreditsScene);
     }
 
     private void LoadScores()
     {
-        Loader.Load(Loader.Scene.HighScores);
+        Loader.Load(highScoresScene);
     }
 
     private void SkipIntro()
     {
-        Loader.Load(Loader.Scene.FinalizedBuild);
+        Loader.Load(skipScene);
     }
 }
