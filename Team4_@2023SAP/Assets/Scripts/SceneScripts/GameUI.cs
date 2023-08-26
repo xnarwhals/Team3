@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
@@ -24,6 +26,11 @@ public class GameUI : MonoBehaviour
         highScores.onClick.AddListener(LoadScores);
 
         skip.onClick.AddListener(SkipIntro);
+
+        if (Input.GetJoystickNames().Length > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(newGame.gameObject);
+        }
     }
 
     private void LoadGame()
