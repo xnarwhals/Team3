@@ -1532,7 +1532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446b903e69f26f64d9834ec4da819d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keyboard: {fileID: 21300000, guid: 33f8a32b3a92a134286e8dbf670cce1a, type: 3}
+  Keyboard: {fileID: 0}
   Controller: {fileID: 21300000, guid: cac65496eafedeb4d9f65d24fb37280a, type: 3}
 --- !u!1 &498849791
 GameObject:
@@ -2398,7 +2398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1515672016
 Transform:
   m_ObjectHideFlags: 0
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446b903e69f26f64d9834ec4da819d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keyboard: {fileID: 21300000, guid: 406fae9791bb9ec41b6f92eeb8477ec2, type: 3}
+  Keyboard: {fileID: 0}
   Controller: {fileID: 21300000, guid: cac65496eafedeb4d9f65d24fb37280a, type: 3}
 --- !u!114 &1560547352
 MonoBehaviour:

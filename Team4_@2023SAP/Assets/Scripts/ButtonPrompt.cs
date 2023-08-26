@@ -23,6 +23,10 @@ public class ButtonPrompt : MonoBehaviour
         }
         else
         {
+            if (Controller == null)
+            {
+                img.color = new Color(0, 0, 0);
+            }
             img.sprite = Keyboard;
         }
     }
