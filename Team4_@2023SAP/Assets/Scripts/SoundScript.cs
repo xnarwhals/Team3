@@ -56,7 +56,7 @@ public class SoundScript : MonoBehaviour
 
     void shootPaint(GameEvents.ShootPaint evt)
     {
-        AudioSource.PlayClipAtPoint(ShootPaint, Vector3.zero, volume * 1.5f);
+        AudioSource.PlayClipAtPoint(ShootPaint, Vector3.zero, volume);
     }
 
     void ColorWheel (GameEvents.ColorWheelChange evt)

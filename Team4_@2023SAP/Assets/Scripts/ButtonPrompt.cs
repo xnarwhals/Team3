@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ButtonPrompt : MonoBehaviour
@@ -17,17 +19,17 @@ public class ButtonPrompt : MonoBehaviour
     public void SelectImage()
     {
         Image img = GetComponent<Image>();
-        if (Input.GetJoystickNames().Length > 0)
+        if (Joystick.current.IsUnityNull())
         {
             img.sprite = Controller;
         }
         else
         {
-            if (Controller == null)
+            try { img.sprite = Keyboard; } 
+            catch 
             {
-                img.color = new Color(0, 0, 0);
+                img.color = new Color(0, 0, 0, 0);
             }
-            img.sprite = Keyboard;
         }
     }
 }
