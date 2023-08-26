@@ -20,6 +20,8 @@ public class MarketManager : MonoBehaviour
 
     int joystickDirection = -1;
 
+    bool postClose = false;
+
     void Start()
     {
         EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(CloseDialogue);
@@ -27,28 +29,28 @@ public class MarketManager : MonoBehaviour
 
     void Update()
     {
-        if (joystickDirection == -1)
-        {
-            if (Input.GetAxis("Horizontal") > thumbStickDeadzone)
-            {
-                joystickDirection = 1;
-            }
-            else if (Input.GetAxis("Horizontal") < -thumbStickDeadzone)
-            {
-                joystickDirection = 0;
-            }
-        }
-        else if (joystickDirection == -2 && Mathf.Abs(Input.GetAxis("Horizontal")) < thumbStickDeadzone)
-        {
-            joystickDirection = -1;
-        }
-        else
-        {
-            joystickDirection = -2;
-        }
-
         if (!dialogueOpen)
         {
+            if (joystickDirection == -1)
+            {
+                if (Input.GetAxis("Horizontal") > thumbStickDeadzone)
+                {
+                    joystickDirection = 1;
+                }
+                else if (Input.GetAxis("Horizontal") < -thumbStickDeadzone)
+                {
+                    joystickDirection = 0;
+                }
+            }
+            else if (joystickDirection == -2 && Mathf.Abs(Input.GetAxis("Horizontal")) < thumbStickDeadzone)
+            {
+                joystickDirection = -1;
+            }
+            else
+            {
+                joystickDirection = -2;
+            }
+
             if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)) // Interact button
             {
                 OpenDialogue(dialogueLines[currentIndex]);
@@ -68,6 +70,14 @@ public class MarketManager : MonoBehaviour
                 UpdateBackground();
             }
         }
+        else if (postClose)
+        {
+            if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E))
+            {
+                dialogueOpen = false;
+                postClose = false;
+            }
+        }
     }
 
     void OpenDialogue(MarketDialogue dialogueLine)
@@ -81,7 +91,7 @@ public class MarketManager : MonoBehaviour
 
     void CloseDialogue(GameEvents.EndDialogue evt)
     {
-        dialogueOpen = false;
+        postClose = true;
     }
 
     void UpdateBackground()

@@ -4,6 +4,7 @@
 using EvtSystem;
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static GameEvents;
@@ -45,7 +46,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
         {
             if (!typewriter.isDone())
             {
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.E)
                     && typewriter.GetCurrentRevealedText().Length > 0)  //fixes a bug using duct tape
                 {
                     typewriter.ForceFinish();
@@ -61,15 +62,13 @@ public class DialogueSystem : Singleton<DialogueSystem>
                 if (!dialogueOverStandby)
                 {
                     dialogueOverStandby = true;
-
+                    
                     currentIndex++;
                     DialogueEnd();
                 }
 
-                if (Input.GetKeyUp(KeyCode.Joystick1Button0) || Input.GetKeyUp(KeyCode.E)) 
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.E)) 
                 {
-                    dialogueOverStandby = false;
-
                     ContinueDialogue evt = new ContinueDialogue();
                     evt.dialogueLine = currentDialogue;
                     evt.index = currentIndex;
@@ -82,6 +81,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     public void BeginDialogue(StartDialogue evt)
     {
+        dialogueOverStandby = false;
 
         currentDialogue = evt.dialogueLine;
         currentIndex = evt.index;
@@ -99,6 +99,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
     public void BeginDialogue(ContinueDialogue evt) //this is so messy but it works
     {
+        dialogueOverStandby = false;
 
         currentDialogue = evt.dialogueLine;
         currentIndex = evt.index;
@@ -139,6 +140,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
         button1.SetActive(true);
         button2.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(button2);
 
         activate[1].SetActive(true);
         activate[2].SetActive(true);
@@ -155,9 +157,9 @@ public class DialogueSystem : Singleton<DialogueSystem>
     public void Choose()
     {
         //PlayerPrefs.SetInt("Color1", currentDialogue.color1);
-        //PlayerPrefs.SetInt("Color1", currentDialogue.color2);
+        //PlayerPrefs.SetInt("Color2", currentDialogue.color2);
 
-        Loader.Load(Loader.Scene.HowToPlay);
+        Loader.Load("OfficialHowToPlay");
         Destroy(gameObject);
     }
     
