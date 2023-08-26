@@ -38,7 +38,7 @@ public class ColorWheel : MonoBehaviour
 
                 if (currentIndex != prevIndex)
                 {
-                    EvtSystem.EventDispatcher.Raise(new GameEvents.ColorWheelChange());
+                    EvtSystem.EventDispatcher.Raise(new GameEvents.ColorWheelChange { ChangedColor = currentIndex });
                 }
 
                 prevIndex = currentIndex;

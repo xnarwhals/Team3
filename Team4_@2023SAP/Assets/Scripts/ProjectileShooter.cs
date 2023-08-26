@@ -16,12 +16,18 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
 
     PaintExample paintExample;
 
+    public Color color = Color.white;
+
+    public List<Color> colors = new List<Color>();
+
     // Start is called before the first frame update
     void Start()
     {
         firetimer = fireRate;
 
         paintExample = FindAnyObjectByType<PaintExample>(); //this is bad
+
+        EvtSystem.EventDispatcher.AddListener<GameEvents.ColorWheelChange>(ColorChange);
     }
 
     // Update is called once per frame
@@ -53,7 +59,14 @@ public class ProjectileShooter : Singleton<ProjectileShooter>
                 GameObject obj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
                 Projectile p = obj.GetComponent<Projectile>();
                 p.direction = (Vector2)(Reticle.Instance.transform.position - transform.position);
+
+                obj.GetComponent<SpriteRenderer>().color = color;
             }
         }
+    }
+
+    void ColorChange(GameEvents.ColorWheelChange evt)
+    {
+        color = colors[evt.ChangedColor];
     }
 }

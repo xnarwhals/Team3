@@ -92,6 +92,6 @@ public class GameEvents : MonoBehaviour
 
     public class ColorWheelChange : EvtSystem.Event
     {
-        public string color; //not in use rn
+        public int ChangedColor; //not in use rn
     }
 }

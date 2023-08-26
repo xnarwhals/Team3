@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 226707722}
   - component: {fileID: 226707724}
   - component: {fileID: 226707723}
+  - component: {fileID: 226707725}
   m_Layer: 5
   m_Name: Gun
   m_TagString: Untagged
@@ -462,16 +463,16 @@ RectTransform:
   m_GameObject: {fileID: 226707721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 782685300}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -19.099976, y: 82.100006}
-  m_SizeDelta: {x: 120, y: 83.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -101.1}
+  m_SizeDelta: {x: -680, y: -366.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226707723
 MonoBehaviour:
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 12d746a6ba67d8644abfef5c484379e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5af0ebea10df4a4b9da02859ba0143f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -511,6 +512,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226707721}
   m_CullTransparentMesh: 1
+--- !u!114 &226707725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226707721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eea1c47382cdef429275405e680328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Left: {fileID: 21300000, guid: 6b40212ee855f9743b9bd887be7cec3e, type: 3}
+  Middle: {fileID: 21300000, guid: b5af0ebea10df4a4b9da02859ba0143f, type: 3}
+  Right: {fileID: 21300000, guid: ae5682d2983dc494c8a0d690f636ba60, type: 3}
+  MiddleRange: 2.5
 --- !u!1 &324133761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,11 +1250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9123710753681120281, guid: d31f31a5176d1624585ebfbde47cf138, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 335.3
+      value: 78.3
       objectReference: {fileID: 0}
     - target: {fileID: 9123710753681120281, guid: d31f31a5176d1624585ebfbde47cf138, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -62.5
+      value: -94.2
       objectReference: {fileID: 0}
     - target: {fileID: 9123710753681120281, guid: d31f31a5176d1624585ebfbde47cf138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1289,6 +1306,12 @@ MonoBehaviour:
   fireRate: 0.5
   holdToFire: 1
   PaintCost: 4
+  color: {r: 0.93725497, g: 0.078431375, b: 0.5568628, a: 1}
+  colors:
+  - {r: 0.93725497, g: 0.078431375, b: 0.5568628, a: 1}
+  - {r: 0.21176472, g: 0.61960787, b: 0.3647059, a: 1}
+  - {r: 0.9490197, g: 0.32941177, b: 0.10196079, a: 1}
+  - {r: 0.40784317, g: 0.7960785, b: 0.92549026, a: 1}
 --- !u!4 &512155950
 Transform:
   m_ObjectHideFlags: 0
@@ -1297,7 +1320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512155947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.44, z: 0}
+  m_LocalPosition: {x: 0, y: -3.378, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
