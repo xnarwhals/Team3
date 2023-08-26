@@ -49,7 +49,13 @@ public class GameManager : Singleton<GameManager>
         
         Cursor.visible = false;
         playerIdentity.Identity = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        foreach (GameObject obj in FindObjectsOfType(typeof(GameObject)))
+        {
+            Destroy(obj);
+        }
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        Destroy(gameObject);
     }
 
     public void QuitGame()

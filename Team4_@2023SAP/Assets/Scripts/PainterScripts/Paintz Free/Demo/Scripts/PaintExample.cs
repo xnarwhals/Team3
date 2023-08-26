@@ -44,8 +44,8 @@ public class PaintExample : MonoBehaviour
             brush.splatsY = 4;
         }
 
-        colors[0] = PlayerPrefs.GetInt("Color1");
-        colors[1] = PlayerPrefs.GetInt("Color2");
+        //colors[0] = PlayerPrefs.GetInt("Color1");
+        //colors[1] = PlayerPrefs.GetInt("Color2");
     }
 
     private void Update()
