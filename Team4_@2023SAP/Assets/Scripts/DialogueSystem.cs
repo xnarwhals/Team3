@@ -35,6 +35,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
     void Start()
     {
         EventDispatcher.AddListener<StartDialogue>(BeginDialogue);
+        EventDispatcher.AddListener<ContinueDialogue>(BeginDialogue);
     }
 
     // Update is called once per frame
@@ -69,7 +70,7 @@ public class DialogueSystem : Singleton<DialogueSystem>
                 {
                     dialogueOverStandby = false;
 
-                    StartDialogue evt = new StartDialogue();
+                    ContinueDialogue evt = new ContinueDialogue();
                     evt.dialogueLine = currentDialogue;
                     evt.index = currentIndex;
 
@@ -79,8 +80,24 @@ public class DialogueSystem : Singleton<DialogueSystem>
         }
     }
 
-    //just putting this in start for now
     public void BeginDialogue(StartDialogue evt)
+    {
+
+        currentDialogue = evt.dialogueLine;
+        currentIndex = evt.index;
+        float duration = currentDialogue.lines[evt.index].Length / dialogueSpeed;
+
+        typewriter.StartReveal(currentDialogue.lines[evt.index], duration);
+
+
+        pfp.SetActive(true);
+        pfp.GetComponent<Image>().sprite = currentDialogue.CloseUp;
+
+        activate[0].SetActive(true);
+        continueIcon.SetActive(false);
+    }
+
+    public void BeginDialogue(ContinueDialogue evt) //this is so messy but it works
     {
 
         currentDialogue = evt.dialogueLine;
@@ -128,45 +145,17 @@ public class DialogueSystem : Singleton<DialogueSystem>
 
         continueIcon.SetActive(false);
 
-        Image img = color1.GetComponent<Image>();
-        switch (currentDialogue.color1)
-        {
-            case 0:
-                img.color = new Color(223.0f / 255, 143.0f / 255, 42.0f / 255);
-                break;
-            case 1:
-                img.color = Color.red;
-                break;
-            case 2:
-                img.color = Color.blue;
-                break;
-            case 3:
-                img.color = Color.green;
-                break;
-        }
+        Image img1 = color1.GetComponent<Image>();
+        img1.color = currentDialogue.color1;
 
-        img = color2.GetComponent<Image>();
-        switch (currentDialogue.color2)
-        {
-            case 0:
-                img.color = new Color(223, 143, 42);
-                break;
-            case 1:
-                img.color = Color.red;
-                break;
-            case 2:
-                img.color = Color.blue;
-                break;
-            case 3:
-                img.color = Color.green;
-                break;
-        }
+        Image img2 = color2.GetComponent<Image>();
+        img2.color = currentDialogue.color2;
     }
 
     public void Choose()
     {
-        PlayerPrefs.SetInt("Color1", currentDialogue.color1);
-        PlayerPrefs.SetInt("Color1", currentDialogue.color2);
+        //PlayerPrefs.SetInt("Color1", currentDialogue.color1);
+        //PlayerPrefs.SetInt("Color1", currentDialogue.color2);
 
         Loader.Load(Loader.Scene.HowToPlay);
         Destroy(gameObject);

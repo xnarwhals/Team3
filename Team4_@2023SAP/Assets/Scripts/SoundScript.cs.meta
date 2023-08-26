@@ -3,7 +3,14 @@ guid: 0c794877290094c4eb02f410a5831617
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - DroneScan: {instanceID: 0}
+  - DroneHit: {instanceID: 0}
+  - DroneDeath: {instanceID: 0}
+  - ShootPaint: {instanceID: 0}
+  - colorWheel: {instanceID: 0}
+  - MarketTalking: {instanceID: 0}
+  - AudioSourcePrefab: {fileID: 7596697212527524426, guid: 21649ab5793236d41a32b7a7f1ca416b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

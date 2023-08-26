@@ -11,6 +11,11 @@ public class SoundScript : MonoBehaviour
     public AudioClip ShootPaint;
     public AudioClip colorWheel;
 
+    public AudioClip MarketTalking;
+    private GameObject marketTalkingSource;
+
+    public GameObject AudioSourcePrefab;
+
     public float volume = 1.0f;
 
     // Start is called before the first frame update
@@ -22,6 +27,10 @@ public class SoundScript : MonoBehaviour
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(shootPaint);
         EvtSystem.EventDispatcher.AddListener<GameEvents.ColorWheelChange>(ColorWheel);
+
+
+        EvtSystem.EventDispatcher.AddListener<GameEvents.StartDialogue>(StartDialogue);
+        EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(EndDialogue);
     }
 
     // Update is called once per frame
@@ -53,5 +62,22 @@ public class SoundScript : MonoBehaviour
     void ColorWheel (GameEvents.ColorWheelChange evt)
     {
         AudioSource.PlayClipAtPoint(colorWheel, Vector3.zero, volume);
+    }
+
+    void StartDialogue (GameEvents.StartDialogue evt)
+    {
+        if (MarketTalking != null)
+        {
+            marketTalkingSource = Instantiate(AudioSourcePrefab);
+
+            AudioSource source = marketTalkingSource.GetComponent<AudioSource>();
+            source.clip = MarketTalking;
+            source.Play();
+        }
+    }
+
+    void EndDialogue (GameEvents.EndDialogue evt)
+    {
+        Destroy(marketTalkingSource);
     }
 }

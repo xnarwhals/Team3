@@ -10,6 +10,12 @@ public class GameEvents : MonoBehaviour
         public int index;
     }
 
+    public class ContinueDialogue : EvtSystem.Event
+    {
+        public MarketDialogue dialogueLine;
+        public int index;
+    }
+
     public class EndDialogue : EvtSystem.Event
     {
 

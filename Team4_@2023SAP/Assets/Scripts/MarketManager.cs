@@ -14,14 +14,13 @@ public class MarketManager : MonoBehaviour
 
     public float DialogueSpeed = 5.0f; // I want to be able to edit this, but I do not know where to tell of this change in the code  
 
-    private AudioSource textAudioSource; // Trying to make a sound effect play with every word being written in front of the player
+    public AudioSource textAudioSource; // Trying to make a sound effect play with every word being written in front of the player
 
     void Start()
     {
         EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(CloseDialogue);
-
-        textAudioSource = transform.Find("Pan14 - Tone Beep").GetComponent<AudioSource>(); // When the scene starts, find this audio
     }
+
     void Update()
     {
         if (!dialogueOpen)
@@ -62,15 +61,5 @@ public class MarketManager : MonoBehaviour
     void UpdateBackground()
     {
         MarketImage.sprite = marketSprites[currentIndex];
-    }
-
-    private void StartTalkingSound() // When dialogue plays out, I want you to play
-    {
-        textAudioSource.Play();
-    }
-
-    private void StopTalkingSound() // When the very last word is typed out, I want you to stop
-    {
-        textAudioSource.Play();
     }
 }

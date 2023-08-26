@@ -46,6 +46,5 @@ public class Reticle : Singleton<Reticle>
             Camera.main.ScreenToWorldPoint(new Vector3(0.0f, Camera.main.scaledPixelHeight, 0.0f)).y);
         transform.position = new Vector2(x, y);
     }
-
 }
 
