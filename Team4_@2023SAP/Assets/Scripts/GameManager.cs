@@ -46,10 +46,10 @@ public class GameManager : Singleton<GameManager>
     {
         playerInputs[0].SetActive(true);
         playerInputs[1].SetActive(true);
-
+        
         Cursor.visible = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerIdentity.Identity = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()

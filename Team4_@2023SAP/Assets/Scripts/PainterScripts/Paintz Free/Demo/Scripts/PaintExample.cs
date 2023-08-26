@@ -3,7 +3,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PaintExample : Singleton<PaintExample>
+public class PaintExample : MonoBehaviour
 {
     public Brush brush;
     public bool SingleShotClick = false;
