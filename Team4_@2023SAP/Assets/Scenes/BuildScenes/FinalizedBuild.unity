@@ -3436,8 +3436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brush:
     splatTexture: {fileID: 0}
-    splatsX: 4
-    splatsY: 4
+    splatsX: 5
+    splatsY: 5
     splatIndex: -1
     splatScale: 1.4
     splatRandomScaleMin: 1
@@ -3447,8 +3447,8 @@ MonoBehaviour:
     splatChannel: 0
   SingleShotClick: 1
   IndexBrush: 0
-  paintCost: 9.5
-  paintRegenSpeed: 10
+  paintCost: 9
+  paintRegenSpeed: 11.5
   regenMultiplier: 2.5
   currentRegenSpeed: 0
   paintBar: {fileID: 1024469722}
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6284fa0deda66640b394ce995831079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CompletionPercentage: 0.8
+  CompletionPercentage: 0.67
 --- !u!4 &1375428797
 Transform:
   m_ObjectHideFlags: 0

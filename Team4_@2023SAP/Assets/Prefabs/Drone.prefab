@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchTime: 2
-  stayWaitTime: 1.25
+  stayWaitTime: 2
   scanTime: 3
   ScanPower: 3.8
   target: {x: 0, y: 0}
