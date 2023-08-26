@@ -550,7 +550,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604982633}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -784,8 +784,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2005559278}
   - component: {fileID: 2005559277}
+  - component: {fileID: 2005559279}
   m_Layer: 0
-  m_Name: Market Ambience
+  m_Name: Sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,6 +903,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005559279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005559276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c794877290094c4eb02f410a5831617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DroneScan: {fileID: 0}
+  DroneHit: {fileID: 0}
+  DroneDeath: {fileID: 0}
+  ShootPaint: {fileID: 0}
+  colorWheel: {fileID: 0}
+  MarketTalking: {fileID: 0}
+  AudioSourcePrefab: {fileID: 7596697212527524426, guid: 21649ab5793236d41a32b7a7f1ca416b, type: 3}
+  volume: 1
 --- !u!1001 &6723397597839092165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1341,6 +1362,10 @@ PrefabInstance:
     - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_text
       value: 'Score: 1.5x, Difficulty 1.0x'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7805231999469695604, guid: 9d36ec407e12d834bb02eb19eb7324f6, type: 3}
       propertyPath: m_fontSize
