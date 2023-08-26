@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,6 +19,9 @@ public class Switch : MonoBehaviour
     void Start()
     {
         index = 0;
+
+        if (Input.GetJoystickNames().Length > 0)
+            EventSystem.current.SetSelectedGameObject(nextButton);
     }
 
     void Update()
@@ -69,6 +74,7 @@ public class Switch : MonoBehaviour
         if (index <= 0)
         {
             backButton.gameObject.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(nextButton);
         }
     }
 }
