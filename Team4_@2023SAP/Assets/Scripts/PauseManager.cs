@@ -54,6 +54,7 @@ public class PauseManager : MonoBehaviour
 
     public void RestartClicked()
     {
+        Time.timeScale = 1.0f;
         GameManager.gameManager.Restart(); 
     }
 
