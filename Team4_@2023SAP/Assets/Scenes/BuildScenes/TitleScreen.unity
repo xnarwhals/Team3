@@ -2488,11 +2488,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248101036}
-<<<<<<< Updated upstream
-=======
-  - {fileID: 2068450333}
-  - {fileID: 484621872}
->>>>>>> Stashed changes
   m_Father: {fileID: 143790425}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
