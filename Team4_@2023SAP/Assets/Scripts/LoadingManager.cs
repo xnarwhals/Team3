@@ -9,7 +9,7 @@ public class LoadingManager : MonoBehaviour
 
     public static LoadingManager Instance;
 
-    public GameObject LoadingPanel;
+    public GameObject LoadingPanel; // Public Slider? Somewhere in the code insert "LoadingPanel.value = asyncLoad.progress"
     public float MinLoadTime;
 
     public GameObject LoadingWheel;
