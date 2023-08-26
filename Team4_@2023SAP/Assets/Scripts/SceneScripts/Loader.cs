@@ -11,6 +11,7 @@ public static class Loader
     {
         TitleScreen,
         Loading,
+        Load,
         ScrollingEndCredits,
         HighScores,
         MarketTest,
@@ -33,7 +34,11 @@ public static class Loader
 
     public static void Load(string scene)
     {
-        SceneManager.LoadScene(scene);
+        GameObject sceneHolderObj = new GameObject("SceneHolder");
+        SceneHolder sceneHolder = sceneHolderObj.AddComponent<SceneHolder>();
+        sceneHolder.SceneName = scene;
+
+        SceneManager.LoadScene(Scene.Load.ToString());
     }
 
     public static void LoaderCallback()
