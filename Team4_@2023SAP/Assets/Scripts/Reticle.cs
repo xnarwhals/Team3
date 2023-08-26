@@ -38,11 +38,11 @@ public class Reticle : Singleton<Reticle>
                 (transform.position, desiredPos, Time.deltaTime * speed);
 
         float x = Mathf.Clamp(transform.position.x, 
-            Camera.main.ScreenToWorldPoint(new Vector3(-Camera.main.scaledPixelWidth, 0.0f, 0.0f)).x,
+            Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, 0.0f)).x,
             Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.scaledPixelWidth, 0.0f, 0.0f)).x);
 
         float y = Mathf.Clamp(transform.position.y, 
-            Camera.main.ScreenToWorldPoint(new Vector3(0.0f, -Camera.main.scaledPixelHeight, 0.0f)).y,
+            Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, 0.0f)).y,
             Camera.main.ScreenToWorldPoint(new Vector3(0.0f, Camera.main.scaledPixelHeight, 0.0f)).y);
         transform.position = new Vector2(x, y);
     }
