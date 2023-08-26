@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PaintTracker : MonoBehaviour
 {
+    public float CompletionPercentage = 0.8f;
+
     struct GridData
     {
         public GridData(BuildingGrid BuildingGrid, int tileX, int tileY)
@@ -33,6 +35,7 @@ public class PaintTracker : MonoBehaviour
             if (grids[i].buildingGrid == evt.hitGrid)
             {
                 grids[i].tiles[evt.hitCoords.x, evt.hitCoords.y]++;
+                CheckCompletion();
 
                 return;
             }
@@ -43,5 +46,30 @@ public class PaintTracker : MonoBehaviour
     {
         BuildingGrid grid = evt.grid;
         grids.Add(new GridData(grid, grid.tiles.GetLength(0), grid.tiles.GetLength(1)));
+    }
+
+    void CheckCompletion()
+    {
+        int complete = 0;
+        int count = 0;
+        foreach (GridData grid in grids)
+        {
+            for (int i = 0; i < grid.tiles.GetLength(0); i++)
+            {
+                for (int j = 0; j < grid.tiles.GetLength(1); j++)
+                {
+                    if ((grid.tiles[i, j]) > 0)
+                    {
+                        complete++;
+                    }
+                    count++;
+                }
+            }
+        }
+
+        if ((float)complete / (float)count > CompletionPercentage)
+        {
+            Loader.Load("ScrollingEndCredits");
+        }
     }
 }

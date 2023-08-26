@@ -40,7 +40,6 @@ public class PaintShooter : Singleton<PaintShooter>
         if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton0)) 
             && fireTimer >= fireRate)
         {
-            print("wha");
             PaintExample paintScript = FindAnyObjectByType<PaintExample>(); //fixes weird bug
             if (paintScript.CanPaint())
             {
