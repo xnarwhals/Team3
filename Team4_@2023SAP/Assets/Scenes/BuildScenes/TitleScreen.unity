@@ -530,6 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2231c6615954aaaa8c22e114d3d36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newGame: {fileID: 96289211}
+  gameCredits: {fileID: 1734785106}
+  highScores: {fileID: 10583526}
+  skip: {fileID: 1051275899}
 --- !u!114 &19736292
 MonoBehaviour:
   m_ObjectHideFlags: 0

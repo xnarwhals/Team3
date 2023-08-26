@@ -5,18 +5,19 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    public Button newGame;
+    public Button gameCredits;
+    public Button highScores;
+    public Button skip;
+
     private void Awake()
     {
-        Button newGame = GameObject.Find("New Game Btn").GetComponent<Button>();
         newGame.onClick.AddListener(LoadGame);
 
-        Button gameCredits = GameObject.Find("End Credits Btn").GetComponent<Button>();
         gameCredits.onClick.AddListener(LoadCredits);
-
-        Button highScores = GameObject.Find("High Scores Btn").GetComponent<Button>();
+        
         highScores.onClick.AddListener(LoadScores);
 
-        Button skip = GameObject.Find("Skip Intro Btn").GetComponent<Button>();
         skip.onClick.AddListener(SkipIntro);
     }
 
