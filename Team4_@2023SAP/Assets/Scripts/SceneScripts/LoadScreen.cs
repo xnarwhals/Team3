@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadScreen : MonoBehaviour
+
+/*public GameObject LoadingPanel; // Public Slider? Somewhere in the code insert "LoadingPanel.value = asyncLoad.progress"
+public float MinLoadTime;*/
+
 {
-    // Start is called before the first frame update
     void Start()
     {
         SceneManager.LoadSceneAsync(SceneHolder.Instance.SceneName);
         Destroy(SceneHolder.Instance);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

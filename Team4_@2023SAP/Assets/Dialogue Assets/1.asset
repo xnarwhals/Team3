@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   lines:
-  - You know you can at least crack a joke if you're going to be staring so much
-    without saying anything.
+  - You know you can at least crack a joke if you're going to be staring so much.
   - Wait, you want me to help you with information on the mysterious artist? Not
-    a chance buddy uuuuunlesssss you tell me a good place that's hiring. A girl is
-    strapped for cash to support her people, you know?
-  - Wait, there's a store that just needs someone to lift boxes and check inventory?
-    Awesome!! Alright, let me tell you the super secret classified information now.
+    a chance buddy uuuuunlesssss you tell me a good place that's hiring? A girl is
+    strapped for cash to help her people, you know?
+  - There's a store that just needs someone to lift boxes and check inventory? Awesome!!
+    Alright, let me tell you the super secret classified information now.
   - "\u2026"
   - . . .
   - .     .     .
@@ -29,7 +28,7 @@ MonoBehaviour:
   - "Huh? You want me to pick two random colors for no reason? Well, I have really
     liked blue and orange since I was a little kid, but um\u2026 How does this help
     you out again?"
-  color1: {r: 0.25490198, g: 0.45490196, b: 1, a: 1}
+  color1: {r: 0.40784314, g: 0.79607844, b: 0.9254902, a: 1}
   color2: {r: 0.89411765, g: 0.57254905, b: 0.25882354, a: 1}
   multiplier: 1
   difficulty: 1

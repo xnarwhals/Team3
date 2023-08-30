@@ -18,12 +18,12 @@ MonoBehaviour:
     in this very neighborhood and buy paint using their own pocket money.
   - They do an art performance in front of everyone, even while the pigs try to find
     their identity. I work in machinery, which is dangerous, but that artist got
-    more cojones than me. Personalmente, los respeto por ello.
+    more cojones than me. Personalmente, los respeto..
   - You want my thoughts about their color usage? Well, not that opinion matters,
-    but I would like to see red and blue incorporated in their next piece because
+    but I would like to see green and blue incorporated in their next piece because
     they remind me of my favorite bullfighter!
-  color1: {r: 0.69803923, g: 0.28627452, b: 0.25882354, a: 1}
-  color2: {r: 0.058823533, g: 0.03137255, b: 0.91372555, a: 1}
+  color1: {r: 0, g: 0.6431373, b: 0.3254902, a: 1}
+  color2: {r: 0.40784314, g: 0.79607844, b: 0.9254902, a: 1}
   multiplier: 1
   difficulty: 1
   CloseUp: {fileID: 21300000, guid: bb09ac0475d439544a5d11f020006326, type: 3}

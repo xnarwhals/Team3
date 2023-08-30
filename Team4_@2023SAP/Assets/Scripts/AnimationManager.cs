@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadingManager : MonoBehaviour
+/*public class LoadingManager : MonoBehaviour
 {
 
     public static LoadingManager Instance;
@@ -18,7 +18,6 @@ public class LoadingManager : MonoBehaviour
     public Image FadeImage;
     public float FadeTime;
 
-    private string targetScene;
     private bool isLoading;
     private void Awake()
     {
@@ -30,11 +29,6 @@ public class LoadingManager : MonoBehaviour
 
         LoadingPanel.SetActive(false);
         FadeImage.gameObject.SetActive(false);
-    }
-    public void LoadScene(string sceneName)
-    {
-        targetScene = sceneName;
-        StartCoroutine(LoadSceneRoutine());
     }
 
     private IEnumerator LoadSceneRoutine()
@@ -101,4 +95,4 @@ public class LoadingManager : MonoBehaviour
             yield return null;
         }
     }
-}
+}*/

@@ -309,7 +309,7 @@ MonoBehaviour:
   switchTime: 2
   stayWaitTime: 3
   scanTime: 3
-  ScanPower: 4
+  ScanPower: 4.5
   target: {x: 0, y: 0}
   sizeMulti: 1.3
 --- !u!114 &8017248300785518696
