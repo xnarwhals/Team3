@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GunSprite : MonoBehaviour
 {
-    public Sprite Left;
-    public Sprite Middle;
-    public Sprite Right;
+    public List<Sprite> Sprites = new List<Sprite>();
 
     public float MiddleRange = 0.25f;
 
     UnityEngine.UI.Image img;
+
+    int prevDirection;
+    int Direction = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,18 @@ public class GunSprite : MonoBehaviour
     {
         float reticlePos = Reticle.Instance.transform.position.x;
         if (reticlePos > MiddleRange)
-            img.sprite = Right;
+            Direction = 1;
         else if (reticlePos < -MiddleRange)
-            img.sprite = Left;
+            Direction = -1;
         else
-            img.sprite = Middle;
-            
+            Direction = 0;
+
+        if (Direction != prevDirection)
+        {
+            prevDirection = Direction;
+            EvtSystem.EventDispatcher.Raise(new GameEvents.GunDirectionChange() { direction = Direction });
+
+            img.sprite = Sprites[Direction + 1];
+        }
     }
 }

@@ -465,7 +465,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 974325234}
   m_Father: {fileID: 782685300}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -524,9 +525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eea1c47382cdef429275405e680328d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: {fileID: 21300000, guid: 6b40212ee855f9743b9bd887be7cec3e, type: 3}
-  Middle: {fileID: 21300000, guid: b5af0ebea10df4a4b9da02859ba0143f, type: 3}
-  Right: {fileID: 21300000, guid: ae5682d2983dc494c8a0d690f636ba60, type: 3}
+  Sprites:
+  - {fileID: 21300000, guid: 6b40212ee855f9743b9bd887be7cec3e, type: 3}
+  - {fileID: 21300000, guid: b5af0ebea10df4a4b9da02859ba0143f, type: 3}
+  - {fileID: 21300000, guid: ae5682d2983dc494c8a0d690f636ba60, type: 3}
   MiddleRange: 2.5
 --- !u!1 &324133761
 GameObject:
@@ -2942,6 +2944,101 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968392074}
+  m_CullTransparentMesh: 1
+--- !u!1 &974325233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974325234}
+  - component: {fileID: 974325237}
+  - component: {fileID: 974325236}
+  - component: {fileID: 974325235}
+  m_Layer: 5
+  m_Name: MuzzleSplat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &974325234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974325233}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 226707722}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -40.200005, y: 5.3666534}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &974325235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974325233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032b0a37a8bab8043b84695ad51b1c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 21300000, guid: 35db377a6f5815748badc3132a030c80, type: 3}
+  - {fileID: 21300000, guid: 02c91b98051f34841b47389b64b55bb0, type: 3}
+  - {fileID: 21300000, guid: 11694f017f91cd542ac88380732eb246, type: 3}
+  - {fileID: 21300000, guid: 0a9efb991537654419395c43f6d1ee67, type: 3}
+  ShowTime: 0.2
+--- !u!114 &974325236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974325233}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 35db377a6f5815748badc3132a030c80, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &974325237
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974325233}
   m_CullTransparentMesh: 1
 --- !u!1 &1000303665
 GameObject:

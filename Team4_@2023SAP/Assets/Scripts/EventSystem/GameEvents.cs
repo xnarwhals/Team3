@@ -92,6 +92,11 @@ public class GameEvents : MonoBehaviour
 
     public class ColorWheelChange : EvtSystem.Event
     {
-        public int ChangedColor; //not in use rn
+        public int ChangedColor;
+    }
+
+    public class GunDirectionChange : EvtSystem.Event
+    {
+        public int direction;
     }
 }
