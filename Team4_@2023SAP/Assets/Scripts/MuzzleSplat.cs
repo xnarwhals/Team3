@@ -25,7 +25,9 @@ public class MuzzleSplat : MonoBehaviour
 
         image = GetComponent<Image>();
 
-        EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(ShowSplat);
+        EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(PaintSplat);
+        EvtSystem.EventDispatcher.AddListener<GameEvents.ShootProjectile>(ShootSplat);
+
         EvtSystem.EventDispatcher.AddListener<GameEvents.ColorWheelChange>(SetColor);
         EvtSystem.EventDispatcher.AddListener<GameEvents.GunDirectionChange>(SetDirection);
     }
@@ -44,7 +46,17 @@ public class MuzzleSplat : MonoBehaviour
         }
     }
 
-    void ShowSplat(GameEvents.ShootPaint evt) 
+    void PaintSplat(GameEvents.ShootPaint evt) 
+    {
+        ShowSplat();
+    }
+
+    void ShootSplat(GameEvents.ShootProjectile evt)
+    {
+        ShowSplat();
+    }
+
+    void ShowSplat()
     {
         if (Direction != 0)
         {
