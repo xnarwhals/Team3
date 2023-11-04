@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Reticle : MonoBehaviour
+public class Reticle : SingletonLite<Reticle>
 {
-    #region singleton
-    static Reticle _instance = null;
-
-    public static Reticle Instance { get { return _instance; } }
-    #endregion
-
     public float speed;
 
     Rigidbody2D rb;

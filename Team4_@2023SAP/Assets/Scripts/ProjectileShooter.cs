@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileShooter : MonoBehaviour
+public class ProjectileShooter : SingletonLite<ProjectileShooter>
 {
-    #region singleton
-    static ProjectileShooter _instance = null;
-
-    public static ProjectileShooter Instance { get { return _instance; } }
-    #endregion
-
     public GameObject projectilePrefab;
 
     public float fireRate = 0.2f;

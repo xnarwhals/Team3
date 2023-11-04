@@ -3,14 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PaintShooter : MonoBehaviour
+public class PaintShooter : SingletonLite<PaintShooter>
 {
-    #region singleton
-    static PaintShooter _instance = null;
-
-    public static PaintShooter Instance { get { return _instance; } }
-    #endregion
-
     public float fireRate = 0.1f;
     public float shotRadius = 0.05f;
 
