@@ -46,18 +46,20 @@ public class GameManager : Singleton<GameManager>
 
     public void Restart()
     {
-        playerInputs[0].SetActive(true);
-        playerInputs[1].SetActive(true);
+        //playerInputs[0].SetActive(true);
+        //playerInputs[1].SetActive(true);
         
         Cursor.visible = false;
-        playerIdentity.Identity = 0;
+        playerIdentity.Identity = 0f;
+        playerPaint.Paint = 100f;
+        Time.timeScale = 1.0f;
 
         foreach (GameObject obj in FindObjectsOfType(typeof(GameObject)))
         {
-            Destroy(obj);
+            //Destroy(obj);
         }
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     public void QuitGame()

@@ -46,6 +46,15 @@ public class MuzzleSplat : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootPaint>(PaintSplat);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootProjectile>(ShootSplat);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ColorWheelChange>(SetColor);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.GunDirectionChange>(SetDirection);
+    }
+
     void PaintSplat(GameEvents.ShootPaint evt) 
     {
         ShowSplat();
