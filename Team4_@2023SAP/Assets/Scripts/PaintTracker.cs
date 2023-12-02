@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintTracker : MonoBehaviour
+public class PaintTracker : SingletonLite<PaintTracker>
 {
     public float CompletionPercentage = 0.8f;
 
@@ -21,7 +21,7 @@ public class PaintTracker : MonoBehaviour
     List<GridData> grids = new List<GridData>();
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(tileHit);
 
@@ -30,6 +30,7 @@ public class PaintTracker : MonoBehaviour
 
     void tileHit(GameEvents.ShootPaint evt)
     {
+        print("s");
         for (int i = 0; i < grids.Count; i++)
         {
             if (grids[i].buildingGrid == evt.hitGrid)
