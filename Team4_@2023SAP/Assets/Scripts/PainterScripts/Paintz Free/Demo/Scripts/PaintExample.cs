@@ -3,7 +3,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PaintExample : MonoBehaviour
+public class PaintExample : SingletonLite<PaintExample>
 {
     public Brush brush;
     public bool SingleShotClick = false;
@@ -28,7 +28,7 @@ public class PaintExample : MonoBehaviour
     private bool canPaint = true;
     private bool isDead;
 
-    private void Awake()
+    private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
 
@@ -47,6 +47,11 @@ public class PaintExample : MonoBehaviour
         //colors[0] = PlayerPrefs.GetInt("Color1");
         //colors[1] = PlayerPrefs.GetInt("Color2");
     }
+
+    /*private void OnDestroy()
+    {
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootPaint>(Shoot);
+    }*/
 
     private void Update()
     {

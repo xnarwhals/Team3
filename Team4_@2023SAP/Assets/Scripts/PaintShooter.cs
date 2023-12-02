@@ -10,6 +10,8 @@ public class PaintShooter : SingletonLite<PaintShooter>
 
     float fireTimer = 0.0f;
 
+    PaintExample paintScript;
+
     struct tileInfo
     {
         public tileInfo(Vector2 Pos, Vector2Int Coords)
@@ -25,7 +27,7 @@ public class PaintShooter : SingletonLite<PaintShooter>
     // Start is called before the first frame update
     void Start()
     {
-        
+        paintScript = FindAnyObjectByType<PaintExample>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,6 @@ public class PaintShooter : SingletonLite<PaintShooter>
         if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton0)) 
             && fireTimer >= fireRate)
         {
-            PaintExample paintScript = FindAnyObjectByType<PaintExample>(); //fixes weird bug
             if (paintScript.CanPaint())
             {
                 fireTimer = 0;

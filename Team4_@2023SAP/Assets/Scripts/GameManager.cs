@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : SingletonLite<GameManager>
 { 
     public static GameManager gameManager { get; private set; }
 
@@ -18,7 +18,7 @@ public class GameManager : Singleton<GameManager>
     GameObject[] playerInputs;
 
 
-    private void Awake()
+    private void Start()
     {
         gameManager = this;
         playerInputs = new GameObject[] { FindAnyObjectByType<PaintShooter>().gameObject,
@@ -70,6 +70,10 @@ public class GameManager : Singleton<GameManager>
     public void MainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
+        foreach (GameObject obj in FindObjectsOfType(typeof(SingletonLite<>)))
+        {
+            Destroy(obj);
+        }
     }
 
     public void RestoreIdentity(GameEvents.EnemyDie evt)
