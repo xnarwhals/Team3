@@ -70,10 +70,6 @@ public class GameManager : SingletonLite<GameManager>
     public void MainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
-        foreach (GameObject obj in FindObjectsOfType(typeof(SingletonLite<>)))
-        {
-            Destroy(obj);
-        }
     }
 
     public void RestoreIdentity(GameEvents.EnemyDie evt)

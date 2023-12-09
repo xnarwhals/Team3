@@ -30,7 +30,7 @@ public class PaintExample : SingletonLite<PaintExample>
 
     private void Start()
     {
-        _gameManager = FindObjectOfType<GameManager>();
+        _gameManager = GameManager.Instance;
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
         EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(Shoot);
@@ -48,10 +48,11 @@ public class PaintExample : SingletonLite<PaintExample>
         //colors[1] = PlayerPrefs.GetInt("Color2");
     }
 
-    /*private void OnDestroy()
+    private void OnDestroy()
     {
         EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootPaint>(Shoot);
-    }*/
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.NoPaintMouseOver>(UpdateNoPaint);
+    }
 
     private void Update()
     {

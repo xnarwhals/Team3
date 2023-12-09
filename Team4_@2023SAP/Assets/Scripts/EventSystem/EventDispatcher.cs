@@ -44,12 +44,13 @@ namespace EvtSystem
             System.Delegate del;
 
             foreach (System.Delegate d in m_eventDelegates.Values)
+            {
+                if (d.Method == listener.Method) //if it already exists
                 {
-                    if (d.Method == listener.Method) //if it already exists
-                    {
-                        return;
-                    }
+                    return;
                 }
+            }
+
             if(m_eventDelegates.TryGetValue(eventType, out del))
             {
                 
