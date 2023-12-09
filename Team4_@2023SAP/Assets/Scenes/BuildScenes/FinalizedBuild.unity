@@ -3237,7 +3237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558175068313115355, guid: c70ca66893a504b338196eb263aa9c25, type: 3}
       propertyPath: m_Value
-      value: 100
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 5558175068313115355, guid: c70ca66893a504b338196eb263aa9c25, type: 3}
       propertyPath: m_MaxValue
