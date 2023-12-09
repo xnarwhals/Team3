@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 namespace EvtSystem
@@ -42,8 +43,16 @@ namespace EvtSystem
             System.Type eventType = typeof(T);
             System.Delegate del;
 
+            foreach (System.Delegate d in m_eventDelegates.Values)
+                {
+                    if (d.Method == listener.Method) //if it already exists
+                    {
+                        return;
+                    }
+                }
             if(m_eventDelegates.TryGetValue(eventType, out del))
             {
+                
                 m_eventDelegates[eventType] = System.Delegate.Combine(del, listener);
             }
             else

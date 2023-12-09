@@ -30,7 +30,6 @@ public class PaintTracker : SingletonLite<PaintTracker>
 
     void tileHit(GameEvents.ShootPaint evt)
     {
-        print("s");
         for (int i = 0; i < grids.Count; i++)
         {
             if (grids[i].buildingGrid == evt.hitGrid)
