@@ -5133,6 +5133,8 @@ MonoBehaviour:
   DroneHit: {fileID: 8300000, guid: 31ae5c95cc58c3a4fb2ed58b4a94174b, type: 3}
   DroneDeath: {fileID: 8300000, guid: b27e7cbddf7b0a74094ca9b23ba11185, type: 3}
   ShootPaint: {fileID: 8300000, guid: 53f1d32c600bd9146b8dfdcdd89f9167, type: 3}
+  ShootProjectile: {fileID: 8300000, guid: 53f1d32c600bd9146b8dfdcdd89f9167, type: 3}
+  PaintEmpty: {fileID: 8300000, guid: e543e8ae7dea27049ae8da746b763d16, type: 3}
   colorWheel: {fileID: 8300000, guid: e7564de0d3d9a29429ba0cafcf10f093, type: 3}
   DroneEnter: {fileID: 8300000, guid: 65e2dcd1dcffaa14694b832f5df6f970, type: 3}
   GameOverRiff: {fileID: 8300000, guid: 64d623a367d0672429813a53121d5fd3, type: 3}

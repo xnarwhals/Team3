@@ -66,6 +66,7 @@ public class PauseManager : MonoBehaviour
 
     public void ExitClicked()
     {
+        Time.timeScale = 1.0f;
         GameManager.gameManager.MainMenu();
     }
 

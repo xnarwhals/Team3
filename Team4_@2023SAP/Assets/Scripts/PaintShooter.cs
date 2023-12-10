@@ -42,9 +42,9 @@ public class PaintShooter : SingletonLite<PaintShooter>
         if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.JoystickButton0)) 
             && fireTimer >= fireRate)
         {
+            fireTimer = 0;
             if (paintScript.CanPaint())
             {
-                fireTimer = 0;
 
                 BuildingGrid grid = GetHitBuilding();
                 if (grid == null) return;

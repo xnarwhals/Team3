@@ -20,6 +20,8 @@ public class GameManager : SingletonLite<GameManager>
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
+
         gameManager = this;
         playerInputs = new GameObject[] { FindAnyObjectByType<PaintShooter>().gameObject,
             FindAnyObjectByType<ProjectileShooter>().gameObject};

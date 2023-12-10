@@ -1,5 +1,6 @@
 ﻿// Ignore Spelling: evt
 
+using EvtSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -87,6 +88,10 @@ public class PaintExample : SingletonLite<PaintExample>
 
     void UpdateNoPaint(GameEvents.NoPaintMouseOver evt)
     {
+        if (!canPaint)
+        {
+            return;
+        }
         canPaint = !evt.isOver;
     }
 
@@ -113,6 +118,11 @@ public class PaintExample : SingletonLite<PaintExample>
 
     public bool CanPaint()
     {
+        if (!canPaint)
+        {
+            EventDispatcher.Raise(new GameEvents.PaintEmpty());
+        }
+
         return canPaint && _gameManager.playerPaint.Paint > 0 && isRegening && !isDead;
     }
 }

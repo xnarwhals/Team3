@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using static GameEvents;
 
 public class SoundScript : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class SoundScript : MonoBehaviour
     public AudioClip DroneDeath;
 
     public AudioClip ShootPaint;
+    public AudioClip ShootProjectile;
+    public AudioClip PaintEmpty;
     public AudioClip colorWheel;
 
     public AudioClip DroneEnter;
@@ -31,8 +34,9 @@ public class SoundScript : MonoBehaviour
         EvtSystem.EventDispatcher.AddListener<GameEvents.EnemyDie>(droneDeath);
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.ShootPaint>(shootPaint);
+        EvtSystem.EventDispatcher.AddListener<GameEvents.ShootProjectile>(shootProjectile);
         EvtSystem.EventDispatcher.AddListener<GameEvents.ColorWheelChange>(ColorWheel);
-
+        EvtSystem.EventDispatcher.AddListener<GameEvents.PaintEmpty>(paintEmpty);
 
         EvtSystem.EventDispatcher.AddListener<GameEvents.StartDialogue>(StartDialogue);
         EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(EndDialogue);
@@ -43,9 +47,24 @@ public class SoundScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ScanStart>(scan);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.EnemyHit>(droneHit);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.EnemyDie>(droneDeath);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootPaint>(shootPaint);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ShootProjectile>(shootProjectile);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.ColorWheelChange>(ColorWheel);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.PaintEmpty>(paintEmpty);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.StartDialogue>(StartDialogue);
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.EndDialogue>(EndDialogue);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.DroneWaveEnter>(droneEnter);
+
+        EvtSystem.EventDispatcher.RemoveListener<GameEvents.GameOver>(GameOver);
     }
 
     void scan(GameEvents.ScanStart evt)
@@ -66,6 +85,16 @@ public class SoundScript : MonoBehaviour
     void shootPaint(GameEvents.ShootPaint evt)
     {
         AudioSource.PlayClipAtPoint(ShootPaint, Vector3.zero, volume);
+    }
+
+    void shootProjectile(GameEvents.ShootProjectile evt)
+    {
+        AudioSource.PlayClipAtPoint(ShootProjectile, Vector3.zero, volume);
+    }
+
+    void paintEmpty(GameEvents.PaintEmpty evt)
+    {
+        AudioSource.PlayClipAtPoint(PaintEmpty, Vector3.zero, volume);
     }
 
     void ColorWheel (GameEvents.ColorWheelChange evt)

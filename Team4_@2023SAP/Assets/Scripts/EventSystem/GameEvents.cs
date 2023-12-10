@@ -99,4 +99,9 @@ public class GameEvents : MonoBehaviour
     {
         public int direction;
     }
+
+    public class PaintEmpty : EvtSystem.Event
+    {
+
+    }
 }

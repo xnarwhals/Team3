@@ -473,7 +473,6 @@ GameObject:
   - component: {fileID: 19736288}
   - component: {fileID: 19736290}
   - component: {fileID: 19736291}
-  - component: {fileID: 19736292}
   m_Layer: 5
   m_Name: Main Menu Container
   m_TagString: Untagged
@@ -537,18 +536,6 @@ MonoBehaviour:
   gameCreditsScene: ScrollingEndCredits
   highScoresScene: HighScores
   skipScene: FinalizedBuild
---- !u!114 &19736292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19736287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef029c9449d8f824cb81447757eed5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &96289209
 GameObject:
   m_ObjectHideFlags: 0
