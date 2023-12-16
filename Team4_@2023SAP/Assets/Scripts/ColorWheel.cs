@@ -27,7 +27,28 @@ public class ColorWheel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("OpenColorWheel") == 1 || Input.GetKey(KeyCode.I))
+        if (Input.GetKey("1"))
+        {
+            OpenMenu(0);
+        }
+        else if (Input.GetKey("2"))
+        {
+            OpenMenu(1);
+        }
+        else if (Input.GetKey("3"))
+        {
+            OpenMenu(2);
+        }
+        else if (Input.GetKey("4"))
+        {
+            OpenMenu(3);
+        }
+        else
+        {
+            img.enabled = false;
+        }
+
+        if (Input.GetAxis("OpenColorWheel") == 1)
         {
             img.enabled = true;
             center.SetActive(true);
@@ -36,22 +57,28 @@ public class ColorWheel : MonoBehaviour
             if (stickPos.magnitude > 0.1f && stickPos.y >= 0.0f)
             {
                 currentIndex = (int)((Vector2.Angle(Vector2.left, stickPos) + offset) / 180.0f * (sprites.Length - 1));
-                img.sprite = sprites[currentIndex];
-
-                paintScript.brush.splatChannel = currentIndex;
-
-                if (currentIndex != prevIndex)
-                {
-                    EvtSystem.EventDispatcher.Raise(new GameEvents.ColorWheelChange { ChangedColor = currentIndex });
-                }
-
-                prevIndex = currentIndex;
+                OpenMenu(currentIndex);
             }
         }
         else
         {
-            img.enabled = false;
             center.SetActive(false);
         }
+    }
+
+    void OpenMenu(int index)
+    {
+        img.enabled = true;
+
+        img.sprite = sprites[index];
+
+        paintScript.brush.splatChannel = index;
+
+        if (index != prevIndex)
+        {
+            EvtSystem.EventDispatcher.Raise(new GameEvents.ColorWheelChange { ChangedColor = index });
+        }
+
+        prevIndex = index;
     }
 }

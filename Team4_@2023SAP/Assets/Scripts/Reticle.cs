@@ -20,12 +20,27 @@ public class Reticle : SingletonLite<Reticle>
         }*/
     }
 
+    bool input = true; //true is controller, false is keyboard
+    Vector3 PrevMousePos = Vector2.zero;
     public void Update()
     {
-        Vector2 desiredPos;
-        if (Input.GetJoystickNames().Length > 0)
+        Vector2 stickPos =
+                new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        if (Input.mousePosition != PrevMousePos)
         {
-            Vector2 stickPos =
+            PrevMousePos = Input.mousePosition;
+            input = false;
+        }
+        else if (stickPos.magnitude >= 0.1f)
+        {
+            input = true;
+        }
+
+        Vector2 desiredPos;
+        if (input)
+        {
+            stickPos =
                 new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             desiredPos = (Vector2)transform.position + (2.0f * stickPos);
         }
