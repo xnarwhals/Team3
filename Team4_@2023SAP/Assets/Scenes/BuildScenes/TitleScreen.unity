@@ -532,6 +532,7 @@ MonoBehaviour:
   gameCredits: {fileID: 1734785106}
   highScores: {fileID: 10583526}
   skip: {fileID: 1051275899}
+  exit: {fileID: 236340978}
   newGameScene: MarketPlace
   gameCreditsScene: ScrollingEndCredits
   highScoresScene: HighScores

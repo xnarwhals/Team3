@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
     public Button gameCredits;
     public Button highScores;
     public Button skip;
+    public Button exit;
 
     public string newGameScene;
     public string gameCreditsScene;
@@ -26,6 +27,8 @@ public class GameUI : MonoBehaviour
         highScores.onClick.AddListener(LoadScores);
 
         skip.onClick.AddListener(SkipIntro);
+
+        exit.onClick.AddListener(Exit);
 
         if (Input.GetJoystickNames().Length > 0)
         {
@@ -51,5 +54,10 @@ public class GameUI : MonoBehaviour
     private void SkipIntro()
     {
         Loader.Load(skipScene);
+    }
+
+    private void Exit()
+    {
+        Application.Quit();
     }
 }
