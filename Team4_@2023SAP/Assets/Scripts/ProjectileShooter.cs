@@ -41,9 +41,10 @@ public class ProjectileShooter : SingletonLite<ProjectileShooter>
             firetimer += Time.deltaTime;
         }
 
-        bool canfire = holdToFire ?
+        bool canfire = (holdToFire ?
             Input.GetMouseButton(1) || Input.GetKey(KeyCode.JoystickButton1) :
-            Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1);
+            Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.JoystickButton1))
+            && PaintExample.Instance.CanPaint();
 
         if (canfire)
         {

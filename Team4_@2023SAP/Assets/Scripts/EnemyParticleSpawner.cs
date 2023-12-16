@@ -15,6 +15,7 @@ public class EnemyParticleSpawner : MonoBehaviour
     // Update is called once per frame
     void SpawnParticles(GameEvents.EnemyHit evt)
     {
-        Instantiate(particlePrefab, evt.enemy.transform);
+        GameObject obj = Instantiate(particlePrefab, evt.enemy.transform);
+        obj.GetComponent<ParticleSystem>().startColor = ProjectileShooter.Instance.color;
     }
 }
