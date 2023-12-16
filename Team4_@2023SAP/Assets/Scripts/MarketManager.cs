@@ -27,6 +27,11 @@ public class MarketManager : MonoBehaviour
         EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(CloseDialogue);
     }
 
+    private void OnDestroy()
+    {
+        EvtSystem.EventDispatcher.AddListener<GameEvents.EndDialogue>(CloseDialogue);
+    }
+
     void Update()
     {
         if (!dialogueOpen)

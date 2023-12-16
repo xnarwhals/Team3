@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static GameEvents;
 
-public class DialogueSystem : Singleton<DialogueSystem>
+public class DialogueSystem : MonoBehaviour
 {
     public GameObject button1;
     public GameObject button2;
@@ -37,6 +37,12 @@ public class DialogueSystem : Singleton<DialogueSystem>
     {
         EventDispatcher.AddListener<StartDialogue>(BeginDialogue);
         EventDispatcher.AddListener<ContinueDialogue>(BeginDialogue);
+    }
+
+    private void OnDestroy()
+    {
+        EventDispatcher.RemoveListener<StartDialogue>(BeginDialogue);
+        EventDispatcher.RemoveListener<ContinueDialogue>(BeginDialogue);
     }
 
     // Update is called once per frame
