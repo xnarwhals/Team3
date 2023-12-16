@@ -15,7 +15,10 @@ public class CreditsEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            End();
+        }
     }
 
     public void End()
