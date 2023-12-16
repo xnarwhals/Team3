@@ -5,6 +5,7 @@ using UnityEngine;
 public class Reticle : SingletonLite<Reticle>
 {
     public float speed;
+    public float ControllerSpeedMulti = 0.5f;
 
     Rigidbody2D rb;
 
@@ -49,8 +50,10 @@ public class Reticle : SingletonLite<Reticle>
             desiredPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
+        float multi = input ? ControllerSpeedMulti : 1.0f;
+
         transform.position = Vector2.Lerp
-                (transform.position, desiredPos, Time.deltaTime * speed);
+                (transform.position, desiredPos, Time.deltaTime * speed * multi);
 
         float x = Mathf.Clamp(transform.position.x, 
             Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, 0.0f)).x,
