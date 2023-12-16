@@ -20,6 +20,10 @@ public class CreditsEnd : MonoBehaviour
 
     public void End()
     {
+        foreach (PaintTarget wall in FindObjectsByType<PaintTarget>(sortMode: FindObjectsSortMode.None))
+        {
+            Destroy(wall.gameObject);
+        }
         Loader.Load(NextScene);
     }
 }

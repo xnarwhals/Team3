@@ -449,7 +449,6 @@ GameObject:
   - component: {fileID: 324133764}
   - component: {fileID: 324133763}
   - component: {fileID: 324133768}
-  - component: {fileID: 324133769}
   m_Layer: 3
   m_Name: Building 5
   m_TagString: Untagged
@@ -559,8 +558,8 @@ Transform:
   m_LocalScale: {x: 2.57712, y: 2.305526, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 786654311}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &324133768
 MonoBehaviour:
@@ -579,23 +578,6 @@ MonoBehaviour:
   height: 4
   showLines: 0
   showXs: 0
---- !u!114 &324133769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324133761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df8ed32f5431e44fb8c6720ed7e603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: {x: 0.859, y: 0.766}
-  width: 3
-  height: 3
-  showLines: 1
-  showXs: 1
 --- !u!1 &349471964
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +621,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364202172
 GameObject:
@@ -1232,7 +1214,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534525607
 GameObject:
@@ -1845,7 +1827,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &663263290
 MonoBehaviour:
@@ -1996,16 +1978,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 831098413}
-  - {fileID: 1957664704}
-  - {fileID: 1005012257}
-  - {fileID: 793209537}
-  - {fileID: 324133767}
   - {fileID: 1762973778}
   - {fileID: 193733690}
   - {fileID: 434218998}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793209531
 GameObject:
@@ -2021,7 +1998,6 @@ GameObject:
   - component: {fileID: 793209534}
   - component: {fileID: 793209533}
   - component: {fileID: 793209538}
-  - component: {fileID: 793209539}
   m_Layer: 3
   m_Name: Building 4
   m_TagString: Untagged
@@ -2131,8 +2107,8 @@ Transform:
   m_LocalScale: {x: 3.2507706, y: 3.930509, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 786654311}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &793209538
 MonoBehaviour:
@@ -2151,23 +2127,6 @@ MonoBehaviour:
   height: 6
   showLines: 0
   showXs: 0
---- !u!114 &793209539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793209531}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df8ed32f5431e44fb8c6720ed7e603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: {x: 1.09, y: 0.985}
-  width: 3
-  height: 4
-  showLines: 1
-  showXs: 1
 --- !u!1 &800458054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2217,6 @@ GameObject:
   - component: {fileID: 831098410}
   - component: {fileID: 831098409}
   - component: {fileID: 831098415}
-  - component: {fileID: 831098414}
   m_Layer: 3
   m_Name: Building 1
   m_TagString: Untagged
@@ -2368,26 +2326,9 @@ Transform:
   m_LocalScale: {x: 2.0301118, y: 5.410508, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 786654311}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &831098414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831098407}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df8ed32f5431e44fb8c6720ed7e603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: {x: 1.02, y: 1.08}
-  width: 2
-  height: 5
-  showLines: 1
-  showXs: 1
 --- !u!114 &831098415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,7 +2702,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &914857472
 GameObject:
@@ -2978,7 +2919,6 @@ GameObject:
   - component: {fileID: 1005012254}
   - component: {fileID: 1005012253}
   - component: {fileID: 1005012258}
-  - component: {fileID: 1005012259}
   m_Layer: 3
   m_Name: Building 3
   m_TagString: Untagged
@@ -3088,8 +3028,8 @@ Transform:
   m_LocalScale: {x: 3.0175514, y: 2.3758428, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 786654311}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1005012258
 MonoBehaviour:
@@ -3108,23 +3048,6 @@ MonoBehaviour:
   height: 4
   showLines: 0
   showXs: 0
---- !u!114 &1005012259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005012251}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df8ed32f5431e44fb8c6720ed7e603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: {x: 1, y: 0.79}
-  width: 3
-  height: 3
-  showLines: 1
-  showXs: 1
 --- !u!1001 &1024469720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5000,7 +4923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377149784
 GameObject:
@@ -5100,7 +5023,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523421165
 GameObject:
@@ -5157,7 +5080,7 @@ Transform:
   m_Children:
   - {fileID: 1308311178}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1565259068
 GameObject:
@@ -5202,7 +5125,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696244014
 GameObject:
@@ -5247,7 +5170,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737631044
 GameObject:
@@ -6611,7 +6534,6 @@ GameObject:
   - component: {fileID: 1957664701}
   - component: {fileID: 1957664700}
   - component: {fileID: 1957664705}
-  - component: {fileID: 1957664706}
   m_Layer: 3
   m_Name: Building 2
   m_TagString: Untagged
@@ -6721,8 +6643,8 @@ Transform:
   m_LocalScale: {x: 3.4045777, y: 3.6971512, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 786654311}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1957664705
 MonoBehaviour:
@@ -6741,23 +6663,6 @@ MonoBehaviour:
   height: 6
   showLines: 0
   showXs: 0
---- !u!114 &1957664706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957664698}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df8ed32f5431e44fb8c6720ed7e603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileSize: {x: 1.135, y: 1.23}
-  width: 3
-  height: 3
-  showLines: 1
-  showXs: 1
 --- !u!114 &419816378397222134
 MonoBehaviour:
   m_ObjectHideFlags: 0

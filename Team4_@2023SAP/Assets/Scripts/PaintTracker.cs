@@ -69,6 +69,13 @@ public class PaintTracker : SingletonLite<PaintTracker>
 
         if ((float)complete / (float)count > CompletionPercentage)
         {
+            foreach (PaintTarget wall in FindObjectsByType<PaintTarget>(sortMode: FindObjectsSortMode.None))
+            {
+                DontDestroyOnLoad(wall.gameObject);
+                wall.enabled = false;
+                wall.gameObject.GetComponent<BuildingGrid>().enabled = false;
+            }
+
             Loader.Load("ScrollingEndCredits");
         }
     }
