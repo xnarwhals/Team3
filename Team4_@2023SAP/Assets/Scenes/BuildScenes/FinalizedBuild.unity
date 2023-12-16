@@ -2740,12 +2740,14 @@ MonoBehaviour:
     splatChannel: 0
   SingleShotClick: 1
   IndexBrush: 0
+  PaintUseFreeze: 0.15
   paintCost: 9
-  paintRegenSpeed: 11.5
+  paintRegenSpeed: 12.5
   regenMultiplier: 2.5
   currentRegenSpeed: 0
   paintBar: {fileID: 1024469722}
   _gameManager: {fileID: 0}
+  PaintEmptyTime: 0.2
 --- !u!4 &855723193
 Transform:
   m_ObjectHideFlags: 0

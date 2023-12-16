@@ -9,6 +9,9 @@ public class PaintExample : SingletonLite<PaintExample>
     public Brush brush;
     public bool SingleShotClick = false;
     public bool IndexBrush = false;
+    public float PaintUseFreeze = 0.1f;
+
+    float PaintUseFreezeTimer = 0.0f;
 
     //Change Paint Variables 
     [SerializeField] [Range(1f, 45f)] float paintCost;
@@ -74,7 +77,16 @@ public class PaintExample : SingletonLite<PaintExample>
             isRegening = true;
             canPaint = true;
         }
-        PlayerRegenPaint();
+
+        if (PaintUseFreezeTimer >= PaintUseFreeze)
+        {
+            PlayerRegenPaint();
+        }
+        else
+        {
+            PaintUseFreezeTimer += Time.deltaTime;
+        }
+
 
         //Identity Loss
         if (_gameManager.playerIdentity.Identity >= 100 && !isDead)
@@ -99,6 +111,8 @@ public class PaintExample : SingletonLite<PaintExample>
     {
         GameManager.gameManager.playerPaint.UsePaint(paintAmount);//updates data
         paintBar.SetPaint(GameManager.gameManager.playerPaint.Paint);//updates UI
+
+        PaintUseFreezeTimer = 0.0f;
     }
 
     public void PlayerRegenPaint()
