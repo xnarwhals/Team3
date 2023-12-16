@@ -116,10 +116,15 @@ public class PaintExample : SingletonLite<PaintExample>
         if (IndexBrush) brush.splatIndex++;
     }
 
+    public float PaintEmptyTime = 0.2f;
+    float PaintEmptyTimer = 0.0f;
+
     public bool CanPaint()
     {
-        if (!canPaint)
+        if (!canPaint && Time.time - PaintEmptyTimer > PaintEmptyTime)
         {
+            PaintEmptyTimer = Time.time;
+
             EventDispatcher.Raise(new GameEvents.PaintEmpty());
         }
 
