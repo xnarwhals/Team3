@@ -11,6 +11,8 @@ public class GameManager : SingletonLite<GameManager>
 
     public UnitIdentity playerIdentity = new UnitIdentity(0, 100);
 
+    public GameObject gameoverbutton;
+
     private EnemySpawner enemySpawner;
 
     [SerializeField] private GameObject GameOverUI;
@@ -37,13 +39,13 @@ public class GameManager : SingletonLite<GameManager>
     {
         EvtSystem.EventDispatcher.Raise(new GameEvents.GameOver());
 
-        enemySpawner.enabled = !enemySpawner.enabled;
+        
         Cursor.visible = true;
 
-
-        playerInputs[0].SetActive(false);
-        playerInputs[1].SetActive(false);
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(gameoverbutton);
         GameOverUI.SetActive(true);
+
+        Time.timeScale = 0.0f;
     }
 
     public void Restart()
@@ -71,6 +73,7 @@ public class GameManager : SingletonLite<GameManager>
 
     public void MainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("TitleScreen");
     }
 

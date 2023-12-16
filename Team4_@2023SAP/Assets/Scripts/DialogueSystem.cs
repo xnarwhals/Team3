@@ -37,6 +37,8 @@ public class DialogueSystem : MonoBehaviour
     {
         EventDispatcher.AddListener<StartDialogue>(BeginDialogue);
         EventDispatcher.AddListener<ContinueDialogue>(BeginDialogue);
+
+        Time.timeScale = 1.0f;
     }
 
     private void OnDestroy()

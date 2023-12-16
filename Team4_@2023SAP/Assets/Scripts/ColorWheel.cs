@@ -14,11 +14,14 @@ public class ColorWheel : MonoBehaviour
     PaintExample paintScript;
     Image img;
 
+    GameObject center;
+
     // Start is called before the first frame update
     void Start()
     {
         img = GetComponent<Image>();
         paintScript = FindAnyObjectByType<PaintExample>();
+        center = FindAnyObjectByType<gunMenuCenter>().gameObject;
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class ColorWheel : MonoBehaviour
         if (Input.GetAxis("OpenColorWheel") == 1 || Input.GetKey(KeyCode.I))
         {
             img.enabled = true;
+            center.SetActive(true);
 
             Vector2 stickPos = new Vector2(Input.GetAxis("ColorWheelX"), Input.GetAxis("ColorWheelY"));
             if (stickPos.magnitude > 0.1f && stickPos.y >= 0.0f)
@@ -47,6 +51,7 @@ public class ColorWheel : MonoBehaviour
         else
         {
             img.enabled = false;
+            center.SetActive(false);
         }
     }
 }
